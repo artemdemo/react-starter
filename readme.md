@@ -31,3 +31,9 @@ $ ./install-react.sh
 ```
 
 At the end you'll need to add build script commands to your `package.json`. You'll see them in your terminal at the end of installation.
+
+And finally you'll probably want replace `.git` folder with yours:
+
+```
+$ rm -rf .git/ && git init
+```
