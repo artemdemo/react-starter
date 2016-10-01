@@ -8,12 +8,13 @@ import './styles/general.less';
 import history from './history';
 import store from './store';
 
+import AppView from './views/AppView';
 import MainView from './views/MainView';
 
 render(
     <Provider store={store}>
         <Router history={history}>
-            <Route path='/'>
+            <Route path='/' component={AppView}>
                 <IndexRoute component={MainView} />
             </Route>
         </Router>

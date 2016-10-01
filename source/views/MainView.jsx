@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
-const MainView = (props) => {
+const MainView = () => {
     return (
-        <div className='container'>
-            Main View
-            {props.children}
+        <div>
+            <p>Main View</p>
         </div>
     );
-}
+};
 
 export default MainView;
