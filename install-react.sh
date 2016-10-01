@@ -30,7 +30,6 @@ npm i --save react react-dom react-router history
 printf ' --> Installing redux... \n'
 npm i --save redux react-redux
 npm i --save react-router-redux
-npm i --save redux-thunk
 
 printf ' --> Installing webpack... \n'
 npm i --save webpack webpack-dev-server
