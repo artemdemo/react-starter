@@ -5,7 +5,8 @@ import { Router, Route, IndexRoute } from 'react-router';
 
 import './styles/general.less';
 
-import { store, history } from './configs';
+import history from './history';
+import store from './store';
 
 import MainView from './views/MainView';
 

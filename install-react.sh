@@ -28,7 +28,8 @@ printf ' --> Installing react... \n'
 npm i --save react react-dom react-router history
 
 printf ' --> Installing redux... \n'
-npm i --save redux react-redux react-router-redux
+npm i --save redux react-redux
+npm i --save react-router-redux
 npm i --save redux-thunk
 
 printf ' --> Installing webpack... \n'
@@ -53,6 +54,6 @@ printf '{ \n'
 printf '  "start": "npm run server", \n'
 printf '  \"server\": \"webpack-dev-server\", \n'
 printf '  \"build\": \"webpack --progress --colors\", \n'
-printf '  \"watch\": \"webpack --progress --colors --watch\", \n'
+printf '  \"watch\": \"webpack --progress --colors --watch\" \n'
 printf '... \n'
 printf '} \n'
