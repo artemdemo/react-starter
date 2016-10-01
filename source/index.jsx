@@ -7,7 +7,7 @@ import './styles/general.less';
 
 import { store, history } from './configs';
 
-import { MainView } from './views/MainView';
+import MainView from './views/MainView';
 
 render(
     <Provider store={store}>
