@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 const MainView = () => {
     return (
         <div>
-            <p>Main View</p>
+            <p>
+                <span className='glyphicon glyphicon-globe' />
+                &nbsp;
+                Main View
+            </p>
         </div>
     );
 };
