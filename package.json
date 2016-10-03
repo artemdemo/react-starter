@@ -4,10 +4,14 @@
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "npm run server",
-    "server": "webpack-dev-server",
-    "build": "webpack --progress --colors",
-    "watch": "webpack --progress --colors --watch"
+    "start": "npm run server:dev",
+    "server:dev": "webpack-dev-server --config webpack/webpack-dev.config.js",
+    "server:prod": "webpack-dev-server --config webpack/webpack-prod.config.js",
+    "build": "webpack --progress --colors --config webpack/webpack-prod.config.js",
+    "build:prod": "npm run build",
+    "build:dev": "webpack --progress --colors --config webpack/webpack-dev.config.js",
+    "watch": "npm run watch:dev",
+    "watch:dev": "webpack --progress --colors --watch --config webpack/webpack-dev.config.js"
   },
   "repository": {
     "type": "git",

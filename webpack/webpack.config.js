@@ -7,7 +7,7 @@ module.exports = {
         app: './source/index.jsx',
     },
     output: {
-        path: `${__dirname}/build`,
+        path: `${__dirname}/../build`,
         filename: './js/bundle.js',
         publicPath: '/',
     },
@@ -20,7 +20,6 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx'],
     },
-    devtool: 'source-map',
     module: {
         loaders: [
             {
@@ -32,7 +31,7 @@ module.exports = {
                 test: /\.(less|css)$/,
                 loader: ExtractTextPlugin.extract(
                     'style',
-                    'css?importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!less'
+                    'css-loader?importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!less'
                 ),
             },
             {test: /\.(png|gif|jpg)(\?.*$|$)/, loader: 'url-loader?limit=100000&name=images/[hash].[ext]'},
@@ -50,9 +49,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './source/index.html',
             filename: './index.html',
-        }),
-        new ExtractTextPlugin('./css/styles.css', {
-            allChunks: true,
         }),
     ],
     postcss: function() {

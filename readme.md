@@ -5,7 +5,6 @@ Basic packages and scripts to start app developing in react, redux and webpack
 ## Packages
 * react
 * redux
-    - thunk
     - redux-router
 * webpack
     - webpack-dev-server
@@ -37,3 +36,13 @@ And finally you'll probably want replace `.git` folder with yours:
 ```
 $ rm -rf .git/ && git init
 ```
+
+## npm commands
+
+* `$ npm start` (alias `$ npm run server:dev`) - build bundle, but without minification and serve it in the browser
+* `$ npm run server:prod` - build prod version of bundle (with minification) and serve it in the browser
+* `$ npm run build` (alias `$ npm run build:prod`) - build prod version of bundle (with minification)
+* `$ npm run build:dev` - build bundle, without minification
+* `$ npm run watch` (alias `$ npm run watch:dev`) - watch changes and build build bundle without minification
+
+
