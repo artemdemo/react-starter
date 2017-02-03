@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "build": "webpack --progress --colors --config webpack/webpack-prod.config.js",
     "build:prod": "npm run build",
     "build:dev": "webpack --progress --colors --config webpack/webpack-dev.config.js",
+    "npm-check": "npm-check --skip-unused",
+    "npm-check:update": "npm-check --update",
+    "test": "BABEL_DISABLE_CACHE=1 jest --verbose",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
     "watch": "npm run watch:dev",
     "watch:dev": "webpack --progress --colors --watch --config webpack/webpack-dev.config.js"
   },
@@ -23,19 +27,36 @@
     "url": "https://github.com/artemdemo/react-webpack-starter/issues"
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-dom"
+    ]
+  },
   "dependencies": {
     "autoprefixer": "^6.5.0",
     "babel": "^6.5.2",
     "babel-core": "^6.16.0",
     "babel-loader": "^6.2.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-polyfill": "^6.22.0",
     "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.22.0",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "css-loader": "^0.25.0",
-    "eslint": "^3.7.0",
-    "eslint-config-artem-react": "git+https://github.com/artemdemo/eslint-config-artem-react.git#1.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "history": "^4.3.0",
@@ -53,7 +74,19 @@
     "redux-thunk": "^2.1.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1"
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-runtime": "^6.20.0",
+    "enzyme": "^2.7.0",
+    "npm-check": "^5.4.0",
+    "webpack-dev-server": "^1.16.1",
+    "eslint": "^3.12.2",
+    "eslint-config-artem-react": "git+https://github.com/artemdemo/eslint-config-artem-react.git#2.1.0",
+    "react-addons-test-utils": "^15.4.1",
+    "react-test-renderer": "^15.4.1",
+    "redux-mock-store": "^1.2.1",
+    "jest-cli": "^18.1.0"
   }
 }
