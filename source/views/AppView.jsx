@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import history from '../history';
+import Container from '../components/Container/Container';
+import MainMenu from '../containers/MainMenu/MainMenu';
 
 const AppView = (props) => {
     return (
-        <div className='container'>
-            <ul>
-                <li><Link to='/'>Main page</Link></li>
-                <li><Link to='/second'>Second page</Link></li>
-            </ul>
+        <Container>
+            <MainMenu/>
             <p>
                 <button type='button'
                         className='btn btn-default'
@@ -24,7 +22,7 @@ const AppView = (props) => {
             <hr />
 
             {props.children}
-        </div>
+        </Container>
     );
 };
 

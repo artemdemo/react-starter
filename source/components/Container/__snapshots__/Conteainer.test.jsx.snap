@@ -1,0 +1,13 @@
+exports[`<Container> Render 1`] = `
+<div
+  className="container" />
+`;
+
+exports[`<Container> Render with children 1`] = `
+<div
+  className="container">
+  <div>
+    Some content
+  </div>
+</div>
+`;
