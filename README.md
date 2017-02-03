@@ -38,5 +38,8 @@ $ rm -rf .git/ && git init
 * `$ npm run build` (alias `$ npm run build:prod`) - build prod version of bundle (with minification)
 * `$ npm run build:dev` - build bundle, without minification
 * `$ npm run watch` (alias `$ npm run watch:dev`) - watch changes and build build bundle without minification
-
+* `$ npm run npm-check` - check if some of npm packages are outdated
+* `$ npm run npm-check:update` - interactive console for updating npm packages
+* `$ npm run eslint` - run eslint for code-styling checks
+* `$ npm t` - run tests
 
