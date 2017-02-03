@@ -5,8 +5,6 @@ const webpackBase = require('./webpack.config');
 module.exports = Object.assign(webpackBase, {
     devtool: 'source-map',
     plugins: webpackBase.plugins.concat([
-        new ExtractTextPlugin('./css/styles.css', {
-            allChunks: true,
-        }),
+        new ExtractTextPlugin('./css/styles.css'),
     ])
 });
