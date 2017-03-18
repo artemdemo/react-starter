@@ -19,12 +19,11 @@ NC='\033[0m'
 #     R - Renamed
 # More about `git diff`:
 # https://git-scm.com/docs/git-diff
-files=$(git diff --cached --name-only --diff-filter=ACMR | egrep '^soc-ui\/source\/.+\.js[x]?$')
+files=$(git diff --cached --name-only --diff-filter=ACMR | egrep '^source\/.+\.js[x]?$')
 
 echo "${files}"
 
 if [ -n "$files" ]; then
-    cd ./soc-ui
     node ./node_modules/jest-cli/bin/jest.js
     RESULT=$?
     if [ $RESULT -ne 0 ]
