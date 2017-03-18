@@ -12,7 +12,7 @@
     "build:dev": "webpack --progress --colors --config webpack/webpack-dev.config.js",
     "npm-check": "npm-check --skip-unused",
     "npm-check:update": "npm-check --update",
-    "test": "BABEL_DISABLE_CACHE=1 jest --verbose",
+    "test": "BABEL_DISABLE_CACHE=1 jest",
     "eslint": "./node_modules/eslint/bin/eslint.js ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
     "watch": "npm run watch:dev",
     "watch:dev": "webpack --progress --colors --watch --config webpack/webpack-dev.config.js"

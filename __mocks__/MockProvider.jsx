@@ -4,12 +4,21 @@ import configureStore from 'redux-mock-store';
 
 const mockStore = configureStore();
 
-const MockProvider = ({ children }) => {
+/**
+ * MockProvider
+ * @doc https://github.com/arnaudbenard/redux-mock-store
+ */
+const MockProvider = (props) => {
+    const { state } = props;
     return (
-        <Provider store={mockStore()}>
-            {children}
+        <Provider store={mockStore(state)}>
+            {props.children}
         </Provider>
     );
+};
+
+MockProvider.propTypes = {
+    state: React.PropTypes.shape({}),
 };
 
 export default MockProvider;
