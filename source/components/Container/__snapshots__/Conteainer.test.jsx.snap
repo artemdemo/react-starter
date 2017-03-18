@@ -1,11 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<Container> Render 1`] = `
 <div
-  className="container" />
+  className="container"
+/>
 `;
 
 exports[`<Container> Render with children 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <div>
     Some content
   </div>

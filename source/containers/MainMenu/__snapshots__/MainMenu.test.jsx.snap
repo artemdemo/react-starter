@@ -1,16 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`<MainMenu> Render 1`] = `
 <ul>
   <li>
     <a
       onClick={[Function]}
-      style={Object {}}>
+      style={Object {}}
+    >
       Main page
     </a>
   </li>
   <li>
     <a
       onClick={[Function]}
-      style={Object {}}>
+      style={Object {}}
+    >
       Second page
     </a>
   </li>
