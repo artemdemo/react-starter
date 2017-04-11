@@ -5,7 +5,7 @@ import MainMenu from './MainMenu';
 describe('<MainMenu>', () => {
     it('Render', () => {
         const tree = renderer.create(
-            <MainMenu/>
+            <MainMenu />,
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

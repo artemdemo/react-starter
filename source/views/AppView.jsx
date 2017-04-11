@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import history from '../history';
 import Container from '../components/Container/Container';
 import MainMenu from '../containers/MainMenu/MainMenu';
@@ -6,7 +6,7 @@ import MainMenu from '../containers/MainMenu/MainMenu';
 const AppView = (props) => {
     return (
         <Container>
-            <MainMenu/>
+            <MainMenu />
             <p>
                 <button type='button'
                         className='btn btn-default'
