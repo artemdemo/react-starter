@@ -11,7 +11,7 @@
     "build:prod": "npm run build",
     "build:dev": "webpack --progress --colors --config webpack/webpack-dev.config.js",
     "npm-check": "npm-check --skip-unused",
-    "test": "BABEL_DISABLE_CACHE=1 jest",
+    "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest-config.json",
     "eslint": "./node_modules/eslint/bin/eslint.js ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
     "watch": "npm run watch:dev",
     "watch:dev": "webpack --progress --colors --watch --config webpack/webpack-dev.config.js",
@@ -27,22 +27,6 @@
     "url": "https://github.com/artemdemo/react-webpack-starter/issues"
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
-  "jest": {
-    "transform": {
-      ".*": "<rootDir>/node_modules/babel-jest"
-    },
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "unmockedModulePathPatterns": [
-      "react",
-      "react-dom"
-    ]
-  },
   "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.16.0",
