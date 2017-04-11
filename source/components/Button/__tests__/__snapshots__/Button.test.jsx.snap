@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> Render empty 1`] = `
+<button
+  className="btn btn-default"
+  onClick={[Function]}
+  type="submit"
+/>
+`;
+
+exports[`<Button> With className 1`] = `
+<button
+  className="some-class btn btn-default"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> With text 1`] = `
+<button
+  className="btn btn-default"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> With type 1`] = `
+<button
+  className="btn btn-default"
+  onClick={[Function]}
+  type="button"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> block 1`] = `
+<button
+  className="btn btn-block btn-default"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> danger 1`] = `
+<button
+  className="btn btn-danger"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> lg 1`] = `
+<button
+  className="btn btn-lg btn-default"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> onClick 1`] = `
+<button
+  className="btn btn-default"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;
+
+exports[`<Button> primary 1`] = `
+<button
+  className="btn btn-primary"
+  onClick={[Function]}
+  type="submit"
+>
+  Some text
+</button>
+`;

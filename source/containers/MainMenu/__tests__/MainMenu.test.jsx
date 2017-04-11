@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MainMenu from './MainMenu';
+import MainMenu from '../MainMenu';
 
 describe('<MainMenu>', () => {
     it('Render', () => {

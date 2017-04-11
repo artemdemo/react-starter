@@ -1,6 +1,7 @@
 import React from 'react';
 import history from '../history';
 import Container from '../components/Container/Container';
+import Button from '../components/Button/Button';
 import MainMenu from '../containers/MainMenu/MainMenu';
 
 const AppView = (props) => {
@@ -8,15 +9,14 @@ const AppView = (props) => {
         <Container>
             <MainMenu />
             <p>
-                <button type='button'
-                        className='btn btn-default'
+                <Button type='button'
                         onClick={() => {
                             history.push('/third');
                         }}>
                     <span className='glyphicon glyphicon-link' />
                     &nbsp;
                     Open third page programmatically
-                </button>
+                </Button>
             </p>
 
             <hr />
