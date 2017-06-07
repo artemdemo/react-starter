@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  * @param options {Object}
  * @param options.isProduction {Boolean}
  * @param options.buildFolder {String}
- * @param options.publicPath {String}
  * @param options.appVersion {String}
  */
 module.exports = (options) => {
