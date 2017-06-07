@@ -25,6 +25,6 @@ module.exports = (options) => {
                     warnings: false,
                 },
             }),
-        ])
+        ]),
     });
 };
