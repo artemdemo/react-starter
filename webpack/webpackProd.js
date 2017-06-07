@@ -2,7 +2,6 @@ const DefinePlugin = require('webpack').DefinePlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpackCommonFactory = require('./webpackCommon');
 
 /**
@@ -16,12 +15,6 @@ module.exports = (options) => {
         }),
         plugins: webpackCommon.plugins.concat([
             new ExtractTextPlugin('./css/styles-[hash].css'),
-            new CleanWebpackPlugin(['./build/js', './build/css', './build/fonts'], {
-                verbose: true,
-                dry: false,
-                root: path.resolve(__dirname, '../'),
-                exclude: ['.gitignore'],
-            }),
             new DefinePlugin({
                 'process.env': {
                     NODE_ENV: '"production"',

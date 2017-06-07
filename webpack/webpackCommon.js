@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 /**
  * @param options {Object}
@@ -49,6 +50,12 @@ module.exports = (options) => {
             new HtmlWebpackPlugin({
                 template: './source/index.html',
                 filename: './index.html',
+            }),
+            new CleanWebpackPlugin([options.buildFolder], {
+                verbose: true,
+                dry: false,
+                root: process.cwd(),
+                exclude: ['.gitignore'],
             }),
         ],
     };
