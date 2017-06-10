@@ -10,6 +10,17 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = (options) => {
     return {
         entry: {
+            vendor: [
+                'babel-polyfill',
+                'react',
+                'react-dom',
+                'react-redux',
+                'react-router',
+                'react-router-redux',
+                'redux',
+                'history',
+                'classnames',
+            ],
             app: './source/index.jsx',
         },
         output: {
