@@ -12,7 +12,8 @@ const webpackConfig = isProduction ?
     require('./webpack/webpackDev')(configOptions);
 
 if (process.argv.indexOf('--json') === -1) {
-    console.log(' ❤ isProduction:', isProduction, '\n');
+    // eslint-disable-next-line no-console
+    console.log('\n', ' ❤ isProduction:', isProduction, '\n');
 }
 
 module.exports = webpackConfig;

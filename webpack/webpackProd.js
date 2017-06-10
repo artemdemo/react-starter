@@ -1,6 +1,5 @@
 const DefinePlugin = require('webpack').DefinePlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
-const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpackCommonFactory = require('./webpackCommon');
 
