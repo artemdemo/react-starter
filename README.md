@@ -44,4 +44,4 @@ $ rm -rf .git/ && git init
 
 **Notice**
 
-In order to run command in production mode you'll need use env variable `NODE_ENV='production`
+In order to run command in production mode you'll need use env variable `NODE_ENV='production'`

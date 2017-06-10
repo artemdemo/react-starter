@@ -1,6 +1,7 @@
 const DefinePlugin = require('webpack').DefinePlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WebpackChunkHash = require('webpack-chunk-hash');
 const webpackCommonFactory = require('./webpackCommon');
 
 /**
@@ -10,10 +11,12 @@ module.exports = (options) => {
     const webpackCommon = webpackCommonFactory(options);
     return Object.assign(webpackCommon, {
         output: Object.assign(webpackCommon.output, {
-            filename: './js/bundle-[hash].js',
+            filename: './js/bundle-[chunkhash].js',
         }),
         plugins: webpackCommon.plugins.concat([
-            new ExtractTextPlugin('./css/styles-[hash].css'),
+            // @docs https://webpack.js.org/guides/caching/
+            new WebpackChunkHash(),
+            new ExtractTextPlugin('./css/styles-[chunkhash].css'),
             new DefinePlugin({
                 'process.env': {
                     NODE_ENV: '"production"',
