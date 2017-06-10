@@ -59,8 +59,9 @@ module.exports = (options) => {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: './source/index.html',
+                template: './source/index.ejs',
                 filename: './index.html',
+                appVersion: options.appVersion,
             }),
             new CleanWebpackPlugin([options.buildFolder], {
                 verbose: true,
