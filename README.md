@@ -22,7 +22,7 @@ $ cd YOUR_APP_NAME
 ```
 
 ```
-$ yarn install
+$ npm install
 ```
 
 You also can use `npm i` instead, but yarn is better.
@@ -45,3 +45,15 @@ $ rm -rf .git/ && git init
 **Notice**
 
 In order to run command in production mode you'll need use env variable `NODE_ENV='production'`
+
+### Check for outdated packages
+
+```
+$ npm outdated
+```
+
+After that you can upgrade them:
+
+```
+$ npm update [-g] [<pkg>...]
+```
