@@ -57,7 +57,7 @@
     "webpack": "^2.6.1"
   },
   "devDependencies": {
-    "@types/jest": "^19.2.4",
+    "@types/jest": "^20.0.2",
     "@types/prop-types": "^15.5.1",
     "clean-webpack-plugin": "^0.1.15",
     "enzyme": "^2.8.2",

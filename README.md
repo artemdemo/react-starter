@@ -57,3 +57,9 @@ After that you can upgrade them:
 ```
 $ npm update [-g] [<pkg>...]
 ```
+
+If you want to upgrade to the latest version use:
+
+```
+$ npm update <pkg>@latest
+```
