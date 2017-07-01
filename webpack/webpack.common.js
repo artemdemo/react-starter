@@ -10,8 +10,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = (options) => {
     return {
         entry: {
+            // It's important that `global is first in the list
+            // This way it will contain all chunk hashes
+            // For additional information see `webpack.prod`
+            global: [
+                'classnames',
+            ],
             vendor: [
-                'babel-polyfill',
                 'react',
                 'react-dom',
                 'react-redux',
@@ -19,13 +24,13 @@ module.exports = (options) => {
                 'react-router-redux',
                 'redux',
                 'history',
-                'classnames',
             ],
-            app: './source/index.jsx',
+            bundle: './source/index.jsx',
         },
         output: {
             path: `${process.cwd()}/${options.buildFolder}`,
-            filename: './js/bundle.js',
+            filename: './js/[name].js',
+            chunkFilename: './js/[id].chunk.js',
             publicPath: '/',
         },
         resolve: {

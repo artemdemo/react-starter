@@ -1,6 +1,5 @@
-const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const webpackCommonFactory = require('./webpackCommon');
+const webpackCommonFactory = require('./webpack.common');
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`
@@ -16,11 +15,6 @@ module.exports = (options) => {
         },
         plugins: webpackCommon.plugins.concat([
             new ExtractTextPlugin('./css/styles.css'),
-            new CommonsChunkPlugin({
-                name: 'vendor',
-                filename: './js/vendor.js',
-                minChunks: Infinity,
-            }),
         ]),
     });
 };

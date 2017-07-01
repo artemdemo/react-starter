@@ -8,8 +8,8 @@ const configOptions = {
 };
 
 const webpackConfig = isProduction ?
-    require('./webpack/webpackProd')(configOptions) :
-    require('./webpack/webpackDev')(configOptions);
+    require('./webpack/webpack.prod')(configOptions) :
+    require('./webpack/webpack.dev')(configOptions);
 
 if (process.argv.indexOf('--json') === -1) {
     // eslint-disable-next-line no-console
