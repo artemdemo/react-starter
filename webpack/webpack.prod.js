@@ -1,7 +1,6 @@
 const DefinePlugin = require('webpack').DefinePlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const webpackCommonFactory = require('./webpack.common');
 
@@ -25,7 +24,6 @@ module.exports = (options) => {
                 filename: './js/global-[hash].js',
                 minChunks: Infinity,
             }),
-            new ExtractTextPlugin('./css/styles-[chunkhash].css'),
             new DefinePlugin({
                 'process.env': {
                     NODE_ENV: '"production"',

@@ -1,4 +1,3 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpackCommonFactory = require('./webpack.common');
 
 /**
@@ -13,8 +12,5 @@ module.exports = (options) => {
             contentBase: `${options.buildFolder}/`,
             historyApiFallback: true,
         },
-        plugins: webpackCommon.plugins.concat([
-            new ExtractTextPlugin('./css/styles.css'),
-        ]),
     });
 };
