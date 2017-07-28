@@ -1,4 +1,5 @@
 const webpackCommonFactory = require('./webpack.common');
+const staticCommons = require('./commonChunks').staticCommons;
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`
@@ -12,5 +13,8 @@ module.exports = (options) => {
             contentBase: `${options.buildFolder}/`,
             historyApiFallback: true,
         },
+        plugins: webpackCommon.plugins.concat([
+            staticCommons(),
+        ]),
     });
 };

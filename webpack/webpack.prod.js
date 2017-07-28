@@ -1,8 +1,8 @@
 const DefinePlugin = require('webpack').DefinePlugin;
 const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
-const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 const WebpackChunkHash = require('webpack-chunk-hash');
 const webpackCommonFactory = require('./webpack.common');
+const staticCommons = require('./commonChunks').staticCommons;
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`
@@ -16,14 +16,9 @@ module.exports = (options) => {
         plugins: webpackCommon.plugins.concat([
             // @docs https://webpack.js.org/guides/caching/
             new WebpackChunkHash(),
-            new CommonsChunkPlugin({
-                name: 'global',
-                // `global` chunk should always change hash
-                // This way we can be sure that browser will get fresh list of all chunk hashes
-                // For more information see `webpack.common`
-                filename: './js/global-[hash].js',
-                minChunks: Infinity,
-            }),
+
+            staticCommons(true),
+
             new DefinePlugin({
                 'process.env': {
                     NODE_ENV: '"production"',
