@@ -39,6 +39,7 @@ $ rm -rf .git/ && git init
 * `$ npm run build` - build version of bundle
 * `$ npm run watch` - watch changes (if don't want to use `webpack-dev-server`)
 * `$ npm run npm-check` - check if some of npm packages are outdated
+* `$ npm run stats` - analyze code distribution in bundle files
 * `$ npm run eslint` - run eslint for code-styling checks
 * `$ npm t` - run tests
 

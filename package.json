@@ -7,10 +7,11 @@
     "start": "npm run server:dev",
     "server:dev": "webpack-dev-server",
     "build": "webpack --progress --colors",
-    "npm-check": "npm-check --skip-unused",
+    "npm-check": "npm outdated",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest-config.json",
     "eslint": "./node_modules/eslint/bin/eslint.js ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
     "watch": "webpack --progress --colors --watch",
+    "stats": "webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
     "postinstall": "./postinstall.sh"
   },
   "repository": {
@@ -66,6 +67,7 @@
     "react-addons-test-utils": "^15.4.1",
     "react-test-renderer": "^15.5.4",
     "redux-mock-store": "^1.2.1",
+    "webpack-bundle-analyzer": "^2.8.3",
     "webpack-chunk-hash": "^0.4.0",
     "webpack-dev-server": "^2.4.5"
   }

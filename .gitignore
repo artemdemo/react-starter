@@ -1,6 +1,7 @@
 .idea
 .vscode
 .DS_Store
+bundle-stats.json
 node_modules
 *.log
 selenium-*
