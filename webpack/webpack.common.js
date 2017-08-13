@@ -32,7 +32,7 @@ module.exports = (options) => {
                     test: /\.(less|css)$/,
                     use: [
                         'style-loader',
-                        { loader: 'css-loader', options: { importLoaders: 1 } },
+                        { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
                         'less-loader',
                     ],
                 },
