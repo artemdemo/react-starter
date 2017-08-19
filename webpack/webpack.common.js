@@ -14,8 +14,14 @@ module.exports = (options) => {
         },
         output: {
             path: `${process.cwd()}/${options.buildFolder}`,
-            filename: './js/[name].js',
-            chunkFilename: './js/[id].chunk.js',
+
+            // @docs https://webpack.js.org/guides/caching/#deterministic-hashes
+            filename: options.isProduction ?
+                './js/[name]-[chunkhash].js' :
+                './js/[name].js',
+            chunkFilename: options.isProduction ?
+                './js/[id].chunk-[chunkhash].js' :
+                './js/[id].chunk.js',
             publicPath: '/',
         },
         resolve: {

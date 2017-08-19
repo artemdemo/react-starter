@@ -10,9 +10,6 @@ const staticCommons = require('./commonChunks').staticCommons;
 module.exports = (options) => {
     const webpackCommon = webpackCommonFactory(options);
     return Object.assign(webpackCommon, {
-        output: Object.assign(webpackCommon.output, {
-            filename: './js/[name]-[chunkhash].js',
-        }),
         plugins: webpackCommon.plugins.concat([
             // @docs https://webpack.js.org/guides/caching/
             new WebpackChunkHash(),
