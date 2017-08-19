@@ -22,8 +22,10 @@ module.exports = (options) => {
                 },
             }),
             new UglifyJsPlugin({
-                compress: {
-                    warnings: false,
+                uglifyOptions: {
+                    compress: {
+                        warnings: false,
+                    },
                 },
             }),
         ]),
