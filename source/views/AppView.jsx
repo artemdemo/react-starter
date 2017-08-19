@@ -9,10 +9,12 @@ const AppView = (props) => {
         <Container>
             <MainMenu />
             <p>
-                <Button type='button'
-                        onClick={() => {
-                            history.push('/third');
-                        }}>
+                <Button
+                    type='button'
+                    onClick={() => {
+                        history.push('/third');
+                    }}
+                >
                     <span className='glyphicon glyphicon-link' />
                     &nbsp;
                     Open third page programmatically

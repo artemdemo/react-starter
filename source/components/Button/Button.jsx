@@ -18,9 +18,11 @@ const Button = (props) => {
         'btn-danger': danger,
     });
     return (
-        <button className={buttonClass}
-                onClick={e => onClick && onClick(e)}
-                type={type}>
+        <button
+            className={buttonClass}
+            onClick={e => onClick && onClick(e)}
+            type={type}
+        >
             {props.children}
         </button>
     );
