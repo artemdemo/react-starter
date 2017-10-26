@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 
@@ -18,7 +19,7 @@ const MockProvider = (props) => {
 };
 
 MockProvider.propTypes = {
-    state: React.PropTypes.shape({}),
+    state: PropTypes.shape({}),
 };
 
 export default MockProvider;
