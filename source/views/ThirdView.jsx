@@ -1,9 +1,10 @@
 import React from 'react';
+import Icon from '../components/Icon/Icon';
 
 const ThirdView = () => {
     return (
         <div>
-            <span className='glyphicon glyphicon-fire' />
+            <Icon name='fire' />
             &nbsp;
             Third View
         </div>

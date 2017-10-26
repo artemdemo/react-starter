@@ -1,13 +1,12 @@
 import React from 'react';
+import Icon from '../components/Icon/Icon';
 
 const MainView = () => {
     return (
         <div>
-            <p>
-                <span className='glyphicon glyphicon-globe' />
-                &nbsp;
-                Main View
-            </p>
+            <Icon name='globe' />
+            &nbsp;
+            Main View
         </div>
     );
 };

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon> Empty render 1`] = `null`;
+
+exports[`<Icon> with name 1`] = `
+<span
+  className="glyphicon glyphicon-fire"
+/>
+`;

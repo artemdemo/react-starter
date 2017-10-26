@@ -1,9 +1,10 @@
 import React from 'react';
+import Icon from '../components/Icon/Icon';
 
 const SecondView = () => {
     return (
         <div>
-            <span className='glyphicon glyphicon-heart-empty' />
+            <Icon name='heart-empty' />
             &nbsp;
             Second View
         </div>
