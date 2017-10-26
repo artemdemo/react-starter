@@ -2,7 +2,9 @@ import React from 'react';
 import 'babel-polyfill';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute } from 'react-router';
+import Router from 'react-router/lib/Router';
+import Route from 'react-router/lib/Route';
+import IndexRoute from 'react-router/lib/IndexRoute';
 
 import './styles/general.less';
 
@@ -19,10 +21,10 @@ render(
         <Router history={history}>
             <Route path='/' component={AppView}>
                 <IndexRoute component={MainView} />
-                <Route path='/second' component={SecondView} />
-                <Route path='/third' component={ThirdView} />
+                <Route path='second' component={SecondView} />
+                <Route path='third' component={ThirdView} />
             </Route>
         </Router>
     </Provider>,
-    document.getElementById('app')
+    document.getElementById('app'),
 );
