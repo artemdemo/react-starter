@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -49,6 +49,7 @@
     "@types/prop-types": "^15.5.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
@@ -61,8 +62,7 @@
     "clean-webpack-plugin": "^0.1.17",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
-    "eslint": "^4.5.0",
-    "eslint-config-artem-react": "git+https://github.com/artemdemo/eslint-config-artem-react.git#2.2.0",
+    "eslint-config-artem-react": "git+https://github.com/artemdemo/eslint-config-artem-react.git#3.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^0.5.1",
     "jest-cli": "^21.2.1",

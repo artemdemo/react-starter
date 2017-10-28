@@ -1,3 +1,4 @@
 {
-    "extends": "artem-react"
+    "extends": "artem-react",
+    "parser": "babel-eslint"
 }
