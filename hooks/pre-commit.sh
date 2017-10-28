@@ -30,7 +30,7 @@ function print_error() {
 if [ -n "$files" ]; then
     printf "\n${GREEN} 🚴 ${YELLOW}Running unit tests${NC} \n\n"
 
-    node ./node_modules/jest-cli/bin/jest.js --config ./jest-config.json
+    node ./node_modules/jest-cli/bin/jest.js --config ./jest/jest-config.json
     TEST_RESULT=$?
 
     if [ $TEST_RESULT -ne 0 ]

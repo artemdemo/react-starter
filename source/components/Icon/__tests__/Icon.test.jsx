@@ -18,4 +18,20 @@ describe('<Icon>', () => {
 
         expect(tree).toMatchSnapshot();
     });
+
+    it('with className', () => {
+        const tree = renderer.create(
+            <Icon className='some-class' />,
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('with style', () => {
+        const tree = renderer.create(
+            <Icon style={{position: 'absolute'}} />,
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
 });

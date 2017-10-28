@@ -2,8 +2,13 @@
 
 exports[`<Icon> Empty render 1`] = `null`;
 
+exports[`<Icon> with className 1`] = `null`;
+
 exports[`<Icon> with name 1`] = `
 <span
   className="glyphicon glyphicon-fire"
+  style={null}
 />
 `;
+
+exports[`<Icon> with style 1`] = `null`;
