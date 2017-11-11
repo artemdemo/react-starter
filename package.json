@@ -11,7 +11,6 @@
     "npm-check": "npm outdated",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",
     "eslint": "./node_modules/eslint/bin/eslint.js ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
-    "watch": "webpack --progress --colors --watch",
     "stats": "webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
     "postinstall": "./postinstall.sh"
   },
