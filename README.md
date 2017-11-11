@@ -42,6 +42,7 @@ $ rm -rf .git/ && git init
 * `$ npm run stats` - analyze code distribution in bundle files
 * `$ npm run eslint` - run eslint for code-styling checks
 * `$ npm t` - run tests
+* `$ npm run server:prod` - build for production and run simple server to show in the browser
 
 **Notice**
 
