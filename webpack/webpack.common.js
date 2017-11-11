@@ -1,8 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextplugin = require('extract-text-webpack-plugin');
-const IgnorePlugin = require('webpack').IgnorePlugin;
-const DefinePlugin = require('webpack').DefinePlugin;
+const { IgnorePlugin, DefinePlugin } = require('webpack');
 
 /**
  * @param options {Object}

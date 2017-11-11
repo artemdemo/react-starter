@@ -1,5 +1,5 @@
 const webpackCommonFactory = require('./webpack.common');
-const staticCommons = require('./commonChunks').staticCommons;
+const { staticCommons } = require('./commonChunks');
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`

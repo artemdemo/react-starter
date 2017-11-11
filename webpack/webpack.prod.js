@@ -1,8 +1,8 @@
-const DefinePlugin = require('webpack').DefinePlugin;
-const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
+const { DefinePlugin } = require('webpack');
+const { UglifyJsPlugin } = require('webpack').optimize;
 const WebpackChunkHash = require('webpack-chunk-hash');
 const webpackCommonFactory = require('./webpack.common');
-const staticCommons = require('./commonChunks').staticCommons;
+const { staticCommons } = require('./commonChunks');
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`
