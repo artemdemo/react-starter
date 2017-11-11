@@ -68,16 +68,6 @@ exports[`<Button> lg 1`] = `
 </button>
 `;
 
-exports[`<Button> onClick 1`] = `
-<button
-  className="btn btn-default"
-  onClick={[Function]}
-  type="submit"
->
-  Some text
-</button>
-`;
-
 exports[`<Button> primary 1`] = `
 <button
   className="btn btn-primary"
