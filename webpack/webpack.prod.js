@@ -2,7 +2,7 @@ const { DefinePlugin } = require('webpack');
 const { UglifyJsPlugin } = require('webpack').optimize;
 const WebpackChunkHash = require('webpack-chunk-hash');
 const webpackCommonFactory = require('./webpack.common');
-const { staticCommons } = require('./commonChunks');
+const { commonCommons } = require('./commonChunks');
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`
@@ -14,7 +14,7 @@ module.exports = (options) => {
             // @docs https://webpack.js.org/guides/caching/
             new WebpackChunkHash(),
 
-            staticCommons(true),
+            commonCommons(true),
 
             new DefinePlugin({
                 'process.env': {

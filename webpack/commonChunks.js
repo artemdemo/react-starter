@@ -1,17 +1,14 @@
 const CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 
-const staticCommons = (prod = false) => {
-    const filename = prod ? './js/static-[chunkhash].js' : './js/static.js';
+const commonCommons = (prod = false) => {
+    const filename = prod ? './js/common-[chunkhash].js' : './js/common.js';
     return new CommonsChunkPlugin({
-        name: 'static',
+        name: 'common',
         filename,
-        minChunks(module, count) {
-            const context = module.context;
-            return context && context.indexOf('node_modules') >= 0;
-        },
+        minChunks: Infinity,
     });
 };
 
 module.exports = {
-    staticCommons,
+    commonCommons,
 };

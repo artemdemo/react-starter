@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { IgnorePlugin, DefinePlugin } = require('webpack');
-const extractCss = require('./extractCss');
+const extractStyles = require('./extractStyles');
 
 const fontLoaders = [
     {
@@ -31,7 +31,7 @@ const fontLoaders = [
  * @param options.isProduction {Boolean}
  * @param options.buildFolder {String}
  * @param options.appVersion {String}
- * @param options.extractCssFile {Boolean}
+ * @param options.extractStylesFile {Boolean}
  */
 module.exports = (options) => {
     return {
@@ -61,7 +61,7 @@ module.exports = (options) => {
                     use: 'babel-loader',
                 },
 
-                ...extractCss.loaders(options.extractCssFile),
+                extractStyles.moduleRule(options.extractStylesFile),
 
                 {test: /\.(png|gif|jpg)(\?.*$|$)/, use: 'url-loader?limit=100000&name=images/[hash].[ext]'},
                 {test: /\.(json)(\?.*$|$)/, use: 'json-loader'},
@@ -91,7 +91,7 @@ module.exports = (options) => {
                 exclude: ['.gitignore'],
             }),
 
-            ...extractCss.plugins(options.extractCssFile, options.isProduction),
+            ...extractStyles.plugins(options.extractStylesFile, options.isProduction),
         ],
     };
 };
