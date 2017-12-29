@@ -1,6 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const { IgnorePlugin, DefinePlugin } = require('webpack');
+const {
+    IgnorePlugin,
+    DefinePlugin,
+} = require('webpack');
+const {
+    ModuleConcatenationPlugin,
+} = require('webpack').optimize;
 const extractStyles = require('./extractStyles');
 
 const fontLoaders = [
@@ -71,6 +77,12 @@ module.exports = (options) => {
             ],
         },
         plugins: [
+            // ModuleConcatenationPlugin
+            // * faster build
+            // * faster execution time in the browser
+            // @link https://webpack.js.org/plugins/module-concatenation-plugin/
+            new ModuleConcatenationPlugin(),
+
             // Ignoring warnings for following plugins, case they doesn't matter
             new IgnorePlugin(/regenerator|nodent|js-beautify/, /ajv/),
 
