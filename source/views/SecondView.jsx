@@ -3,11 +3,11 @@ import Icon from '../components/Icon/Icon';
 
 const SecondView = () => {
     return (
-        <div>
+        <React.Fragment>
             <Icon name='heart-empty' />
             &nbsp;
             Second View
-        </div>
+        </React.Fragment>
     );
 };
 

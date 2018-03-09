@@ -3,11 +3,11 @@ import Icon from '../components/Icon/Icon';
 
 const ThirdView = () => {
     return (
-        <div>
+        <React.Fragment>
             <Icon name='fire' />
             &nbsp;
             Third View
-        </div>
+        </React.Fragment>
     );
 };
 
