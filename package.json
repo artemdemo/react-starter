@@ -4,7 +4,7 @@
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "npm run server:dev",
+    "start": "./start.sh",
     "server:dev": "webpack-dev-server",
     "server:prod": "NODE_ENV=production npm run build && http-server ./build",
     "build": "webpack --progress --colors",
