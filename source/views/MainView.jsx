@@ -3,11 +3,11 @@ import Icon from '../components/Icon/Icon';
 
 const MainView = () => {
     return (
-        <div>
+        <React.Fragment>
             <Icon name='globe' />
             &nbsp;
             Main View
-        </div>
+        </React.Fragment>
     );
 };
 
