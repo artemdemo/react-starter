@@ -1,4 +1,4 @@
-const ExtractTextplugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const moduleRule = (extract = false) => {
     const rule = {
@@ -6,7 +6,7 @@ const moduleRule = (extract = false) => {
         use: null,
     };
     if (extract) {
-        rule.use = ExtractTextplugin.extract({
+        rule.use = ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [
                 { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
@@ -26,7 +26,7 @@ const moduleRule = (extract = false) => {
 const plugins = (extract = false, isProduction = false) => {
     if (extract) {
         return [
-            new ExtractTextplugin({
+            new ExtractTextPlugin({
                 filename: isProduction ?
                     './css/styles-[hash].css' :
                     './css/styles.css',

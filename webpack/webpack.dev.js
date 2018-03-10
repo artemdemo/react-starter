@@ -1,5 +1,4 @@
 const webpackCommonFactory = require('./webpack.common');
-const { commonCommons } = require('./commonChunks');
 
 /**
  * @param options {Object} - see required params in `webpackCommon.js`
@@ -7,14 +6,18 @@ const { commonCommons } = require('./commonChunks');
 module.exports = (options) => {
     const webpackCommon = webpackCommonFactory(options);
     return Object.assign(webpackCommon, {
+        mode: 'development',
         devtool: 'source-map',
+        optimization: {
+            minimize: false,
+        },
         devServer: {
             port: 8080,
             contentBase: `${options.buildFolder}/`,
             historyApiFallback: true,
         },
-        plugins: webpackCommon.plugins.concat([
-            commonCommons(),
-        ]),
+        plugins: [
+            ...webpackCommon.plugins,
+        ],
     });
 };
