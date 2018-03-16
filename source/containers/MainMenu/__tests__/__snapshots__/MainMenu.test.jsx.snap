@@ -4,16 +4,16 @@ exports[`<MainMenu> Render 1`] = `
 <ul>
   <li>
     <a
+      href="/"
       onClick={[Function]}
-      style={Object {}}
     >
       Main page
     </a>
   </li>
   <li>
     <a
+      href="/second"
       onClick={[Function]}
-      style={Object {}}
     >
       Second page
     </a>
