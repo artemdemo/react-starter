@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "classnames": "^2.2.5",
     "history": "^4.7.2",
     "prop-types": "^15.6.1",

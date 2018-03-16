@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 /**
  * Buttons
  *
- * @link http://getbootstrap.com/css/#buttons
+ * @link https://getbootstrap.com/docs/4.0/components/buttons/
  */
 const Button = (props) => {
     const { type, className, lg, primary, danger, block, onClick } = props;
@@ -13,7 +13,7 @@ const Button = (props) => {
         btn: true,
         'btn-lg': lg,
         'btn-block': block,
-        'btn-default': !primary && !danger,
+        'btn-light': !primary && !danger,
         'btn-primary': primary,
         'btn-danger': danger,
     });
