@@ -1,9 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import Router from 'react-router/lib/Router';
-import Route from 'react-router/lib/Route';
-import IndexRoute from 'react-router/lib/IndexRoute';
+import { Router, Route } from 'react-router-dom';
 
 import './styles/general.less';
 
@@ -18,11 +16,11 @@ import ThirdView from './views/ThirdView';
 render(
     <Provider store={store}>
         <Router history={history}>
-            <Route path='/' component={AppView}>
-                <IndexRoute component={MainView} />
-                <Route path='second' component={SecondView} />
-                <Route path='third' component={ThirdView} />
-            </Route>
+            <AppView>
+                <Route exact path='/' component={MainView} />
+                <Route path='/second' component={SecondView} />
+                <Route path='/third' component={ThirdView} />
+            </AppView>
         </Router>
     </Provider>,
     document.getElementById('app'),

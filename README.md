@@ -4,8 +4,8 @@ Basic packages and scripts to start app developing in react, redux and webpack
 
 ## Packages
 * react
+    - react-router
 * redux
-    - redux-router
 * webpack
     - webpack-dev-server
 * less
