@@ -2,7 +2,7 @@
 
 exports[`<Button> Render empty 1`] = `
 <button
-  className="btn btn-default"
+  className="btn btn-light"
   onClick={[Function]}
   type="submit"
 />
@@ -10,7 +10,7 @@ exports[`<Button> Render empty 1`] = `
 
 exports[`<Button> With className 1`] = `
 <button
-  className="some-class btn btn-default"
+  className="some-class btn btn-light"
   onClick={[Function]}
   type="submit"
 >
@@ -20,7 +20,7 @@ exports[`<Button> With className 1`] = `
 
 exports[`<Button> With text 1`] = `
 <button
-  className="btn btn-default"
+  className="btn btn-light"
   onClick={[Function]}
   type="submit"
 >
@@ -30,7 +30,7 @@ exports[`<Button> With text 1`] = `
 
 exports[`<Button> With type 1`] = `
 <button
-  className="btn btn-default"
+  className="btn btn-light"
   onClick={[Function]}
   type="button"
 >
@@ -40,7 +40,7 @@ exports[`<Button> With type 1`] = `
 
 exports[`<Button> block 1`] = `
 <button
-  className="btn btn-block btn-default"
+  className="btn btn-block btn-light"
   onClick={[Function]}
   type="submit"
 >
@@ -60,7 +60,7 @@ exports[`<Button> danger 1`] = `
 
 exports[`<Button> lg 1`] = `
 <button
-  className="btn btn-lg btn-default"
+  className="btn btn-lg btn-light"
   onClick={[Function]}
   type="submit"
 >

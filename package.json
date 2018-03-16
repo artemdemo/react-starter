@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "5.4.0",
+  "version": "6.0.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -24,8 +24,9 @@
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",

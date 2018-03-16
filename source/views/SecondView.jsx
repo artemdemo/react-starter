@@ -4,7 +4,7 @@ import Icon from '../components/Icon/Icon';
 const SecondView = () => {
     return (
         <React.Fragment>
-            <Icon name='heart-empty' />
+            <Icon name='gift' />
             &nbsp;
             Second View
         </React.Fragment>

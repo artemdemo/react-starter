@@ -6,7 +6,7 @@ exports[`<Icon> with className 1`] = `null`;
 
 exports[`<Icon> with name 1`] = `
 <span
-  className="glyphicon glyphicon-fire"
+  className="fa fa-fire"
   style={null}
 />
 `;
