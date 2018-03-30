@@ -1,3 +1,7 @@
+## 6.1.0
+
+* Updated React v.16.3
+
 ## 6.0.0
 
 * Upgraded to bootstrap v.4
