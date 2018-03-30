@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This are pre-commit hooks for soc-ui environment
 # in order to run it you need to add following string to .git/hooks/pre-commit:
