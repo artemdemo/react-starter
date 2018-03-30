@@ -16,11 +16,13 @@ import ThirdView from './views/ThirdView';
 render(
     <Provider store={store}>
         <Router history={history}>
-            <AppView>
-                <Route exact path='/' component={MainView} />
-                <Route path='/second' component={SecondView} />
-                <Route path='/third' component={ThirdView} />
-            </AppView>
+            <React.StrictMode>
+                <AppView>
+                    <Route exact path='/' component={MainView} />
+                    <Route path='/second' component={SecondView} />
+                    <Route path='/third' component={ThirdView} />
+                </AppView>
+            </React.StrictMode>
         </Router>
     </Provider>,
     document.getElementById('app'),
