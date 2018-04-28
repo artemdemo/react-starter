@@ -96,6 +96,7 @@ module.exports = (options) => {
                 filename: './index.html',
                 appVersion: options.appVersion,
             }),
+
             new CleanWebpackPlugin([options.buildFolder], {
                 verbose: true,
                 dry: false,

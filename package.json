@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "6.2.0",
+  "version": "6.3.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -67,9 +67,10 @@
     "redux-mock-store": "^1.5.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
-    "webpack": "^3.11.0",
+    "webpack": "^4.1.1",
     "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-chunk-hash": "^0.5.0",
-    "webpack-dev-server": "^2.11.2"
+    "webpack-chunk-hash": "^0.6.0",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
   }
 }
