@@ -70,8 +70,6 @@ module.exports = (options) => {
                 extractStyles.moduleRule(options.extractStylesFile),
 
                 {test: /\.(png|gif|jpg)(\?.*$|$)/, use: 'url-loader?limit=100000&name=images/[hash].[ext]'},
-                {test: /\.(json)(\?.*$|$)/, use: 'json-loader'},
-                {test: /\.(html)(\?.*$|$)/, use: 'html-loader'},
 
                 ...fontLoaders,
             ],
