@@ -1,3 +1,9 @@
+## 6.4.0
+
+* Updated React v.16.4
+* Added sagas
+* Updated webpack 
+
 ## 6.1.0
 
 * Updated React v.16.3
