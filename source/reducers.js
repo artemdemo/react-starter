@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
+import campaigns from './model/campaigns/campaignsReducer';
 
 const reducers = combineReducers({
-    // place here your reducers
-    dummy: () => ({}),
+    campaigns,
 });
 
 export default reducers;

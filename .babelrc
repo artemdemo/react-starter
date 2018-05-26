@@ -3,13 +3,14 @@
         "react",
         ["env", {
             "targets": {
-                "browsers": ["last 2 versions", "safari >= 7"]
+                "browsers": ["last 2 versions"]
             }
         }]
     ],
     "plugins": [
         "transform-react-jsx",
         "transform-object-assign",
+        "transform-object-rest-spread",
         ["transform-runtime", {
             "polyfill": false,
             "regenerator": true

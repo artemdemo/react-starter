@@ -20,5 +20,13 @@ exports[`<MainMenu> Render 1`] = `
       JSON test page
     </a>
   </li>
+  <li>
+    <a
+      href="/campaigns"
+      onClick={[Function]}
+    >
+      Campaigns page
+    </a>
+  </li>
 </ul>
 `;
