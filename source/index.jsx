@@ -10,7 +10,7 @@ import store from './store';
 
 import AppView from './views/AppView';
 import MainView from './views/MainView';
-import SecondView from './views/SecondView';
+import JsonView from './views/JsonView';
 import ThirdView from './views/ThirdView';
 
 render(
@@ -18,7 +18,7 @@ render(
         <Router history={history}>
             <AppView>
                 <Route exact path='/' component={MainView} />
-                <Route path='/second' component={SecondView} />
+                <Route path='/json' component={JsonView} />
                 <Route path='/third' component={ThirdView} />
             </AppView>
         </Router>

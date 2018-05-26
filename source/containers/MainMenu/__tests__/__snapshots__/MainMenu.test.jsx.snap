@@ -14,10 +14,10 @@ exports[`<MainMenu> Render 1`] = `
   </li>
   <li>
     <a
-      href="/second"
+      href="/json"
       onClick={[Function]}
     >
-      Second page
+      JSON test page
     </a>
   </li>
 </ul>
