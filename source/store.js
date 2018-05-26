@@ -1,10 +1,16 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import _isFunction from 'lodash/isFunction';
 
-const reducers = combineReducers({
-    // place here your reducers
-    dummy: () => ({}),
-});
+import combinedReducers from './reducers';
+import rootSaga from './sagas';
 
-const store = createStore(reducers, applyMiddleware());
+// There is some weird bug with combination fo sagas and webpack 4
+// So it's not getting `default` export even if I'm asking it to
+// The work around is to do it explicitly
+const sagaMiddleware = _isFunction(createSagaMiddleware) ? createSagaMiddleware() : createSagaMiddleware.default();
+
+const store = createStore(combinedReducers, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(rootSaga);
 
 export default store;

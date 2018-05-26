@@ -25,16 +25,21 @@
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "bootstrap": "^4.1.1",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "superagent": "^3.8.3",
+    "superagent-bluebird-promise": "^4.2.0"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
