@@ -2,7 +2,7 @@ import { take } from 'redux-saga/effects';
 import _isError from 'lodash/isError';
 import * as constants from '../campaignsConst';
 import * as actions from '../campaignsActions';
-import {
+import campaignsSagas, {
     loadCampaignSagaFactory,
 } from '../campaignsSagas';
 
@@ -53,5 +53,11 @@ describe('campaignsSagas', () => {
         expect(loadedResult.PUT.action.type)
             .toBe(constants.CAMPAIGNS_LOADING_ERROR);
         expect(_isError(loadedResult.PUT.action.err)).toBe(true);
+    });
+
+    it('should return list of sagas', () => {
+        const gen = campaignsSagas();
+        const result = gen.next().value;
+        expect(result.hasOwnProperty('ALL')).toBe(true);
     });
 });
