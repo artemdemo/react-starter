@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { MemoryRouter } from 'react-router-dom';
 import MainMenu from '../MainMenu';
 
 /*
@@ -14,9 +13,7 @@ import MainMenu from '../MainMenu';
 describe('<MainMenu>', () => {
     it('Render', () => {
         const tree = renderer.create(
-            <MemoryRouter>
-                <MainMenu />
-            </MemoryRouter>,
+            <MainMenu />,
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

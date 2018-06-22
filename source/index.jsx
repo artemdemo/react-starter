@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, IndexRoute } from 'react-router';
 import PromiseBluebird from 'bluebird';
 
 import './styles/general.less';
@@ -23,12 +23,12 @@ PromiseBluebird.config({
 render(
     <Provider store={store}>
         <Router history={history}>
-            <AppView>
-                <Route exact path='/' component={MainView} />
-                <Route path='/json' component={JsonView} />
-                <Route path='/third' component={ThirdView} />
-                <Route path='/campaigns' component={CampaignsView} />
-            </AppView>
+            <Route path='/' component={AppView}>
+                <IndexRoute component={MainView} />
+                <Route path='json' component={JsonView} />
+                <Route path='third' component={ThirdView} />
+                <Route path='campaigns' component={CampaignsView} />
+            </Route>
         </Router>
     </Provider>,
     document.getElementById('app'),

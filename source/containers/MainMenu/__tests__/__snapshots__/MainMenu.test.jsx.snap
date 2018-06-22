@@ -6,24 +6,24 @@ exports[`<MainMenu> Render 1`] = `
 >
   <li>
     <a
-      href="/"
       onClick={[Function]}
+      style={Object {}}
     >
       Main page
     </a>
   </li>
   <li>
     <a
-      href="/json"
       onClick={[Function]}
+      style={Object {}}
     >
       JSON test page
     </a>
   </li>
   <li>
     <a
-      href="/campaigns"
       onClick={[Function]}
+      style={Object {}}
     >
       Campaigns page
     </a>
