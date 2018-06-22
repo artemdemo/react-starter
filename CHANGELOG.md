@@ -1,3 +1,8 @@
+## 6.5.0
+
+* Downgraded react-router to v.3
+* Updated packages
+
 ## 6.4.0
 
 * Updated React v.16.4
