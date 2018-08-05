@@ -14,9 +14,12 @@ module.exports = (options) => {
         // https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
         optimization: {
             minimize: true,
+            // SplitChunksPlugin
+            // https://webpack.js.org/plugins/split-chunks-plugin/
             splitChunks: {
-                chunks: 'async',
+                chunks: 'all',
                 minSize: 30000,
+                maxSize: 0,
                 minChunks: 1,
                 maxAsyncRequests: 5,
                 maxInitialRequests: 3,
@@ -34,6 +37,7 @@ module.exports = (options) => {
                 },
             },
         },
+
         plugins: webpackCommon.plugins.concat([
 
             // @docs https://webpack.js.org/guides/caching/
