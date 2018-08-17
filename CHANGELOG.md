@@ -1,3 +1,8 @@
+## 6.6.0
+
+* Added `./jest/test.sh`
+* Added mock libraries: `react-redux`, `react-click-outside`
+
 ## 6.5.0
 
 * Downgraded react-router to v.3
