@@ -2,13 +2,21 @@ let defaultTime;
 
 export const __setDefaultTime = time => defaultTime = time;
 
-const momentMock = (time = defaultTime) => {
-    return {
-        // With this approach we could test with snapshot income time and format
-        format: format => `${time} [${format}]`,
-    };
-};
+function MomentMock(time = defaultTime) {
+    if (this instanceof MomentMock) {
+        this._time = time;
+    } else {
+        return new MomentMock(time);
+    }
+    this._time = time;
+    // With this approach we could test with snapshot income time and format
+    this.format = format => `${this._time} [${format}]`;
 
-momentMock.utc = momentMock;
+    this.utc = MomentMock;
+}
 
-export default momentMock;
+MomentMock.utc = MomentMock;
+
+MomentMock.isMoment = () => true;
+
+export default MomentMock;
