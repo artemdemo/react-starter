@@ -8,7 +8,7 @@ function MomentMock(time = defaultTime) {
     } else {
         return new MomentMock(time);
     }
-    this._time = time;
+
     // With this approach we could test with snapshot income time and format
     this.format = format => `${this._time} [${format}]`;
 
