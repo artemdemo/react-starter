@@ -5,18 +5,31 @@ const moduleRule = (extract = false) => {
         test: /\.(less|css)$/,
         use: null,
     };
+    const cssLoader = {
+        loader: 'css-loader',
+        options: {
+            importLoaders: 1,
+            minimize: true,
+        },
+    };
     if (extract) {
+        // Build styles into separate css files
+        // (extract them and put outside of js)
+        //
         rule.use = ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [
-                { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
+                cssLoader,
                 'less-loader',
             ],
         });
     } else {
+        // Keep styles inside of js
+        // They will be added by js only when needed
+        //
         rule.use = [
             'style-loader',
-            { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
+            cssLoader,
             'less-loader',
         ];
     }

@@ -85,6 +85,9 @@ module.exports = (options) => {
             new IgnorePlugin(/regenerator|nodent|js-beautify/, /ajv/),
 
             // Defining global ENV variable
+            // Useful for some age cases, when you need explicitly know whether you're in development or not
+            // For example, when you want to log out something only in development mode
+            // and don't want to delete this code in production, just want to deactivate it then.
             new DefinePlugin({
                 ENV: {production: options.isProduction},
             }),

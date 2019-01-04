@@ -1,4 +1,3 @@
-const { DefinePlugin } = require('webpack');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const webpackCommonFactory = require('./webpack.common');
 
@@ -39,15 +38,8 @@ module.exports = (options) => {
         },
 
         plugins: webpackCommon.plugins.concat([
-
             // @docs https://webpack.js.org/guides/caching/
             new WebpackChunkHash(),
-
-            new DefinePlugin({
-                'process.env': {
-                    NODE_ENV: '"production"',
-                },
-            }),
         ]),
     });
 };

@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return, max-len */
+/* eslint-disable consistent-return, max-len,import/newline-after-import */
 
 const campaigns = require('./mock-data/campaigns.json');
 const campaignsRegex = /\/api\/campaigns/;
