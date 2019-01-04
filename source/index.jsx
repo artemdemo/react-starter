@@ -9,11 +9,11 @@ import './styles/general.less';
 import history from './history';
 import store from './store';
 
-import AppView from './views/AppView';
-import MainView from './views/MainView';
-import JsonView from './views/JsonView';
-import ThirdView from './views/ThirdView';
-import CampaignsView from './views/CampaignsView';
+import AppView from './views/components/AppView';
+import MainView from './views/components/MainView';
+import JsonView from './views/components/JsonView';
+import ThirdView from './views/components/ThirdView';
+import CampaignsView from './views/components/CampaignsView';
 
 PromiseBluebird.config({
     warnings: false,

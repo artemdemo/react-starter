@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<JsonView> Empty render 1`] = `
+Array [
+  <p>
+    <div
+      data-mock="Icon"
+    >
+      name: 
+      gift
+      className: 
+      style: 
+    </div>
+      JSON Test View
+  </p>,
+  <div
+    data-mock="JsonTest"
+  />,
+]
+`;
