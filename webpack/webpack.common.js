@@ -8,7 +8,6 @@ const {
     ModuleConcatenationPlugin,
 } = require('webpack').optimize;
 const extractStyles = require('./extractStyles');
-const babelConfig = require('./babel.config');
 
 const fontLoaders = [
     {
@@ -67,7 +66,6 @@ module.exports = (options) => {
                     exclude: /(node_modules|bower_components)/,
                     use: {
                         loader: 'babel-loader',
-                        options: babelConfig,
                     },
                 },
 
