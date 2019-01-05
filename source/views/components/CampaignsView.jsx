@@ -1,6 +1,7 @@
 import React from 'react';
 import { loadCampaigns } from '../../model/campaigns/campaignsReq';
 import Icon from '../../components/Icon/Icon';
+import Campaigns from '../../components/Campaigns/Campaigns';
 
 class CampaignsView extends React.PureComponent {
     constructor(props) {
@@ -39,23 +40,9 @@ class CampaignsView extends React.PureComponent {
                     Campaigns View
                 </p>
                 {this.renderLoading()}
-                <div className='row'>
-                    {this.state.campaigns.map((item, index) => (
-                        <div
-                            className='col-6 col-md-4'
-                            key={`campaigns-view-item-${index}`}
-                        >
-                            <h3>{item.name}</h3>
-                            <img
-                                src={item.picture}
-                                alt={item.name}
-                            />
-                            <p>
-                                {item.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                <Campaigns
+                    items={this.state.campaigns}
+                />
             </React.Fragment>
         );
     }
