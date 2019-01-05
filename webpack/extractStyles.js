@@ -7,10 +7,6 @@ const moduleRule = (extract = false) => {
     };
     const cssLoader = {
         loader: 'css-loader',
-        options: {
-            importLoaders: 1,
-            minimize: true,
-        },
     };
     if (extract) {
         // Build styles into separate css files
