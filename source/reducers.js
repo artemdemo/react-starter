@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
+import emails from './model/emails/emailsReducer';
 
 const reducers = combineReducers({
-    routing: routerReducer,
+    emails,
 });
 
 export default reducers;
