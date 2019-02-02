@@ -5,7 +5,11 @@ import Container from '../../components/Container/Container';
 import Button from '../../components/Button/Button';
 import MainMenu from '../../components/MainMenu/MainMenu';
 
-import('../../services/asyncService').then(s => s.default());
+// This is only test for dynamic import.
+// Just to be sure that it is not broken with new `webpack` version
+// or bacause of any other reason.
+import('../../services/asyncService')
+    .then(s => s.default());
 
 const AppView = (props) => {
     return (
