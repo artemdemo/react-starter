@@ -5,6 +5,8 @@ import Container from '../../components/Container/Container';
 import Button from '../../components/Button/Button';
 import MainMenu from '../../components/MainMenu/MainMenu';
 
+import('../../services/asyncService').then(s => s.default());
+
 const AppView = (props) => {
     return (
         <Container>
