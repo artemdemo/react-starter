@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanCSSPlugin = require('less-plugin-clean-css');
 
 const moduleRule = (extract = false) => {
     const rule = {
@@ -8,6 +9,20 @@ const moduleRule = (extract = false) => {
     const cssLoader = {
         loader: 'css-loader',
     };
+    const lessLoader = {
+        loader: 'less-loader',
+        options: {
+            plugins: [
+                // Compresses the css output from less using clean-css.
+                // @link https://github.com/less/less-plugin-clean-css
+                new CleanCSSPlugin({
+                    // advanced optimizations - selector & property merging, reduction, etc.
+                    // @link https://github.com/jakubpawlowicz/clean-css/tree/v3.0.1#how-to-use-clean-css-programmatically
+                    advanced: true,
+                }),
+            ],
+        },
+    };
     if (extract) {
         // Build styles into separate css files
         // (extract them and put outside of js)
@@ -16,7 +31,7 @@ const moduleRule = (extract = false) => {
             fallback: 'style-loader',
             use: [
                 cssLoader,
-                'less-loader',
+                lessLoader,
             ],
         });
     } else {
@@ -26,7 +41,7 @@ const moduleRule = (extract = false) => {
         rule.use = [
             'style-loader',
             cssLoader,
-            'less-loader',
+            lessLoader,
         ];
     }
     return rule;
