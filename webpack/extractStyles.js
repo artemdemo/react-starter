@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanCSSPlugin = require('less-plugin-clean-css');
 

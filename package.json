@@ -1,11 +1,12 @@
 {
   "name": "react-webpack-starter",
-  "version": "6.10.0",
+  "version": "6.11.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
     "start": "./start.sh",
     "server:dev": "webpack-dev-server",
+    "server:dev:minified": "MINIFIED=true webpack-dev-server --client-log-level none",
     "server:prod": "NODE_ENV=production npm run build && http-server ./build",
     "build": "webpack --progress --colors",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",

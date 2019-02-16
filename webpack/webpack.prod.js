@@ -24,7 +24,7 @@ module.exports = (options) => {
                 maxInitialRequests: 3,
                 name: true,
                 cacheGroups: {
-                    default: {
+                    'default': {
                         minChunks: 2,
                         priority: -20,
                         reuseExistingChunk: true,
