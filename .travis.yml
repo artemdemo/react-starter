@@ -1,0 +1,11 @@
+# Travis will need super user permissions
+# in order to run this build.
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t artemdemo/react-webpack-starter -f Dockerfile.dev .
+
+script:
+  - docker run artemdemo/react-webpack-starter npm run test -- --coverage
