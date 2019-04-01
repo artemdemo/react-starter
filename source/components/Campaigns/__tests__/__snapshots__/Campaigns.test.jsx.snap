@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Campaigns> simple render, without data 1`] = `
+<div
+  className="row"
+/>
+`;
+
+exports[`<Campaigns> with data 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-6 col-md-4"
+  >
+    <h3>
+      First campaign
+    </h3>
+    <img
+      alt="First campaign"
+      src="http://example.com/img-1.png"
+    />
+    <p>
+      Some description #1
+    </p>
+  </div>
+  <div
+    className="col-6 col-md-4"
+  >
+    <h3>
+      Second campaign
+    </h3>
+    <img
+      alt="Second campaign"
+      src="http://example.com/img-2.png"
+    />
+    <p>
+      Some description #2
+    </p>
+  </div>
+</div>
+`;

@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
