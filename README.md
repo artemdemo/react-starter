@@ -1,5 +1,7 @@
 # React with webpack - starter pack
 
+[![Build Status](https://travis-ci.org/artemdemo/react-webpack-starter.svg?branch=master)](https://travis-ci.org/artemdemo/react-webpack-starter)
+
 Basic packages and scripts to start app developing in react, redux and webpack
 
 ## Packages
