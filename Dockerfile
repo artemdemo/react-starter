@@ -6,7 +6,7 @@ RUN apk update && apk add git
 ENV NODE_ENV=production
 
 WORKDIR '/app'
-COPY package.json .
+COPY ./package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
