@@ -1,7 +1,7 @@
 FROM node:dubnium-alpine as builder
 
 # I need it for my eslint rules package that I'm using from git
-RUN apk update && apk add git
+RUN apk update && apk add --no-cache git
 
 ENV NODE_ENV=production
 
