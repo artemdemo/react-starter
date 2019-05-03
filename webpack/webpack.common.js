@@ -103,7 +103,10 @@ module.exports = (options) => {
             new CleanWebpackPlugin({
                 verbose: true,
                 dry: false,
-                cleanOnceBeforeBuildPatterns: ['!.gitignore'],
+                cleanOnceBeforeBuildPatterns: [
+                    '**/*',
+                    '!.gitignore',
+                ],
             }),
 
             ...extractStyles.plugins(options.extractStylesFile, options.isProduction),
