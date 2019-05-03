@@ -100,11 +100,10 @@ module.exports = (options) => {
                 appVersion: options.appVersion,
             }),
 
-            new CleanWebpackPlugin([options.buildFolder], {
+            new CleanWebpackPlugin({
                 verbose: true,
                 dry: false,
-                root: process.cwd(),
-                exclude: ['.gitignore'],
+                cleanOnceBeforeBuildPatterns: ['!.gitignore'],
             }),
 
             ...extractStyles.plugins(options.extractStylesFile, options.isProduction),
