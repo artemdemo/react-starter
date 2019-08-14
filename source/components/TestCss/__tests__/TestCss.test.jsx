@@ -1,14 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MainView from '../components/MainView';
+import TestCss from '../TestCss';
 
-jest.mock('../../components/Icon/Icon');
-jest.mock('../../components/TestCss/TestCss');
-
-describe('<MainView>', () => {
+describe('<TestCss>', () => {
     it('Simple render', () => {
         const tree = renderer.create(
-            <MainView />,
+            <TestCss />,
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

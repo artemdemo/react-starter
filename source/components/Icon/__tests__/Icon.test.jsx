@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import Icon from '../Icon';
 
 describe('<Icon>', () => {
-    it('Empty render', () => {
+    it('Simple render', () => {
         const tree = renderer.create(
             <Icon />,
         ).toJSON();

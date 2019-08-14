@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TestCss> Simple render 1`] = `
+<div
+  className="test-css"
+>
+  This is custom component that helps test 
+  <span
+    className="test-css__mini"
+  >
+    css minification
+  </span>
+  .
+</div>
+`;

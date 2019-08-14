@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MainView> Empty render 1`] = `
+exports[`<MainView> Simple render 1`] = `
 Array [
   <div
     data-mock="Icon"
@@ -11,5 +11,11 @@ Array [
     style: 
   </div>,
   "  Main View",
+  <p>
+     
+  </p>,
+  <div
+    data-mock="TestCss"
+  />,
 ]
 `;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Icon> Empty render 1`] = `null`;
+exports[`<Icon> Simple render 1`] = `null`;
 
 exports[`<Icon> with className 1`] = `null`;
 
