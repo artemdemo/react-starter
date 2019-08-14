@@ -6,10 +6,9 @@ Array [
     <div
       data-mock="Icon"
     >
-      name: 
-      gift
-      className: 
-      style: 
+      {
+  "name": "gift"
+}
     </div>
       JSON Test View
   </p>,

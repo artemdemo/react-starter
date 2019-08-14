@@ -6,10 +6,9 @@ Array [
     <div
       data-mock="Icon"
     >
-      name: 
-      globe
-      className: 
-      style: 
+      {
+  "name": "globe"
+}
     </div>
       Campaigns View
   </p>,

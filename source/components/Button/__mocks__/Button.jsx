@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Icon = props => (
-    <div data-mock='Icon'>
+const Button = props => (
+    <div data-mock='Button'>
         {JSON.stringify(props, null, 2)}
     </div>
 );
 
-export default Icon;
+export default Button;

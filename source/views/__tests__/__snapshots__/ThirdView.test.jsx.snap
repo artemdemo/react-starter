@@ -5,10 +5,9 @@ Array [
   <div
     data-mock="Icon"
   >
-    name: 
-    fire
-    className: 
-    style: 
+    {
+  "name": "fire"
+}
   </div>,
   "  Third View",
 ]

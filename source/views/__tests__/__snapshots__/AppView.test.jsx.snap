@@ -16,10 +16,9 @@ exports[`<AppView> Render with children 1`] = `
       <div
         data-mock="Icon"
       >
-        name: 
-        link
-        className: 
-        style: 
+        {
+  "name": "link"
+}
       </div>
         Open third page programmatically
     </button>
@@ -45,10 +44,9 @@ exports[`<AppView> Simple render 1`] = `
       <div
         data-mock="Icon"
       >
-        name: 
-        link
-        className: 
-        style: 
+        {
+  "name": "link"
+}
       </div>
         Open third page programmatically
     </button>

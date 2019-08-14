@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Campaigns = ({items}) => (
+const Campaigns = props => (
     <div data-mock='Campaigns'>
-        {JSON.stringify({
-            items,
-        }, null, 2)}
+        {JSON.stringify(props, null, 2)}
     </div>
 );
 
