@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppView> Render with children 1`] = `
+<div
+  className="container"
+>
+  <div
+    data-mock="MainMenu"
+  />
+  <p>
+    <button
+      className="btn btn-light"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        data-mock="Icon"
+      >
+        name: 
+        link
+        className: 
+        style: 
+      </div>
+        Open third page programmatically
+    </button>
+  </p>
+  <hr />
+  Children
+</div>
+`;
+
+exports[`<AppView> Simple render 1`] = `
+<div
+  className="container"
+>
+  <div
+    data-mock="MainMenu"
+  />
+  <p>
+    <button
+      className="btn btn-light"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        data-mock="Icon"
+      >
+        name: 
+        link
+        className: 
+        style: 
+      </div>
+        Open third page programmatically
+    </button>
+  </p>
+  <hr />
+</div>
+`;

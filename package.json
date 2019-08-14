@@ -8,11 +8,11 @@
     "server:dev": "webpack-dev-server",
     "server:dev:minified": "MINIFIED=true webpack-dev-server --client-log-level none",
     "server:prod": "NODE_ENV=production npm run build && http-server ./build",
-    "build": "webpack --progress --colors",
+    "build": "BABEL_ENV=production webpack --progress --colors",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",
     "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json --coverage",
     "eslint": "eslint --quiet ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
-    "stats": "webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
+    "stats": "BABEL_ENV=production webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
     "postinstall": "./postinstall.sh"
   },
   "repository": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
+    "babel-plugin-dynamic-import-node": "^2.3.0",
     "bluebird": "^3.5.3",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.5",

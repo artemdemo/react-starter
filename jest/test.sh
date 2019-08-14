@@ -12,6 +12,8 @@
 JEST="./node_modules/jest-cli/bin/jest.js"
 JEST_CONFIG="./jest/jest-config.json"
 
+export BABEL_ENV=test
+
 if [ -z "${2}" ];
 then
     BABEL_DISABLE_CACHE=1 node "${JEST}" --config "${JEST_CONFIG}" "$1"
