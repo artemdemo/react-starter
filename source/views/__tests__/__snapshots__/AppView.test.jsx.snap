@@ -8,11 +8,12 @@ exports[`<AppView> Render with children 1`] = `
     data-mock="MainMenu"
   />
   <p>
-    <button
-      className="btn btn-light"
-      onClick={[Function]}
-      type="button"
+    <div
+      data-mock="Button"
     >
+      {
+  "type": "button"
+}
       <div
         data-mock="Icon"
       >
@@ -21,7 +22,7 @@ exports[`<AppView> Render with children 1`] = `
 }
       </div>
         Open third page programmatically
-    </button>
+    </div>
   </p>
   <hr />
   Children
@@ -36,11 +37,12 @@ exports[`<AppView> Simple render 1`] = `
     data-mock="MainMenu"
   />
   <p>
-    <button
-      className="btn btn-light"
-      onClick={[Function]}
-      type="button"
+    <div
+      data-mock="Button"
     >
+      {
+  "type": "button"
+}
       <div
         data-mock="Icon"
       >
@@ -49,7 +51,7 @@ exports[`<AppView> Simple render 1`] = `
 }
       </div>
         Open third page programmatically
-    </button>
+    </div>
   </p>
   <hr />
 </div>

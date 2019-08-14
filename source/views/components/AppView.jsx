@@ -18,9 +18,7 @@ const AppView = (props) => {
             <p>
                 <Button
                     type='button'
-                    onClick={() => {
-                        history.push('/third');
-                    }}
+                    onClick={AppView.goToThirdView}
                 >
                     <Icon name='link' />
                     &nbsp;
@@ -33,6 +31,10 @@ const AppView = (props) => {
             {props.children}
         </Container>
     );
+};
+
+AppView.goToThirdView = () => {
+    history.push('/third');
 };
 
 export default AppView;
