@@ -1,3 +1,8 @@
+## 7.2.0
+
+* Added `<TestCss>`
+* Added `fontLoaders.js`
+
 ## 6.6.0
 
 * Added `./jest/test.sh`
