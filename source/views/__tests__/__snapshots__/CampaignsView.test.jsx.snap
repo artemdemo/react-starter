@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CampaignsView> Render with loading 1`] = `
+Array [
+  <p>
+    <div
+      data-mock="Icon"
+    >
+      name: 
+      globe
+      className: 
+      style: 
+    </div>
+      Campaigns View
+  </p>,
+  <p>
+    Loading...
+  </p>,
+  <div
+    data-mock="Campaigns"
+  >
+    {
+  "items": []
+}
+  </div>,
+]
+`;
