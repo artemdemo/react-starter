@@ -5,28 +5,34 @@ exports[`<MainMenu> Render 1`] = `
   className="mt-3"
 >
   <li>
-    <a
-      onClick={[Function]}
-      style={Object {}}
+    <div
+      data-mock="Link"
     >
+      {
+  "to": "/"
+}
       Main page
-    </a>
+    </div>
   </li>
   <li>
-    <a
-      onClick={[Function]}
-      style={Object {}}
+    <div
+      data-mock="Link"
     >
+      {
+  "to": "/json"
+}
       JSON test page
-    </a>
+    </div>
   </li>
   <li>
-    <a
-      onClick={[Function]}
-      style={Object {}}
+    <div
+      data-mock="Link"
     >
+      {
+  "to": "/campaigns"
+}
       Campaigns page
-    </a>
+    </div>
   </li>
 </ul>
 `;
