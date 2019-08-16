@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../../components/Icon/Icon';
-import JsonTest from '../../components/JsonTest/JsonTest';
+import JsonTest from '../../containers/JsonTest/JsonTest';
 
 const JsonView = () => {
     return (

@@ -4,7 +4,7 @@ import AppView from '../components/AppView';
 
 jest.mock('../../components/Icon/Icon');
 jest.mock('../../components/Button/Button');
-jest.mock('../../components/MainMenu/MainMenu');
+jest.mock('../../containers/MainMenu/MainMenu');
 jest.mock('../../services/asyncService');
 jest.mock('../../history');
 

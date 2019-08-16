@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import JsonView from '../components/JsonView';
 
 jest.mock('../../components/Icon/Icon');
-jest.mock('../../components/JsonTest/JsonTest');
+jest.mock('../../containers/JsonTest/JsonTest');
 
 describe('<JsonView>', () => {
     it('Empty render', () => {

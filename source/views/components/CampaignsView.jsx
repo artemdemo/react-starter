@@ -1,7 +1,7 @@
 import React from 'react';
 import { loadCampaigns } from '../../model/campaigns/campaignsReq';
 import Icon from '../../components/Icon/Icon';
-import Campaigns from '../../components/Campaigns/Campaigns';
+import Campaigns from '../../containers/Campaigns/Campaigns';
 
 class CampaignsView extends React.PureComponent {
     constructor(props) {

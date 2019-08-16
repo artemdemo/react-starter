@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select> Simple render 1`] = `
+<select
+  className="form-control"
+/>
+`;
+
+exports[`<Select> large 1`] = `
+<select
+  className="form-control form-control-lg"
+/>
+`;
+
+exports[`<Select> small 1`] = `
+<select
+  className="form-control form-control-sm"
+/>
+`;
+
+exports[`<Select> with className 1`] = `
+<select
+  className="some-class form-control"
+/>
+`;
+
+exports[`<Select> with id 1`] = `
+<select
+  className="form-control"
+  id="some-id"
+/>
+`;
+
+exports[`<Select> with items 1`] = `
+<select
+  className="form-control"
+>
+  <option
+    value="first"
+  >
+    First
+  </option>
+  <option
+    value="last"
+  >
+    Last
+  </option>
+</select>
+`;

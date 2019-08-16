@@ -4,7 +4,7 @@ import BluePromise from 'bluebird';
 import CampaignsView from '../components/CampaignsView';
 
 jest.mock('../../components/Icon/Icon');
-jest.mock('../../components/Campaigns/Campaigns');
+jest.mock('../../containers/Campaigns/Campaigns');
 jest.mock('../../model/campaigns/campaignsReq');
 
 describe('<CampaignsView>', () => {

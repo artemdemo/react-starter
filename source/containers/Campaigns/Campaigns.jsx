@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 const Campaigns = (props) => {
     return (
         <div className='row'>
-            {props.items.map((item, index) => (
+            {props.items.map(item => (
                 <div
                     className='col-6 col-md-4'
-                    key={`campaigns-item-${index}`}
+                    key={`campaigns-item ${item.name}`}
                 >
                     <h3>{item.name}</h3>
                     <img

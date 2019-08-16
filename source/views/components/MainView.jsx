@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../../components/Icon/Icon';
-import TestCss from '../../components/TestCss/TestCss';
+import TestCss from '../../containers/TestCss/TestCss';
 
 const MainView = () => {
     return (
