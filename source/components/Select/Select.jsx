@@ -4,6 +4,11 @@ import classnames from 'classnames';
 
 const Select = (props) => {
     const { className, id, list, onChange, value, large, small } = props;
+    const onChangeValue = (e) => {
+        onChange(list.find(item => item.value === e.target.value));
+    };
+    const selectedValue = value && list.find(item => item === value);
+
     return (
         <select
             className={classnames(className, {
@@ -11,13 +16,14 @@ const Select = (props) => {
                 'form-control-lg': large,
                 'form-control-sm': small,
             })}
-            value={value}
-            onChange={onChange}
+            value={selectedValue && selectedValue.value}
+            onChange={onChange && onChangeValue}
             id={id}
         >
             {list.map(item => (
                 <option
                     value={item.value}
+                    disabled={!item.value}
                     key={`${item.value} - ${item.name}`}
                 >
                     {item.name}
