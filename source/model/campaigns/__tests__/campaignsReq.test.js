@@ -1,12 +1,15 @@
 /* eslint-disable no-console */
 import * as campaignsReq from '../campaignsReq';
 
-jest.mock('superagent-bluebird-promise');
+jest.mock('axios');
 
 describe('campaignsReq', () => {
-    const requestMock = require('superagent-bluebird-promise');
+    const requestMock = require('axios');
 
     it('Should call campaigns url', (done) => {
+        requestMock.default.get.mockResolvedValueOnce({
+            data: {},
+        });
         campaignsReq.loadCampaigns()
             .then(() => {
                 expect(requestMock.default.get)

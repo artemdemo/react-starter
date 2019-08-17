@@ -1,16 +1,15 @@
 import { take, put, all } from 'redux-saga/effects';
-import request from 'superagent-bluebird-promise';
+import axios from 'axios';
 import * as actions from './emailsActions';
 
 function* loadEmailsSaga() {
     while (true) {
         yield take(actions.loadEmails);
         try {
-            const result = yield request
-                .get('/api/emails')
-                .promise();
+            const result = yield axios
+                .get('/api/emails');
 
-            yield put(actions.emailsLoaded(result.body));
+            yield put(actions.emailsLoaded(result.data));
         } catch (err) {
             yield put(actions.emailsLoadingError(err));
         }

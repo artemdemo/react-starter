@@ -1,3 +1,7 @@
+## 7.3.0
+
+* Replaced `superagent` with `axios`
+
 ## 7.2.0
 
 * Added `<TestCss>`

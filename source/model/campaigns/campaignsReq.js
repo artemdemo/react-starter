@@ -1,8 +1,7 @@
-import request from 'superagent-bluebird-promise';
+import axios from 'axios';
 
 export const loadCampaigns = () => {
-    return request
+    return axios
         .get('/api/campaigns')
-        .promise()
-        .then(result => result.body);
+        .then(result => result.data);
 };
