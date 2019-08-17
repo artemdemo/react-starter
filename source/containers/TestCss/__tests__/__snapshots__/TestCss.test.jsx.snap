@@ -2,14 +2,49 @@
 
 exports[`<TestCss> Simple render 1`] = `
 <div
-  className="test-css"
+  className="row"
 >
-  This is custom component that helps test 
-  <span
-    className="test-css__mini"
+  <div
+    className="col"
   >
-    css minification
-  </span>
-  .
+    <div
+      data-mock="Select"
+    >
+      {
+  "value": {
+    "value": "show-css",
+    "name": "Show CSS message"
+  },
+  "list": [
+    {
+      "name": "Select message"
+    },
+    {
+      "value": "show-css",
+      "name": "Show CSS message"
+    },
+    {
+      "value": "hide-css",
+      "name": "Hide CSS message"
+    }
+  ]
+}
+    </div>
+  </div>
+  <div
+    className="col"
+  >
+    <div
+      className="test-css"
+    >
+      This is custom component that helps test 
+      <span
+        className="test-css__mini"
+      >
+        css minification
+      </span>
+      .
+    </div>
+  </div>
 </div>
 `;

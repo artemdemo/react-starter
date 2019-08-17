@@ -31,16 +31,36 @@ exports[`<Select> with id 1`] = `
 />
 `;
 
+exports[`<Select> with items - first disabled 1`] = `
+<select
+  className="form-control"
+>
+  <option
+    disabled={true}
+  >
+    First
+  </option>
+  <option
+    disabled={false}
+    value="last"
+  >
+    Last
+  </option>
+</select>
+`;
+
 exports[`<Select> with items 1`] = `
 <select
   className="form-control"
 >
   <option
+    disabled={false}
     value="first"
   >
     First
   </option>
   <option
+    disabled={false}
     value="last"
   >
     Last

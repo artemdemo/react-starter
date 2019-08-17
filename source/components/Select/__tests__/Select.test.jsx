@@ -55,4 +55,17 @@ describe('<Select>', () => {
 
         expect(tree).toMatchSnapshot();
     });
+
+    it('with items - first disabled', () => {
+        const tree = renderer.create(
+            <Select
+                list={[
+                    {name: 'First'},
+                    {value: 'last', name: 'Last'},
+                ]}
+            />,
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
 });

@@ -3,18 +3,23 @@
 exports[`<MainView> Simple render 1`] = `
 Array [
   <div
-    data-mock="Icon"
+    className="mb-3"
   >
-    {
+    <div
+      data-mock="Icon"
+    >
+      {
   "name": "globe"
 }
+    </div>
+      Main View
   </div>,
-  "  Main View",
-  <p>
-     
-  </p>,
   <div
-    data-mock="TestCss"
-  />,
+    className="mb-3"
+  >
+    <div
+      data-mock="TestCss"
+    />
+  </div>,
 ]
 `;
