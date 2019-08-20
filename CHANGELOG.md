@@ -1,3 +1,7 @@
+## 7.4.0
+
+* Added placeholder to Select
+
 ## 7.3.0
 
 * Replaced `superagent` with `axios`
