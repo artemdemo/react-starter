@@ -14,6 +14,7 @@ import MainView from './views/components/MainView';
 import JsonView from './views/components/JsonView';
 import ThirdView from './views/components/ThirdView';
 import CampaignsView from './views/components/CampaignsView';
+import ComponentsView from './views/components/ComponentsView';
 
 PromiseBluebird.config({
     warnings: false,
@@ -28,6 +29,7 @@ render(
                 <Route path='/json' component={JsonView} />
                 <Route path='/third' component={ThirdView} />
                 <Route path='/campaigns' component={CampaignsView} />
+                <Route path='/components' component={ComponentsView} />
             </AppView>
         </Router>
     </Provider>,

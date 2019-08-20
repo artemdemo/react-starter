@@ -8,10 +8,11 @@ import PropTypes from 'prop-types';
  * @link https://getbootstrap.com/docs/4.0/components/buttons/
  */
 const Button = (props) => {
-    const { type, className, lg, primary, danger, block, onClick } = props;
+    const { type, className, lg, sm, primary, danger, block, onClick } = props;
     const buttonClass = classnames(className, {
         btn: true,
         'btn-lg': lg,
+        'btn-sm': sm,
         'btn-block': block,
         'btn-light': !primary && !danger,
         'btn-primary': primary,
@@ -32,6 +33,7 @@ Button.propTypes = {
     type: PropTypes.string,
     className: PropTypes.string,
     lg: PropTypes.bool,
+    sm: PropTypes.bool,
     primary: PropTypes.bool,
     danger: PropTypes.bool,
     block: PropTypes.bool,
@@ -42,6 +44,7 @@ Button.defaultProps = {
     type: 'submit',
     className: '',
     lg: false,
+    sm: false,
     primary: false,
     danger: false,
     block: false,
