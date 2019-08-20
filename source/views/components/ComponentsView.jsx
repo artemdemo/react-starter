@@ -3,16 +3,18 @@ import Icon from '../../components/Icon/Icon';
 import Button from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
 
-const MainView = () => {
-    return (
-        <React.Fragment>
-            <div className='mb-3'>
-                <Icon name='plug' />
-                &nbsp;
-                Components View
-            </div>
-            <div className='mb-3'>
+class MainView extends React.PureComponent {
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            selectItem1: undefined,
+        };
+    }
+
+    renderButtons() {
+        return (
+            <React.Fragment>
                 <h3 className='mt-3'>Buttons</h3>
                 <div className='row'>
                     <div className='col'>
@@ -25,7 +27,13 @@ const MainView = () => {
                         <Button primary lg>Primary large</Button>&nbsp;
                     </div>
                 </div>
+            </React.Fragment>
+        );
+    }
 
+    renderSelect() {
+        return (
+            <React.Fragment>
                 <h3 className='mt-3'>Select</h3>
                 <div className='row'>
                     <div className='col'>
@@ -38,11 +46,49 @@ const MainView = () => {
                         />
                     </div>
                     <div className='col'>
+                        <div className='mb-3'>
+                            With placeholder (not controlled)
+                            <Select
+                                list={[
+                                    {name: '1', value: '1'},
+                                    {name: '2', value: '2'},
+                                ]}
+                                placeholder='Select...'
+                            />
+                        </div>
+                        With placeholder (controlled)
+                        <Select
+                            list={[
+                                {name: '1', value: '1'},
+                                {name: '2', value: '2'},
+                            ]}
+                            onChange={selectItem1 => this.setState({ selectItem1 })}
+                            placeholder='Select...'
+                        />
                     </div>
                 </div>
-            </div>
-        </React.Fragment>
-    );
-};
+            </React.Fragment>
+        );
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <div className='mb-3'>
+                    <Icon name='plug' />
+                    &nbsp;
+                    Components View
+                </div>
+                <div className='mb-3'>
+
+                    {this.renderButtons()}
+
+                    {this.renderSelect()}
+                </div>
+            </React.Fragment>
+        );
+
+    }
+}
 
 export default MainView;

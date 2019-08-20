@@ -2,12 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+const PLACEHOLDER_VALUE = 'placeholder-12#$';
+
 const Select = (props) => {
-    const { className, id, list, onChange, value, large, small } = props;
+    const { className, id, placeholder, list, onChange, value, large, small } = props;
     const onChangeValue = (e) => {
         onChange(list.find(item => item.value === e.target.value));
     };
     const selectedValue = value && list.find(item => item === value);
+    const renderPlaceholder = () => {
+        if (placeholder && !value) {
+            return (
+                <option
+                    value={PLACEHOLDER_VALUE}
+                    disabled
+                >
+                    {placeholder}
+                </option>
+            );
+        }
+        return null;
+    };
 
     return (
         <select
@@ -16,10 +31,12 @@ const Select = (props) => {
                 'form-control-lg': large,
                 'form-control-sm': small,
             })}
+            defaultValue={placeholder && !value ? PLACEHOLDER_VALUE : undefined}
             value={selectedValue && selectedValue.value}
             onChange={onChange && onChangeValue}
             id={id}
         >
+            {renderPlaceholder()}
             {list.map(item => (
                 <option
                     value={item.value}
@@ -41,6 +58,7 @@ const valueProp = PropTypes.shape({
 Select.propTypes = {
     className: PropTypes.string,
     id: PropTypes.string,
+    placeholder: PropTypes.string,
     list: PropTypes.arrayOf(valueProp),
     value: valueProp,
     onChange: PropTypes.func,
@@ -51,6 +69,7 @@ Select.propTypes = {
 Select.defaultProps = {
     className: '',
     id: undefined,
+    placeholder: undefined,
     list: [],
     value: undefined,
     onChange: undefined,
