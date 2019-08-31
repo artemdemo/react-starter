@@ -2,38 +2,50 @@
 
 exports[`<Select> Simple render 1`] = `
 <select
-  className="form-control"
+  className="select form-control"
+  disabled={false}
+  value=""
 />
 `;
 
 exports[`<Select> large 1`] = `
 <select
-  className="form-control form-control-lg"
+  className="select form-control form-control-lg"
+  disabled={false}
+  value=""
 />
 `;
 
 exports[`<Select> small 1`] = `
 <select
-  className="form-control form-control-sm"
+  className="select form-control form-control-sm"
+  disabled={false}
+  value=""
 />
 `;
 
 exports[`<Select> with className 1`] = `
 <select
-  className="some-class form-control"
+  className="some-class select form-control"
+  disabled={false}
+  value=""
 />
 `;
 
 exports[`<Select> with id 1`] = `
 <select
-  className="form-control"
+  className="select form-control"
+  disabled={false}
   id="some-id"
+  value=""
 />
 `;
 
-exports[`<Select> with items - first disabled 1`] = `
+exports[`<Select> with items - first without a value 1`] = `
 <select
-  className="form-control"
+  className="select form-control"
+  disabled={false}
+  value=""
 >
   <option
     disabled={true}
@@ -41,7 +53,6 @@ exports[`<Select> with items - first disabled 1`] = `
     First
   </option>
   <option
-    disabled={false}
     value="last"
   >
     Last
@@ -51,16 +62,55 @@ exports[`<Select> with items - first disabled 1`] = `
 
 exports[`<Select> with items 1`] = `
 <select
-  className="form-control"
+  className="select form-control"
+  disabled={false}
+  value=""
 >
   <option
-    disabled={false}
     value="first"
   >
     First
   </option>
   <option
-    disabled={false}
+    value="last"
+  >
+    Last
+  </option>
+</select>
+`;
+
+exports[`<Select> with items and all disabled 1`] = `
+<select
+  className="select form-control"
+  disabled={true}
+  value=""
+>
+  <option
+    value="first"
+  >
+    First
+  </option>
+  <option
+    value="last"
+  >
+    Last
+  </option>
+</select>
+`;
+
+exports[`<Select> with items and first explicetly disabled 1`] = `
+<select
+  className="select form-control"
+  disabled={true}
+  value=""
+>
+  <option
+    disabled={true}
+    value="first"
+  >
+    First
+  </option>
+  <option
     value="last"
   >
     Last
