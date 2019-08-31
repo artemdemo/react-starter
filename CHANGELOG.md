@@ -1,6 +1,13 @@
+## 7.5.0
+
+* Updated <Select>
+    * `disabled` property for whole element and for each item
+    * Added `Select.less`
+* Updated examples
+
 ## 7.4.0
 
-* Added placeholder to Select
+* Added placeholder to <Select>
 
 ## 7.3.0
 
