@@ -4,7 +4,6 @@ exports[`<Select> Simple render 1`] = `
 <select
   className="select form-control"
   disabled={false}
-  value=""
 />
 `;
 
@@ -12,7 +11,6 @@ exports[`<Select> large 1`] = `
 <select
   className="select form-control form-control-lg"
   disabled={false}
-  value=""
 />
 `;
 
@@ -20,7 +18,6 @@ exports[`<Select> small 1`] = `
 <select
   className="select form-control form-control-sm"
   disabled={false}
-  value=""
 />
 `;
 
@@ -28,7 +25,6 @@ exports[`<Select> with className 1`] = `
 <select
   className="some-class select form-control"
   disabled={false}
-  value=""
 />
 `;
 
@@ -37,7 +33,6 @@ exports[`<Select> with id 1`] = `
   className="select form-control"
   disabled={false}
   id="some-id"
-  value=""
 />
 `;
 
@@ -45,7 +40,6 @@ exports[`<Select> with items - first without a value 1`] = `
 <select
   className="select form-control"
   disabled={false}
-  value=""
 >
   <option
     disabled={true}
@@ -64,7 +58,6 @@ exports[`<Select> with items 1`] = `
 <select
   className="select form-control"
   disabled={false}
-  value=""
 >
   <option
     value="first"
@@ -83,7 +76,6 @@ exports[`<Select> with items and all disabled 1`] = `
 <select
   className="select form-control"
   disabled={true}
-  value=""
 >
   <option
     value="first"
@@ -102,7 +94,6 @@ exports[`<Select> with items and first explicetly disabled 1`] = `
 <select
   className="select form-control"
   disabled={true}
-  value=""
 >
   <option
     disabled={true}

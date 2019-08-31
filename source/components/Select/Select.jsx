@@ -12,9 +12,11 @@ const Select = (props) => {
     const onChangeValue = (e) => {
         onChange(list.find(item => item.value === e.target.value));
     };
-    const selectedValue = value && list.find(item => item === value);
+    const selectedValue = value && list.find((item) => {
+        return item === value;
+    });
     const renderPlaceholder = () => {
-        if (placeholder && !value) {
+        if (placeholder) {
             return (
                 <option
                     value={PLACEHOLDER_VALUE}
@@ -36,7 +38,7 @@ const Select = (props) => {
                 'form-control-sm': small,
             })}
             defaultValue={placeholder && !value ? PLACEHOLDER_VALUE : undefined}
-            value={_get(selectedValue, 'value', '')}
+            value={_get(selectedValue, 'value', undefined)}
             onChange={onChange && onChangeValue}
             disabled={disabled}
             id={id}
