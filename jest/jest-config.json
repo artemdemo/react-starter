@@ -1,15 +1,16 @@
 {
     "rootDir": "../",
+    "preset": "ts-jest",
     "testMatch": [
-        "**/__tests__/**/?(*.)(spec|test).js?(x)"
+        "**/__tests__/**/?(*.)(spec|test).(t|j)s?(x)"
     ],
     "transform": {
-        ".*": "<rootDir>/node_modules/babel-jest"
+        ".*": "<rootDir>/node_modules/ts-jest"
     },
     "setupFiles": [
-        "raf/polyfill",
         "<rootDir>/jest/enzyme.config.js"
     ],
+    "moduleFileExtensions": ["js", "jsx", "ts", "tsx"],
     "moduleNameMapper": {
         "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
         "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
@@ -19,8 +20,7 @@
     ],
     "unmockedModulePathPatterns": [
         "react",
-        "react-dom",
-        "<rootDir>/node_modules/babel-polyfill/"
+        "react-dom"
     ],
     "globals": {
         "ENV": {
@@ -28,7 +28,7 @@
         }
     },
     "collectCoverageFrom": [
-        "source/**/*.{js,jsx}",
+        "source/**/*.{js,jsx,ts,tsx}",
         "!source/libraries/**",
         "!source/styles/**",
         "!source/images/**",

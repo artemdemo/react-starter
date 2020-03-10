@@ -9,6 +9,9 @@ const {
 } = require('webpack').optimize;
 const extractStyles = require('./extractStyles');
 const fontLoaders = require('./fontLoaders');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 /**
  * @param options {Object}
@@ -20,7 +23,7 @@ const fontLoaders = require('./fontLoaders');
 module.exports = (options) => {
     return {
         entry: {
-            bundle: './source/index.jsx',
+            bundle: './source/index.tsx',
         },
         output: {
             path: `${process.cwd()}/${options.buildFolder}`,
@@ -35,16 +38,30 @@ module.exports = (options) => {
             publicPath: '/',
         },
         resolve: {
-            extensions: ['.js', '.jsx'],
+            extensions: ['.ts', '.tsx', '.js', '.jsx'],
         },
         module: {
             rules: [
                 {
-                    test: /\.(mjs|js|jsx)?$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                    },
+                    test: /\.(t|j)sx?$/,
+                    exclude: /node_modules/,
+                    use: [{
+                        loader: 'ts-loader',
+                        options: {
+                            getCustomTransformers: () => {
+                                const transformersBefore = [];
+                                if (!options.isProduction) {
+                                    // This transformer will add component name to the generated class.
+                                    // It will make it easier to investigate the DOM.
+                                    // @link https://www.npmjs.com/package/typescript-plugin-styled-components
+                                    transformersBefore.push(styledComponentsTransformer);
+                                }
+                                return {
+                                    before: transformersBefore,
+                                };
+                            },
+                        },
+                    }],
                 },
 
                 extractStyles.moduleRule(options.extractStylesFile),
