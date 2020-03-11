@@ -12,7 +12,8 @@ exports[`<AppView> Render with children 1`] = `
       data-mock="Button"
     >
       {
-  "type": "button"
+  "type": "button",
+  "appearance": "light"
 }
       <div
         data-mock="Icon"
@@ -41,7 +42,8 @@ exports[`<AppView> Simple render 1`] = `
       data-mock="Button"
     >
       {
-  "type": "button"
+  "type": "button",
+  "appearance": "light"
 }
       <div
         data-mock="Icon"

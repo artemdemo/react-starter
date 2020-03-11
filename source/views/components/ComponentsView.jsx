@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import Icon from '../../components/Icon/Icon';
-import Button from '../../components/Button/Button';
+import Button, { buttonAppearance, buttonSize } from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
 
 class MainView extends React.PureComponent {
@@ -24,13 +24,13 @@ class MainView extends React.PureComponent {
                 <h3 className='mt-3'>Buttons</h3>
                 <div className='row'>
                     <div className='col'>
-                        <Button>Default</Button>&nbsp;
-                        <Button danger>Danger</Button>&nbsp;
+                        <Button appearance={buttonAppearance.LIGHT}>Light</Button>&nbsp;
+                        <Button appearance={buttonAppearance.DANGER}>Danger</Button>&nbsp;
                     </div>
                     <div className='col'>
-                        <Button primary sm>Primary small</Button>&nbsp;
-                        <Button primary>Primary standard</Button>&nbsp;
-                        <Button primary lg>Primary large</Button>&nbsp;
+                        <Button size={buttonSize.SM}>Primary small</Button>&nbsp;
+                        <Button>Primary standard</Button>&nbsp;
+                        <Button size={buttonSize.LG}>Primary large</Button>&nbsp;
                     </div>
                 </div>
             </React.Fragment>

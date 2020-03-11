@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Button from '../Button';
+import Button, { buttonAppearance, buttonSize } from '../Button';
 
 describe('<Button>', () => {
     it('Render empty', () => {
@@ -44,7 +44,7 @@ describe('<Button>', () => {
 
     it('lg', () => {
         const tree = renderer.create(
-            <Button lg>
+            <Button size={buttonSize.LG}>
                 Some text
             </Button>,
         ).toJSON();
@@ -52,9 +52,9 @@ describe('<Button>', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('primary', () => {
+    it('appearance=light', () => {
         const tree = renderer.create(
-            <Button primary>
+            <Button appearance={buttonAppearance.LIGHT}>
                 Some text
             </Button>,
         ).toJSON();
@@ -62,9 +62,9 @@ describe('<Button>', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('danger', () => {
+    it('appearance=danger', () => {
         const tree = renderer.create(
-            <Button danger>
+            <Button appearance={buttonAppearance.DANGER}>
                 Some text
             </Button>,
         ).toJSON();
