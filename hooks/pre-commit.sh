@@ -39,15 +39,15 @@ if [ -n "$files" ]; then
         exit 1
     fi
 
-    printf "\n${GREEN} 🚴 ${YELLOW}Running eslint${NC} \n\n"
-    node ./node_modules/eslint/bin/eslint.js $files
-    ESLINT_RESULT=$?
-
-    if [ $ESLINT_RESULT -ne 0 ]
-    then
-        print_error
-        exit 1
-    fi
+#    printf "\n${GREEN} 🚴 ${YELLOW}Running eslint${NC} \n\n"
+#    node ./node_modules/eslint/bin/eslint.js $files
+#    ESLINT_RESULT=$?
+#
+#    if [ $ESLINT_RESULT -ne 0 ]
+#    then
+#        print_error
+#        exit 1
+#    fi
 
     printf "\n${GREEN} 👍 ${YELLOW}Proceeding to commit${NC} \n\n"
 

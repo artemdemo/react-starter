@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
 import Button from '../Button';
 
 describe('<Button>', () => {
@@ -81,17 +80,5 @@ describe('<Button>', () => {
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
-    });
-
-    it('onClick', () => {
-        let clicked = false;
-        const wrapper = mount(
-            <Button onClick={() => clicked = true}>
-                Some text
-            </Button>,
-        );
-
-        wrapper.find('.btn').simulate('click');
-        expect(clicked).toBe(true);
     });
 });
