@@ -2,6 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import MainMenu from '../MainMenu';
 
+jest.mock('../../../components/Navbar/Navbar');
+jest.mock('../../../components/Navbar/NavbarLink');
+
 /*
  * <MemoryRouter />
  * A <Router> that keeps the history of your “URL” in memory (does not read or write to the address bar).

@@ -1,48 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MainMenu> Render 1`] = `
-<ul
-  className="mt-3"
+<div
+  data-mock="Navbar"
 >
-  <li>
-    <div
-      data-mock="Link"
-    >
-      {
+  {
+  "className": "mb-3"
+}
+  <div
+    data-mock="NavbarLink"
+  >
+    {
   "to": "/"
 }
-      Main
-    </div>
-  </li>
-  <li>
-    <div
-      data-mock="Link"
-    >
-      {
+    Main
+  </div>
+  <div
+    data-mock="NavbarLink"
+  >
+    {
   "to": "/json"
 }
-      JSON test
-    </div>
-  </li>
-  <li>
-    <div
-      data-mock="Link"
-    >
-      {
+    JSON test
+  </div>
+  <div
+    data-mock="NavbarLink"
+  >
+    {
   "to": "/campaigns"
 }
-      Campaigns
-    </div>
-  </li>
-  <li>
-    <div
-      data-mock="Link"
-    >
-      {
+    Campaigns
+  </div>
+  <div
+    data-mock="NavbarLink"
+  >
+    {
   "to": "/components"
 }
-      Components
-    </div>
-  </li>
-</ul>
+    Components
+  </div>
+</div>
 `;

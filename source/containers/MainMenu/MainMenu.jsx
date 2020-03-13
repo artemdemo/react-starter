@@ -1,15 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import Navbar from '../../components/Navbar/Navbar';
+import NavbarLink from '../../components/Navbar/NavbarLink';
 
-const MainMenu = () => {
+const MainMenu = (props) => {
     return (
-        <ul className='mt-3'>
-            <li><Link to='/'>Main</Link></li>
-            <li><Link to='/json'>JSON test</Link></li>
-            <li><Link to='/campaigns'>Campaigns</Link></li>
-            <li><Link to='/components'>Components</Link></li>
-        </ul>
+        <Navbar className={classnames(props.className, 'mb-3')}>
+            <NavbarLink to='/'>Main</NavbarLink>
+            <NavbarLink to='/json'>JSON test</NavbarLink>
+            <NavbarLink to='/campaigns'>Campaigns</NavbarLink>
+            <NavbarLink to='/components'>Components</NavbarLink>
+        </Navbar>
     );
+};
+
+MainMenu.propTypes = {
+    className: PropTypes.string,
+};
+
+MainMenu.defaultProps = {
+    className: undefined,
 };
 
 export default MainMenu;

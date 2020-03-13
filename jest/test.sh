@@ -10,7 +10,7 @@
 # $ ./jest/test.sh ./source/components/Input/__tests__/Input.test.jsx -u
 
 JEST="./node_modules/jest-cli/bin/jest.js"
-JEST_CONFIG="./jest/jest-config.json"
+JEST_CONFIG="./jest/jest.config.js"
 
 export BABEL_ENV=test
 
