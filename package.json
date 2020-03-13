@@ -27,7 +27,7 @@
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "history": "^4.9.0",
