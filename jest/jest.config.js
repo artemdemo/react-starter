@@ -5,7 +5,7 @@ module.exports = {
         '**/__tests__/**/?(*.)(spec|test).(t|j)s?(x)'
     ],
     transform: {
-        '.*': '<rootDir>/node_modules/ts-jest',
+        '^.+\\.(t|j)sx?$': 'ts-jest',
     },
     setupFiles: [],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
