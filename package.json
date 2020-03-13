@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "7.5.0",
+  "version": "7.6.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "server:dev:minified": "MINIFIED=true webpack-dev-server --client-log-level none",
     "server:prod": "NODE_ENV=production npm run build && http-server ./build",
     "build": "BABEL_ENV=production webpack --progress --colors",
-    "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",
-    "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json --coverage",
+    "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js",
+    "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js --coverage",
     "eslint": "eslint --quiet ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
     "stats": "BABEL_ENV=production webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
     "postinstall": "./postinstall.sh"
@@ -30,7 +30,7 @@
     "bootstrap": "^4.4.1",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "history": "^4.9.0",
+    "history": "^4.10.1",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
@@ -51,8 +51,8 @@
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.12.1",
-    "jest-cli": "^24.7.1",
-    "less": "^3.9.0",
+    "jest-cli": "^25.1.0",
+    "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "less-plugin-clean-css": "^1.5.1",
     "react-addons-test-utils": "^15.6.2",
