@@ -8,11 +8,9 @@ const Navbar = (props) => {
             props.className,
             'navbar navbar-expand-lg navbar-light bg-light',
         )}>
-            <div className='collapse navbar-collapse'>
-                <ul className='navbar-nav'>
-                    {props.children}
-                </ul>
-            </div>
+            <ul className='navbar-nav'>
+                {props.children}
+            </ul>
         </nav>
     );
 };

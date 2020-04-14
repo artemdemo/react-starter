@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import NavbarLink from '../../components/Navbar/NavbarLink';
 
 const MainMenu = (props) => {
+    console.log('MainMenu');
     return (
         <Navbar className={classnames(props.className, 'mb-3')}>
             <NavbarLink to='/'>Main</NavbarLink>

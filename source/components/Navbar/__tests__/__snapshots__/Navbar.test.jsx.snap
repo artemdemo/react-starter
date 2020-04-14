@@ -4,13 +4,9 @@ exports[`Navbar render default 1`] = `
 <nav
   className="navbar navbar-expand-lg navbar-light bg-light"
 >
-  <div
-    className="collapse navbar-collapse"
-  >
-    <ul
-      className="navbar-nav"
-    />
-  </div>
+  <ul
+    className="navbar-nav"
+  />
 </nav>
 `;
 
@@ -18,15 +14,11 @@ exports[`Navbar should render with children 1`] = `
 <nav
   className="navbar navbar-expand-lg navbar-light bg-light"
 >
-  <div
-    className="collapse navbar-collapse"
+  <ul
+    className="navbar-nav"
   >
-    <ul
-      className="navbar-nav"
-    >
-      children
-    </ul>
-  </div>
+    children
+  </ul>
 </nav>
 `;
 
@@ -34,14 +26,10 @@ exports[`Navbar should render with children and className 1`] = `
 <nav
   className="test-class navbar navbar-expand-lg navbar-light bg-light"
 >
-  <div
-    className="collapse navbar-collapse"
+  <ul
+    className="navbar-nav"
   >
-    <ul
-      className="navbar-nav"
-    >
-      children
-    </ul>
-  </div>
+    children
+  </ul>
 </nav>
 `;
