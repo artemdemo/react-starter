@@ -15,5 +15,5 @@ RUN npm run build
 # @docs: https://hub.docker.com/_/nginx
 FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
-# we don't have to specidy start command
+# we don't have to specify start command
 # for nginx - this command is build in in the docker image
