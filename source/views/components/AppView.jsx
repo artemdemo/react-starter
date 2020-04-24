@@ -12,6 +12,9 @@ import('../../services/asyncService')
     .then(s => s.default());
 
 const AppView = (props) => {
+    // Logging out global variable
+    console.log(ENV);
+
     return (
         <Container>
             <MainMenu />

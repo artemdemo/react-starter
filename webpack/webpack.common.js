@@ -86,7 +86,12 @@ module.exports = (options) => {
             // For example, when you want to log out something only in development mode
             // and don't want to delete this code in production, just want to deactivate it then.
             new DefinePlugin({
-                ENV: {production: options.isProduction},
+                ENV: {
+                    production: options.isProduction,
+                    // This is how `string` value should be passed.
+                    // You should wrap it in `JSON.stringify()`
+                    version: JSON.stringify(options.appVersion),
+                },
             }),
 
             new HtmlWebpackPlugin({
