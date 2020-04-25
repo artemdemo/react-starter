@@ -4,7 +4,7 @@ import TestCss from '../../containers/TestCss/TestCss';
 
 const MainView = () => {
     return (
-        <React.Fragment>
+        <>
             <div className='mb-3'>
                 <Icon name='globe' />
                 &nbsp;
@@ -13,7 +13,7 @@ const MainView = () => {
             <div className='mb-3'>
                 <TestCss />
             </div>
-        </React.Fragment>
+        </>
     );
 };
 

@@ -33,7 +33,7 @@ class CampaignsView extends React.PureComponent {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <p>
                     <Icon name='globe' />
                     &nbsp;
@@ -43,7 +43,7 @@ class CampaignsView extends React.PureComponent {
                 <Campaigns
                     items={this.state.campaigns}
                 />
-            </React.Fragment>
+            </>
         );
     }
 }

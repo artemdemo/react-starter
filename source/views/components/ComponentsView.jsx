@@ -20,7 +20,7 @@ class MainView extends React.PureComponent {
 
     renderButtons() {
         return (
-            <React.Fragment>
+            <>
                 <h3 className='mt-3'>Buttons</h3>
                 <div className='row'>
                     <div className='col'>
@@ -33,13 +33,13 @@ class MainView extends React.PureComponent {
                         <Button size={buttonSize.LG}>Primary large</Button>&nbsp;
                     </div>
                 </div>
-            </React.Fragment>
+            </>
         );
     }
 
     renderSelect() {
         return (
-            <React.Fragment>
+            <>
                 <h3 className='mt-3'>Select</h3>
                 <div className='row'>
                     <div className='col'>
@@ -82,13 +82,13 @@ class MainView extends React.PureComponent {
                         />
                     </div>
                 </div>
-            </React.Fragment>
+            </>
         );
     }
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <div className='mb-3'>
                     <Icon name='plug' />
                     &nbsp;
@@ -100,7 +100,7 @@ class MainView extends React.PureComponent {
 
                     {this.renderSelect()}
                 </div>
-            </React.Fragment>
+            </>
         );
 
     }
