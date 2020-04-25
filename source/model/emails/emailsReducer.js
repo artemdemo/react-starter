@@ -16,6 +16,7 @@ export default handleActions({
         ...state,
         data: action.payload,
         loading: false,
+        loadingError: null,
     }),
     [actions.emailsLoadingError]: (state, action) => ({
         ...state,
