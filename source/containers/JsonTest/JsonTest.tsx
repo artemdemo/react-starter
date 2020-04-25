@@ -18,14 +18,14 @@ const JsonContent = styled.pre`
 
 const JsonTest = () => {
     return (
-        <React.Fragment>
+        <>
             <p>
                 JSON import example:
             </p>
             <JsonContent>
                 {JSON.stringify(data, null, 2)}
             </JsonContent>
-        </React.Fragment>
+        </>
     );
 };
 
