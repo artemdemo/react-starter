@@ -1,8 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 
-const Navbar = (props) => {
+type TProps = {
+    className: string;
+    children?: any;
+};
+
+const Navbar = (props: TProps) => {
     return (
         <nav className={classnames(
             props.className,
@@ -13,10 +17,6 @@ const Navbar = (props) => {
             </ul>
         </nav>
     );
-};
-
-Navbar.propTypes = {
-    className: PropTypes.string,
 };
 
 Navbar.defaultProps = {
