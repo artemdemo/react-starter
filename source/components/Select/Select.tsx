@@ -12,7 +12,25 @@ const  SelectContainer = styled.select`
 
 const PLACEHOLDER_VALUE = 'placeholder-12#$';
 
-const Select = (props) => {
+export type TSelectListItem = {
+    value: string;
+    name: string;
+    disabled: boolean;
+};
+
+type TProps = {
+    className: string;
+    id: string;
+    placeholder: string;
+    disabled: boolean;
+    list: TSelectListItem[];
+    onChange: (TSelectListItem) => void;
+    value: TSelectListItem;
+    large: boolean;
+    small: boolean;
+};
+
+const Select = (props: TProps) => {
     const { className, id, placeholder, disabled, list, onChange, value, large, small } = props;
     const onChangeValue = (e) => {
         onChange(list.find(item => item.value === e.target.value));
