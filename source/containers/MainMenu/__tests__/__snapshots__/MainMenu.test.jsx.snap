@@ -7,37 +7,38 @@ exports[`<MainMenu> Render 1`] = `
   {
   "className": "mb-3"
 }
-  <div
-    data-mock="NavbarLink"
-  >
-    {
+  <div>
+    <div
+      data-mock="NavbarLink"
+    >
+      {
   "to": "/"
 }
-    Main
-  </div>
-  <div
-    data-mock="NavbarLink"
-  >
-    {
-  "to": "/json"
-}
-    JSON test
-  </div>
-  <div
-    data-mock="NavbarLink"
-  >
-    {
+      Main
+    </div>
+    <div
+      data-mock="NavbarLink"
+    >
+      {
   "to": "/campaigns"
 }
-    Campaigns
-  </div>
-  <div
-    data-mock="NavbarLink"
-  >
-    {
+      Campaigns
+    </div>
+    <div
+      data-mock="NavbarLink"
+    >
+      {
   "to": "/components"
 }
-    Components
+      Components
+    </div>
+  </div>
+  <div>
+    <div
+      data-mock="NavbarLink"
+    >
+      {}
+    </div>
   </div>
 </div>
 `;

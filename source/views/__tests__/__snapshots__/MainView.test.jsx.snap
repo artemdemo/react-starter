@@ -21,5 +21,9 @@ Array [
       data-mock="TestCss"
     />
   </div>,
+  <hr />,
+  <div
+    data-mock="JsonTest"
+  />,
 ]
 `;

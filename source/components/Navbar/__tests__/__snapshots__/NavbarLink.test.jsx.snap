@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavbarLink render default 1`] = `
-<li
-  className="nav-item"
+<div
+  className="sc-AxirZ jjcDso"
 >
   <div
     data-mock="Link"
@@ -11,12 +11,12 @@ exports[`NavbarLink render default 1`] = `
   "to": "/test-link"
 }
   </div>
-</li>
+</div>
 `;
 
 exports[`NavbarLink should render active 1`] = `
-<li
-  className="nav-item active"
+<div
+  className="sc-AxirZ jjcDso active"
 >
   <div
     data-mock="Link"
@@ -25,5 +25,5 @@ exports[`NavbarLink should render active 1`] = `
   "to": "/test-link"
 }
   </div>
-</li>
+</div>
 `;

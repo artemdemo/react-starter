@@ -4,8 +4,13 @@ exports[`Navbar render default 1`] = `
 <nav
   className="navbar navbar-expand-lg navbar-light bg-light"
 >
-  <ul
-    className="navbar-nav"
+  <div
+    className="navbar-nav d-flex justify-content-between"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   />
 </nav>
 `;
@@ -14,11 +19,16 @@ exports[`Navbar should render with children 1`] = `
 <nav
   className="navbar navbar-expand-lg navbar-light bg-light"
 >
-  <ul
-    className="navbar-nav"
+  <div
+    className="navbar-nav d-flex justify-content-between"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     children
-  </ul>
+  </div>
 </nav>
 `;
 
@@ -26,10 +36,15 @@ exports[`Navbar should render with children and className 1`] = `
 <nav
   className="test-class navbar navbar-expand-lg navbar-light bg-light"
 >
-  <ul
-    className="navbar-nav"
+  <div
+    className="navbar-nav d-flex justify-content-between"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     children
-  </ul>
+  </div>
 </nav>
 `;

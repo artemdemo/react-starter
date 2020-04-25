@@ -6,8 +6,7 @@ function* loadEmailsSaga() {
     while (true) {
         yield take(actions.loadEmails);
         try {
-            const result = yield axios
-                .get('/api/emails');
+            const result = yield axios.get('/api/emails');
 
             yield put(actions.emailsLoaded(result.data));
         } catch (err) {
