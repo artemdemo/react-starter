@@ -2,8 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import _get from 'lodash/get';
+import styled from 'styled-components';
 
-import './Select.less';
+const  SelectContainer = styled.select`
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+`;
 
 const PLACEHOLDER_VALUE = 'placeholder-12#$';
 
@@ -30,9 +35,8 @@ const Select = (props) => {
     };
 
     return (
-        <select
+        <SelectContainer
             className={classnames(className, {
-                select: true,
                 'form-control': true,
                 'form-control-lg': large,
                 'form-control-sm': small,
@@ -53,7 +57,7 @@ const Select = (props) => {
                     {item.name}
                 </option>
             ))}
-        </select>
+        </SelectContainer>
     );
 };
 
