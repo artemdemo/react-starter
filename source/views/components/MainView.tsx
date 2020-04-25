@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../../components/Icon/Icon';
 import TestCss from '../../containers/TestCss/TestCss';
+import JsonTest from '../../containers/JsonTest/JsonTest';
 
 const MainView = () => {
     return (
@@ -13,6 +14,8 @@ const MainView = () => {
             <div className='mb-3'>
                 <TestCss />
             </div>
+            <hr />
+            <JsonTest />
         </>
     );
 };

@@ -8,7 +8,6 @@ const MainMenu = (props) => {
     return (
         <Navbar className={classnames(props.className, 'mb-3')}>
             <NavbarLink to='/'>Main</NavbarLink>
-            <NavbarLink to='/json'>JSON test</NavbarLink>
             <NavbarLink to='/campaigns'>Campaigns</NavbarLink>
             <NavbarLink to='/components'>Components</NavbarLink>
         </Navbar>
