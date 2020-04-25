@@ -12,8 +12,7 @@
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js",
     "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js --coverage",
     "eslint": "eslint --quiet ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
-    "stats": "BABEL_ENV=production webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
-    "postinstall": "./postinstall.sh"
+    "stats": "BABEL_ENV=production webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html"
   },
   "repository": {
     "type": "git",
