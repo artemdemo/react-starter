@@ -1,7 +1,17 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import TransparentButton from '../TransparentButton/TransparentButton';
+
+const NavItem = styled.div`
+    display: inline-block;
+`;
+
+const ButtonItem = styled(TransparentButton)`
+    padding: .5rem 1rem;
+    line-height: inherit;
+`;
 
 type TProps = {
     to: string;
@@ -32,25 +42,24 @@ class NavbarLink extends React.PureComponent<TProps, TState> {
             );
         }
         return (
-            <TransparentButton
+            <ButtonItem
                 className='nav-link'
                 onClick={this.props.onClick}
             >
                 {this.props.children}
-            </TransparentButton>
+            </ButtonItem>
         );
     }
 
     render() {
         return (
-            <li
+            <NavItem
                 className={classnames({
-                    'nav-item': true,
                     'active': this.props.active,
                 })}
             >
                 {this.renderChildren()}
-            </li>
+            </NavItem>
         );
     }
 }

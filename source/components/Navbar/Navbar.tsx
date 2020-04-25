@@ -12,9 +12,9 @@ const Navbar = (props: TProps) => {
             props.className,
             'navbar navbar-expand-lg navbar-light bg-light',
         )}>
-            <ul className='navbar-nav'>
+            <div className='navbar-nav d-flex justify-content-between' style={{width: '100%'}}>
                 {props.children}
-            </ul>
+            </div>
         </nav>
     );
 };
