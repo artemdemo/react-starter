@@ -22,6 +22,7 @@ class NavbarLink extends React.PureComponent<TProps, TState> {
     renderChildren() {
         if (this.props.to) {
             return (
+                // @ts-ignore
                 <Link
                     className='nav-link'
                     to={this.props.to}
