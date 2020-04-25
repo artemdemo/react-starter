@@ -13,7 +13,7 @@ describe('<Select>', () => {
 
     it('large', () => {
         const tree = renderer.create(
-            <Select large />,
+            <Select size={0} />,
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('<Select>', () => {
 
     it('small', () => {
         const tree = renderer.create(
-            <Select small />,
+            <Select size={1} />,
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

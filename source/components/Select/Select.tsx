@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import _get from 'lodash/get';
 import styled from 'styled-components';
@@ -11,6 +10,11 @@ const  SelectContainer = styled.select`
 `;
 
 const PLACEHOLDER_VALUE = 'placeholder-12#$';
+
+export enum ESelectSize {
+    large,
+    small,
+}
 
 export type TSelectListItem = {
     value: string;
@@ -26,12 +30,11 @@ type TProps = {
     list: TSelectListItem[];
     onChange: (TSelectListItem) => void;
     value: TSelectListItem;
-    large: boolean;
-    small: boolean;
+    size?: ESelectSize;
 };
 
 const Select = (props: TProps) => {
-    const { className, id, placeholder, disabled, list, onChange, value, large, small } = props;
+    const { className, id, placeholder, disabled, list, onChange, value, size } = props;
     const onChangeValue = (e) => {
         onChange(list.find(item => item.value === e.target.value));
     };
@@ -56,8 +59,8 @@ const Select = (props: TProps) => {
         <SelectContainer
             className={classnames(className, {
                 'form-control': true,
-                'form-control-lg': large,
-                'form-control-sm': small,
+                'form-control-lg': size === ESelectSize.large,
+                'form-control-sm': size === ESelectSize.small,
             })}
             defaultValue={placeholder && !value ? PLACEHOLDER_VALUE : undefined}
             value={_get(selectedValue, 'value', undefined)}
@@ -79,24 +82,6 @@ const Select = (props: TProps) => {
     );
 };
 
-const valueProp = PropTypes.shape({
-    value: PropTypes.string,
-    name: PropTypes.string,
-    disabled: PropTypes.bool,
-});
-
-Select.propTypes = {
-    className: PropTypes.string,
-    id: PropTypes.string,
-    placeholder: PropTypes.string,
-    disabled: PropTypes.bool,
-    list: PropTypes.arrayOf(valueProp),
-    value: valueProp,
-    onChange: PropTypes.func,
-    large: PropTypes.bool,
-    small: PropTypes.bool,
-};
-
 Select.defaultProps = {
     className: '',
     id: undefined,
@@ -105,8 +90,6 @@ Select.defaultProps = {
     list: [],
     value: undefined,
     onChange: undefined,
-    large: false,
-    small: false,
 };
 
 export default Select;
