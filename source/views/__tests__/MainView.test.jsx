@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import MainView from '../components/MainView';
 
 jest.mock('../../components/Icon/Icon');
-jest.mock('../../containers/TestCss/TestCss');
 jest.mock('../../containers/JsonTest/JsonTest');
 
 describe('<MainView>', () => {
