@@ -2,7 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import AppView from '../components/AppView';
 
-jest.mock('../../components/Icon/Icon');
 jest.mock('../../components/Button/Button');
 jest.mock('../../containers/MainMenu/MainMenu');
 jest.mock('../../services/asyncService');

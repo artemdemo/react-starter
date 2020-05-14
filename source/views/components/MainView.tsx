@@ -1,12 +1,13 @@
 import React from 'react';
-import Icon from '../../components/Icon/Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 import JsonTest from '../../containers/JsonTest/JsonTest';
 
 const MainView = () => {
     return (
         <>
             <div className='mb-3'>
-                <Icon name='globe' />
+                <FontAwesomeIcon icon={faGlobeAfrica} />
                 &nbsp;
                 Main View
             </div>

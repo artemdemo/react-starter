@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import BluePromise from 'bluebird';
 import CampaignsView from '../components/CampaignsView';
 
-jest.mock('../../components/Icon/Icon');
 jest.mock('../../containers/Campaigns/Campaigns');
 jest.mock('../../model/campaigns/campaignsReq');
 

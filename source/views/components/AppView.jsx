@@ -1,6 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import history from '../../history';
-import Icon from '../../components/Icon/Icon';
 import Container from '../../components/Container/Container';
 import Button, { buttonAppearance } from '../../components/Button/Button';
 import MainMenu from '../../containers/MainMenu/MainMenu';
@@ -21,7 +22,7 @@ const AppView = (props) => {
                     onClick={AppView.goToThirdView}
                     appearance={buttonAppearance.LIGHT}
                 >
-                    <Icon name='link' />
+                    <FontAwesomeIcon icon={faLink} />
                     &nbsp;
                     Open third page programmatically
                 </Button>

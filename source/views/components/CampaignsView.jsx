@@ -1,7 +1,8 @@
-import React from 'react';
-import { loadCampaigns } from '../../model/campaigns/campaignsReq';
-import Icon from '../../components/Icon/Icon';
-import Campaigns from '../../containers/Campaigns/Campaigns';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faGlobe} from "@fortawesome/free-solid-svg-icons";
+import { loadCampaigns } from "../../model/campaigns/campaignsReq";
+import Campaigns from "../../containers/Campaigns/Campaigns";
 
 class CampaignsView extends React.PureComponent {
     constructor(props) {
@@ -35,7 +36,7 @@ class CampaignsView extends React.PureComponent {
         return (
             <>
                 <p>
-                    <Icon name='globe' />
+                    <FontAwesomeIcon icon={faGlobe} />
                     &nbsp;
                     Campaigns View
                 </p>

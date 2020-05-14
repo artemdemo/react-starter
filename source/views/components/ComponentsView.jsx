@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
-import Icon from '../../components/Icon/Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faLink, faPlug} from '@fortawesome/free-solid-svg-icons';
 import Button, { buttonAppearance, buttonSize } from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
 
@@ -90,7 +91,7 @@ class MainView extends React.PureComponent {
         return (
             <>
                 <div className='mb-3'>
-                    <Icon name='plug' />
+                    <FontAwesomeIcon icon={faPlug} />
                     &nbsp;
                     Components View
                 </div>
