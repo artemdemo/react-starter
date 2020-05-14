@@ -1,6 +1,5 @@
 import React from 'react';
-import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import TransparentButton from '../TransparentButton/TransparentButton';
 
@@ -15,7 +14,7 @@ const ButtonItem = styled(TransparentButton)`
 
 type TProps = {
     to: string;
-    active: boolean;
+    exact: boolean;
     children?: any;
     onClick: (e?: any) => void;
 }
@@ -25,20 +24,21 @@ type TState = {}
 class NavbarLink extends React.PureComponent<TProps, TState> {
     static defaultProps = {
         to: undefined,
-        active: false,
         onClick: undefined,
+        exact: false,
     };
 
     renderChildren() {
         if (this.props.to) {
             return (
                 // @ts-ignore
-                <Link
+                <NavLink
                     className='nav-link'
                     to={this.props.to}
+                    exact={this.props.exact}
                 >
                     {this.props.children}
-                </Link>
+                </NavLink>
             );
         }
         return (
@@ -53,11 +53,7 @@ class NavbarLink extends React.PureComponent<TProps, TState> {
 
     render() {
         return (
-            <NavItem
-                className={classnames({
-                    'active': this.props.active,
-                })}
-            >
+            <NavItem>
                 {this.renderChildren()}
             </NavItem>
         );

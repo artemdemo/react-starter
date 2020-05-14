@@ -24,7 +24,7 @@ class MainMenu extends React.PureComponent<TProps, TState> {
             <Navbar className={classnames(this.props.className, 'mb-3')}>
                 {/* I need here `div` in order to support flex styling from the `Navbar` */}
                 <div>
-                    <NavbarLink to='/'>{t('main')}</NavbarLink>
+                    <NavbarLink to='/' exact>{t('main')}</NavbarLink>
                     <NavbarLink to='/campaigns'>{t('campaigns')}</NavbarLink>
                     <NavbarLink to='/components'>{t('components')}</NavbarLink>
                 </div>
