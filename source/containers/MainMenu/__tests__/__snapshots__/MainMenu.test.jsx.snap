@@ -12,7 +12,8 @@ exports[`<MainMenu> Render 1`] = `
       data-mock="NavbarLink"
     >
       {
-  "to": "/"
+  "to": "/",
+  "exact": true
 }
       Main
     </div>

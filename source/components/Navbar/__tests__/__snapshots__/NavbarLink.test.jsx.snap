@@ -5,24 +5,38 @@ exports[`NavbarLink render default 1`] = `
   className="sc-AxirZ jjcDso"
 >
   <div
-    data-mock="Link"
+    data-mock="NavLink"
   >
     {
-  "to": "/test-link"
+  "className": "nav-link",
+  "to": "/test-link",
+  "exact": false
 }
   </div>
 </div>
 `;
 
-exports[`NavbarLink should render active 1`] = `
+exports[`NavbarLink should render button 1`] = `
 <div
-  className="sc-AxirZ jjcDso active"
+  className="sc-AxirZ jjcDso"
+>
+  <button
+    className="sc-AxjAm sc-AxiKw ayMow nav-link"
+  />
+</div>
+`;
+
+exports[`NavbarLink should render exact 1`] = `
+<div
+  className="sc-AxirZ jjcDso"
 >
   <div
-    data-mock="Link"
+    data-mock="NavLink"
   >
     {
-  "to": "/test-link"
+  "className": "nav-link",
+  "to": "/test-link",
+  "exact": true
 }
   </div>
 </div>
