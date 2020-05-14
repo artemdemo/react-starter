@@ -1,5 +1,5 @@
-import React from 'react';
-import _omit from 'lodash/omit';
+import React from "react";
+import _omit from "lodash/omit";
 
 const TransparentButton = props => (
     <button data-mock='TransparentButton'>

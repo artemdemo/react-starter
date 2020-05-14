@@ -1,6 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import NavbarLink from '../NavbarLink';
+import React from "react";
+import renderer from "react-test-renderer";
+import NavbarLink from "../NavbarLink";
 
 jest.mock('../../TransparentButton/TransparentButton');
 
