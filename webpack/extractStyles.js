@@ -13,15 +13,17 @@ const moduleRule = (extract = false) => {
     const lessLoader = {
         loader: 'less-loader',
         options: {
-            plugins: [
-                // Compresses the css output from less using clean-css.
-                // @link https://github.com/less/less-plugin-clean-css
-                new CleanCSSPlugin({
-                    // advanced optimizations - selector & property merging, reduction, etc.
-                    // @link https://github.com/jakubpawlowicz/clean-css/tree/v3.0.1#how-to-use-clean-css-programmatically
-                    advanced: true,
-                }),
-            ],
+            lessOptions: {
+                plugins: [
+                    // Compresses the css output from less using clean-css.
+                    // @link https://github.com/less/less-plugin-clean-css
+                    new CleanCSSPlugin({
+                        // advanced optimizations - selector & property merging, reduction, etc.
+                        // @link https://github.com/jakubpawlowicz/clean-css/tree/v3.0.1#how-to-use-clean-css-programmatically
+                        advanced: true,
+                    }),
+                ],
+            },
         },
     };
     if (extract) {

@@ -56,7 +56,7 @@
     "http-server": "^0.12.1",
     "jest-cli": "^25.3.0",
     "less": "^3.11.1",
-    "less-loader": "^5.0.0",
+    "less-loader": "^6.1.0",
     "less-plugin-clean-css": "^1.5.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.13.1",
