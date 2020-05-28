@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 const path = require('path');
 const express = require('express');
 const Boom = require('boom');
@@ -43,7 +41,8 @@ app.get('/*', (req, res, next) => {
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
-    logger('An unhandled error has occurred', err);
+    logger.error('An unhandled error has occurred');
+    logger(err);
 
     const statusCode = _.get(err, 'status', 500);
     const boomErr = !err.isBoom ? Boom.boomify(err, {statusCode}) : err;
@@ -66,5 +65,6 @@ app.listen(port, () => {
 });
 
 process.on('uncaughtException', (err) => {
-    logger('Uncaught exception, logged by process event listener', err);
+    logger.error('Uncaught exception, logged by process event listener');
+    logger(err);
 });

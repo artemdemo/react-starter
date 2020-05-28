@@ -1,5 +1,17 @@
 const colors = require('colors/safe');
 
+const getFileKey = fileName => `[${fileName}]`;
+
+const logError = (fileName, ...args) => {
+    const fileKeyColored = colors.red.bold(getFileKey(fileName));
+    console.log(fileKeyColored, ...args);
+};
+
+const logInfo = (fileName, ...args) => {
+    const fileKeyColored = colors.green(getFileKey(fileName));
+    console.log(fileKeyColored, ...args);
+};
+
 const logger = (fileName, ...args) => {
     let hasErr = false;
     const argsColored = args.map((item) => {
@@ -9,12 +21,16 @@ const logger = (fileName, ...args) => {
         }
         return item;
     });
-    const fileKey = `[${fileName}]`;
-    const fileKeyColored = hasErr ? colors.red.bold(fileKey) : colors.green(fileKey);
-
-    console.log(fileKeyColored, ...argsColored);
+    if (hasErr) {
+        logError(fileName, ...argsColored);
+    } else {
+        logInfo(fileName, ...argsColored)
+    }
 };
 
 module.exports = (fileKey) => {
-    return logger.bind(null, fileKey);
+    const bindedLogger = logger.bind(null, fileKey);
+    bindedLogger.error = logError.bind(null, fileKey);
+    bindedLogger.info = logInfo.bind(null, fileKey);
+    return bindedLogger;
 };
