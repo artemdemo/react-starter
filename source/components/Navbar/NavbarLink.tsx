@@ -1,14 +1,34 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import TransparentButton from "../TransparentButton/TransparentButton";
+
+const navItemCss = css`
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+`;
 
 const NavItem = styled.div`
     display: inline-block;
 `;
 
+const NavLinkSty = styled(NavLink)`
+    ${navItemCss};
+    color: inherit;
+
+    &:hover {
+        text-decoration: unset;
+    }
+`;
+
 const ButtonItem = styled(TransparentButton)`
-    padding: .5rem 1rem;
+    ${navItemCss};
     line-height: inherit;
 `;
 
@@ -32,13 +52,12 @@ class NavbarLink extends React.PureComponent<TProps, TState> {
         if (this.props.to) {
             return (
                 // @ts-ignore
-                <NavLink
-                    className='nav-link'
+                <NavLinkSty
                     to={this.props.to}
                     exact={this.props.exact}
                 >
                     {this.props.children}
-                </NavLink>
+                </NavLinkSty>
             );
         }
         return (

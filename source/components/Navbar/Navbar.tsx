@@ -10,7 +10,7 @@ const Navbar = (props: TProps) => {
     return (
         <nav className={classnames(
             props.className,
-            'navbar navbar-expand-lg navbar-light bg-light',
+            'navbar navbar-expand navbar-light bg-light',
         )}>
             <div className='navbar-nav d-flex justify-content-between' style={{width: '100%'}}>
                 {props.children}
