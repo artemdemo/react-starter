@@ -9,6 +9,7 @@ const app = express();
 
 const isDevelopment = app.get('env') === 'development';
 const publicPath = '/';
+const buildFolderPath = '../../build';
 
 app.disable('x-powered-by');
 
@@ -20,7 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(publicPath, express.static(path.resolve(__dirname, '../build/'), {
+app.use(publicPath, express.static(path.resolve(__dirname, `${buildFolderPath}/`), {
     setHeaders: (res, path) => {
         if (path.includes('index.html')) {
             res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
@@ -33,7 +34,7 @@ app.get(`${publicPath}health`, apiController.health);
 app.get('/*', (req, res, next) => {
     if (req.url === '/' || req.url.startsWith(publicPath)) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-        res.sendFile(path.resolve(__dirname, '../build/index.html'));
+        res.sendFile(path.resolve(__dirname, `${buildFolderPath}/index.html`));
     } else {
         next();
     }
@@ -61,7 +62,7 @@ const port = (() => {
     return process.env.PORT || 3000;
 })();
 app.listen(port, () => {
-    logger(`Portal (UI) server listening on port ${port}`);
+    logger(`Server listening on port ${port}`);
 });
 
 process.on('uncaughtException', (err) => {
