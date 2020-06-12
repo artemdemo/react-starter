@@ -57,8 +57,15 @@ exports[`<Select> with items - first without a value 1`] = `
 exports[`<Select> with items 1`] = `
 <select
   className="sc-AxjAm bPUWkB form-control"
+  defaultValue="placeholder-12#$"
   disabled={false}
 >
+  <option
+    disabled={true}
+    value="placeholder-12#$"
+  >
+    Mock placeholder
+  </option>
   <option
     value="first"
   >
@@ -97,6 +104,24 @@ exports[`<Select> with items and first explicetly disabled 1`] = `
 >
   <option
     disabled={true}
+    value="first"
+  >
+    First
+  </option>
+  <option
+    value="last"
+  >
+    Last
+  </option>
+</select>
+`;
+
+exports[`<Select> with items and placeholder 1`] = `
+<select
+  className="sc-AxjAm bPUWkB form-control"
+  disabled={false}
+>
+  <option
     value="first"
   >
     First

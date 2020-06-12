@@ -8,9 +8,9 @@ exports[`NavbarLink render default 1`] = `
     data-mock="NavLink"
   >
     {
-  "className": "nav-link",
   "to": "/test-link",
-  "exact": false
+  "exact": false,
+  "className": "sc-AxirZ lokpvZ"
 }
   </div>
 </div>
@@ -24,7 +24,7 @@ exports[`NavbarLink should render button 1`] = `
     data-mock="TransparentButton"
   >
     {
-  "className": "sc-AxirZ fskEG nav-link"
+  "className": "sc-AxiKw foTUbW nav-link"
 }
   </button>
 </div>
@@ -38,9 +38,9 @@ exports[`NavbarLink should render exact 1`] = `
     data-mock="NavLink"
   >
     {
-  "className": "nav-link",
   "to": "/test-link",
-  "exact": true
+  "exact": true,
+  "className": "sc-AxirZ lokpvZ"
 }
   </div>
 </div>

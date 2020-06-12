@@ -50,6 +50,20 @@ describe('<Select>', () => {
                     {value: 'first', name: 'First'},
                     {value: 'last', name: 'Last'},
                 ]}
+                placeholder='Mock placeholder'
+            />,
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('with items and placeholder', () => {
+        const tree = renderer.create(
+            <Select
+                list={[
+                    {value: 'first', name: 'First'},
+                    {value: 'last', name: 'Last'},
+                ]}
             />,
         ).toJSON();
 
