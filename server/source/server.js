@@ -30,8 +30,9 @@ app.use(publicPath, express.static(path.resolve(__dirname, `${buildFolderPath}/`
 }));
 
 app.get(`${publicPath}api/publicConfig`, apiController.publicConfigs);
+app.get(`${publicPath}api/campaigns`, apiController.campaigns);
 app.get(`${publicPath}health`, apiController.health);
-app.get('/*', (req, res, next) => {
+app.get(`${publicPath}*`, (req, res, next) => {
     if (req.url === '/' || req.url.startsWith(publicPath)) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
         res.sendFile(path.resolve(__dirname, `${buildFolderPath}/index.html`));

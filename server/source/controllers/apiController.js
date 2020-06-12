@@ -11,11 +11,21 @@ const publicConfigs = (req, res, next) => {
     }
 };
 
+const campaigns = (req, res, next) => {
+    try {
+        res.json([]);
+    } catch (e) {
+        logger(e);
+        next(Boom.badImplementation('Error in publicConfig'));
+    }
+};
+
 const health = (req, res) => {
     res.send('Aap is up and running.');
 };
 
 module.exports = {
     publicConfigs,
+    campaigns,
     health,
 };

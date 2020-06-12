@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "8.1.0",
+  "version": "8.1.1",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "server:dev": "webpack-dev-server",
     "server:dev:minified": "MINIFIED=true webpack-dev-server --client-log-level none",
     "build": "BABEL_ENV=production webpack --progress --colors",
+    "build:watch": "BABEL_ENV=production webpack --progress --colors --watch",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js",
     "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js --coverage",
     "eslint": "eslint --quiet ./source/**/*.js ./source/**/**/*.js ./source/**/*.jsx ./source/**/**/*.jsx",
