@@ -1,11 +1,11 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faLink, faPlug} from '@fortawesome/free-solid-svg-icons';
+import {faPlug} from '@fortawesome/free-solid-svg-icons';
 import Button, { buttonAppearance, buttonSize } from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
 
-class MainView extends React.PureComponent {
+class ComponentsView extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -107,4 +107,4 @@ class MainView extends React.PureComponent {
     }
 }
 
-export default MainView;
+export default ComponentsView;

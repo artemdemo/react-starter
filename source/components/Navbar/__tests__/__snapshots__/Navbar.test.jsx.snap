@@ -2,7 +2,7 @@
 
 exports[`Navbar render default 1`] = `
 <nav
-  className="navbar navbar-expand-lg navbar-light bg-light"
+  className="navbar navbar-expand navbar-light bg-light"
 >
   <div
     className="navbar-nav d-flex justify-content-between"
@@ -17,7 +17,7 @@ exports[`Navbar render default 1`] = `
 
 exports[`Navbar should render with children 1`] = `
 <nav
-  className="navbar navbar-expand-lg navbar-light bg-light"
+  className="navbar navbar-expand navbar-light bg-light"
 >
   <div
     className="navbar-nav d-flex justify-content-between"
@@ -34,7 +34,7 @@ exports[`Navbar should render with children 1`] = `
 
 exports[`Navbar should render with children and className 1`] = `
 <nav
-  className="test-class navbar navbar-expand-lg navbar-light bg-light"
+  className="test-class navbar navbar-expand navbar-light bg-light"
 >
   <div
     className="navbar-nav d-flex justify-content-between"
