@@ -7,7 +7,8 @@
 export BABEL_ENV=production
 
 if [ "$NODE_ENV" = "production" ]; then
-  npm run server:prod
+    cd server
+    npm start
 else
-  npm run server:dev
+    npm run server:dev
 fi
