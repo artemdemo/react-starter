@@ -2,35 +2,35 @@
 
 exports[`<Select> Simple render 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   disabled={false}
 />
 `;
 
 exports[`<Select> large 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control form-control-lg"
+  className="sc-bdnylx dkMkQg form-control form-control-lg"
   disabled={false}
 />
 `;
 
 exports[`<Select> small 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control form-control-sm"
+  className="sc-bdnylx dkMkQg form-control form-control-sm"
   disabled={false}
 />
 `;
 
 exports[`<Select> with className 1`] = `
 <select
-  className="sc-AxjAm bPUWkB some-class form-control"
+  className="sc-bdnylx dkMkQg some-class form-control"
   disabled={false}
 />
 `;
 
 exports[`<Select> with id 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   disabled={false}
   id="some-id"
 />
@@ -38,7 +38,7 @@ exports[`<Select> with id 1`] = `
 
 exports[`<Select> with items - first without a value 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   disabled={false}
 >
   <option
@@ -56,7 +56,7 @@ exports[`<Select> with items - first without a value 1`] = `
 
 exports[`<Select> with items 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   defaultValue="placeholder-12#$"
   disabled={false}
 >
@@ -81,7 +81,7 @@ exports[`<Select> with items 1`] = `
 
 exports[`<Select> with items and all disabled 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   disabled={true}
 >
   <option
@@ -99,7 +99,7 @@ exports[`<Select> with items and all disabled 1`] = `
 
 exports[`<Select> with items and first explicetly disabled 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   disabled={true}
 >
   <option
@@ -118,7 +118,7 @@ exports[`<Select> with items and first explicetly disabled 1`] = `
 
 exports[`<Select> with items and placeholder 1`] = `
 <select
-  className="sc-AxjAm bPUWkB form-control"
+  className="sc-bdnylx dkMkQg form-control"
   disabled={false}
 >
   <option

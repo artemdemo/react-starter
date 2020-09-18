@@ -2,7 +2,7 @@
 
 exports[`NavbarLink render default 1`] = `
 <div
-  className="sc-AxjAm iHbqWH"
+  className="sc-bdnylx dFDwsK"
 >
   <div
     data-mock="NavLink"
@@ -10,7 +10,7 @@ exports[`NavbarLink render default 1`] = `
     {
   "to": "/test-link",
   "exact": false,
-  "className": "sc-AxirZ lokpvZ"
+  "className": "sc-gtssRu gqthSC"
 }
   </div>
 </div>
@@ -18,13 +18,13 @@ exports[`NavbarLink render default 1`] = `
 
 exports[`NavbarLink should render button 1`] = `
 <div
-  className="sc-AxjAm iHbqWH"
+  className="sc-bdnylx dFDwsK"
 >
   <button
     data-mock="TransparentButton"
   >
     {
-  "className": "sc-AxiKw foTUbW nav-link"
+  "className": "sc-dlnjPT dJvlHt nav-link"
 }
   </button>
 </div>
@@ -32,7 +32,7 @@ exports[`NavbarLink should render button 1`] = `
 
 exports[`NavbarLink should render exact 1`] = `
 <div
-  className="sc-AxjAm iHbqWH"
+  className="sc-bdnylx dFDwsK"
 >
   <div
     data-mock="NavLink"
@@ -40,7 +40,7 @@ exports[`NavbarLink should render exact 1`] = `
     {
   "to": "/test-link",
   "exact": true,
-  "className": "sc-AxirZ lokpvZ"
+  "className": "sc-gtssRu gqthSC"
 }
   </div>
 </div>
