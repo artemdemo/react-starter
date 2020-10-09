@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "8.3.0",
+  "version": "8.4.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@types/jest": "^26.0.14",
     "@types/prop-types": "^15.7.3",
