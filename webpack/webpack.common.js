@@ -98,6 +98,7 @@ module.exports = (options) => {
                 template: './source/index.ejs',
                 filename: './index.html',
                 appVersion: options.appVersion,
+                appBuildDate: new Date().toISOString(),
             }),
 
             new CleanWebpackPlugin({
