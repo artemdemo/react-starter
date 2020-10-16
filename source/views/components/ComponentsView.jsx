@@ -1,8 +1,8 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPlug} from '@fortawesome/free-solid-svg-icons';
-import Button, { buttonAppearance, buttonSize } from '../../components/Button/Button';
+import Button, {EButtonAppearance, EButtonSize} from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
 
 class ComponentsView extends React.PureComponent {
@@ -25,13 +25,13 @@ class ComponentsView extends React.PureComponent {
                 <h3 className='mt-3'>Buttons</h3>
                 <div className='row'>
                     <div className='col'>
-                        <Button appearance={buttonAppearance.LIGHT}>Light</Button>&nbsp;
-                        <Button appearance={buttonAppearance.DANGER}>Danger</Button>&nbsp;
+                        <Button appearance={EButtonAppearance.LIGHT}>Light</Button>&nbsp;
+                        <Button appearance={EButtonAppearance.DANGER}>Danger</Button>&nbsp;
                     </div>
                     <div className='col'>
-                        <Button size={buttonSize.SM}>Primary small</Button>&nbsp;
+                        <Button sizeAppearance={EButtonSize.SM}>Primary small</Button>&nbsp;
                         <Button>Primary standard</Button>&nbsp;
-                        <Button size={buttonSize.LG}>Primary large</Button>&nbsp;
+                        <Button sizeAppearance={EButtonSize.LG}>Primary large</Button>&nbsp;
                     </div>
                 </div>
             </>

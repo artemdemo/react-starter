@@ -1,13 +1,13 @@
 import React from 'react';
 import _omit from 'lodash/omit';
 
-export const buttonAppearance = {
+export const EButtonAppearance = {
     PRIMARY: 'primary',
     DANGER: 'danger',
     LIGHT: 'light',
 };
 
-export const buttonSize = {
+export const EButtonSize = {
     SM: 'sm',
     LG: 'lg',
 };

@@ -64,7 +64,7 @@ Array [
           data-mock="Button"
         >
           {
-  "size": "sm"
+  "sizeAppearance": "sm"
 }
           Primary small
         </div>
@@ -80,7 +80,7 @@ Array [
           data-mock="Button"
         >
           {
-  "size": "lg"
+  "sizeAppearance": "lg"
 }
           Primary large
         </div>

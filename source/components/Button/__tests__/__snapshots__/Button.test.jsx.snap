@@ -3,14 +3,12 @@
 exports[`<Button> Render empty 1`] = `
 <button
   className="btn btn-primary"
-  type="submit"
 />
 `;
 
 exports[`<Button> With className 1`] = `
 <button
   className="some-class btn btn-primary"
-  type="submit"
 >
   Some text
 </button>
@@ -19,7 +17,6 @@ exports[`<Button> With className 1`] = `
 exports[`<Button> With text 1`] = `
 <button
   className="btn btn-primary"
-  type="submit"
 >
   Some text
 </button>
@@ -37,7 +34,6 @@ exports[`<Button> With type 1`] = `
 exports[`<Button> appearance=danger 1`] = `
 <button
   className="btn btn-danger"
-  type="submit"
 >
   Some text
 </button>
@@ -46,7 +42,6 @@ exports[`<Button> appearance=danger 1`] = `
 exports[`<Button> appearance=light 1`] = `
 <button
   className="btn btn-light"
-  type="submit"
 >
   Some text
 </button>
@@ -55,7 +50,6 @@ exports[`<Button> appearance=light 1`] = `
 exports[`<Button> block 1`] = `
 <button
   className="btn btn-block btn-primary"
-  type="submit"
 >
   Some text
 </button>
@@ -63,8 +57,8 @@ exports[`<Button> block 1`] = `
 
 exports[`<Button> lg 1`] = `
 <button
-  className="btn btn-lg btn-primary"
-  type="submit"
+  className="btn btn-primary"
+  size="lg"
 >
   Some text
 </button>
