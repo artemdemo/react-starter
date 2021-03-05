@@ -1,6 +1,6 @@
 type TENV = {
-    production: boolean;
-    version: string;
+  production: boolean;
+  version: string;
 };
 
 declare const ENV: TENV;
