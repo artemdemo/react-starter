@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames';
-import _get from 'lodash/get';
 import styled from 'styled-components';
 
 const SelectContainer = styled.select`
@@ -63,7 +62,7 @@ export const Select = (props: TProps) => {
         'form-control-sm': size === ESelectSize.small,
       })}
       defaultValue={placeholder && !value ? PLACEHOLDER_VALUE : undefined}
-      value={_get(selectedValue, 'value', undefined)}
+      value={selectedValue?.value}
       onChange={onChange && onChangeValue}
       disabled={disabled}
       id={id}
