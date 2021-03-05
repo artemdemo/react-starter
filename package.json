@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/artemdemo/react-webpack-starter#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@types/jest": "^26.0.14",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.51",
