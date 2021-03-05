@@ -12,7 +12,7 @@ import MainMenu from '../../containers/MainMenu/MainMenu';
 import('../../services/asyncService')
   .then(s => s.default());
 
-const AppView = (props) => {
+const AppView: React.FC = (props) => {
   let history = useHistory();
 
   const goToThirdView = () => {

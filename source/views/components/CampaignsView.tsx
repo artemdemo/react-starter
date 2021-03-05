@@ -1,10 +1,15 @@
-import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGlobe} from "@fortawesome/free-solid-svg-icons";
-import {loadCampaigns} from "../../model/campaigns/campaignsReq";
-import {Campaigns} from "../../containers/Campaigns/Campaigns";
+import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faGlobe} from '@fortawesome/free-solid-svg-icons';
+import {loadCampaigns} from '../../model/campaigns/campaignsReq';
+import {Campaigns, TCampaign} from '../../containers/Campaigns/Campaigns';
 
-class CampaignsView extends React.PureComponent {
+type TState = {
+  loading: boolean;
+  campaigns: TCampaign[];
+};
+
+class CampaignsView extends React.PureComponent<{}, TState> {
   constructor(props) {
     super(props);
 

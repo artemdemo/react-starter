@@ -1,6 +1,6 @@
 import React from 'react';
 
-type TCampaign = {
+export type TCampaign = {
   name: string;
   picture: string;
   description: string;

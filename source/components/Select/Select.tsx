@@ -19,7 +19,7 @@ export enum ESelectSize {
 export type TSelectListItem = {
   value: string;
   name: string;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 type TProps = {
@@ -33,7 +33,7 @@ type TProps = {
   size?: ESelectSize;
 };
 
-const Select = (props: TProps) => {
+export const Select = (props: TProps) => {
   const {className, id, placeholder, disabled, list, onChange, value, size} = props;
   const onChangeValue = (e) => {
     onChange(list.find(item => item.value === e.target.value));
@@ -91,5 +91,3 @@ Select.defaultProps = {
   value: undefined,
   onChange: undefined,
 };
-
-export default Select;
