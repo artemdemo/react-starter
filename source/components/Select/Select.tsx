@@ -28,7 +28,7 @@ type TProps = {
   placeholder: string;
   disabled: boolean;
   list: TSelectListItem[];
-  onChange: (TSelectListItem) => void;
+  onChange?: (TSelectListItem) => void;
   value: TSelectListItem;
   size?: ESelectSize;
 };
@@ -36,7 +36,7 @@ type TProps = {
 export const Select = (props: TProps) => {
   const {className, id, placeholder, disabled, list, onChange, value, size} = props;
   const onChangeValue = (e) => {
-    onChange(list.find(item => item.value === e.target.value));
+    onChange && onChange(list.find(item => item.value === e.target.value));
   };
   const selectedValue = value && list.find((item) => {
     return item === value;
@@ -89,5 +89,4 @@ Select.defaultProps = {
   disabled: false,
   list: [],
   value: undefined,
-  onChange: undefined,
 };

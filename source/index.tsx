@@ -2,9 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
-import './styles/general.less';
-
+import './styles/general.css';
 import store from './store';
 
 import AppView from './views/components/AppView';
