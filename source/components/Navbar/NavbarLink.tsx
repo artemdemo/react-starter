@@ -1,7 +1,7 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
-import styled, {css} from "styled-components";
-import TransparentButton from "../TransparentButton/TransparentButton";
+import React from 'react';
+import {NavLink} from 'react-router-dom';
+import styled, {css} from 'styled-components';
+import TransparentButton from '../TransparentButton/TransparentButton';
 
 const navItemCss = css`
   display: inline-block;
@@ -39,38 +39,32 @@ type TProps = {
   onClick?: (e?: any) => void;
 }
 
-type TState = {}
-
-class NavbarLink extends React.PureComponent<TProps, TState> {
-  renderChildren() {
-    if (this.props.to) {
+export const NavbarLink: React.FC<TProps> = (props) => {
+  const renderChildren = () => {
+    if (props.to) {
       return (
         // @ts-ignore
         <NavLinkSty
-          to={this.props.to}
-          exact={this.props.exact}
+          to={props.to}
+          exact={props.exact}
         >
-          {this.props.children}
+          {props.children}
         </NavLinkSty>
       );
     }
     return (
       <ButtonItem
         className='nav-link'
-        onClick={this.props.onClick}
+        onClick={props.onClick}
       >
-        {this.props.children}
+        {props.children}
       </ButtonItem>
     );
-  }
+  };
 
-  render() {
-    return (
-      <NavItem>
-        {this.renderChildren()}
-      </NavItem>
-    );
-  }
-}
-
-export default NavbarLink;
+  return (
+    <NavItem>
+      {renderChildren()}
+    </NavItem>
+  );
+};

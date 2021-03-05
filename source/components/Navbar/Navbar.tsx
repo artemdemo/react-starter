@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 
 type TProps = {
-  className: string;
+  className?: string;
   children?: any;
 };
 
@@ -17,10 +17,6 @@ const Navbar = (props: TProps) => {
       </div>
     </nav>
   );
-};
-
-Navbar.defaultProps = {
-  className: undefined,
 };
 
 export default Navbar;

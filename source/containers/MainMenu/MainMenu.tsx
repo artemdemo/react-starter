@@ -1,8 +1,8 @@
-import React from "react";
-import classnames from "classnames";
-import Navbar from "../../components/Navbar/Navbar";
-import NavbarLink from "../../components/Navbar/NavbarLink";
-import {t} from "../../services/i18n";
+import React from 'react';
+import classnames from 'classnames';
+import Navbar from '../../components/Navbar/Navbar';
+import {NavbarLink} from '../../components/Navbar/NavbarLink';
+import {t} from '../../services/i18n';
 
 type TProps = {
   className: string;

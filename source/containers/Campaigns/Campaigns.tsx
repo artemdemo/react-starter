@@ -1,10 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Campaigns = (props) => {
+type TCampaign = {
+  name: string;
+  picture: string;
+  description: string;
+};
+
+type TProps = {
+  items?: TCampaign[];
+};
+
+export const Campaigns: React.FC<TProps> = (props) => {
+  const items = props.items || [];
   return (
     <div className='row'>
-      {props.items.map(item => (
+      {items.map(item => (
         <div
           className='col-6 col-md-4'
           key={`campaigns-item ${item.name}`}
@@ -22,17 +32,3 @@ const Campaigns = (props) => {
     </div>
   );
 };
-
-Campaigns.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    picture: PropTypes.string,
-    description: PropTypes.string,
-  })),
-};
-
-Campaigns.defaultProps = {
-  items: [],
-};
-
-export default Campaigns;

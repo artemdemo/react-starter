@@ -2,7 +2,7 @@ import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 import {loadCampaigns} from "../../model/campaigns/campaignsReq";
-import Campaigns from "../../containers/Campaigns/Campaigns";
+import {Campaigns} from "../../containers/Campaigns/Campaigns";
 
 class CampaignsView extends React.PureComponent {
   constructor(props) {
