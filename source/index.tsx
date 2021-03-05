@@ -6,20 +6,23 @@ import './styles/general.css';
 import store from './store';
 
 import AppView from './views/components/AppView';
-import MainView from './views/components/MainView';
-import ThirdView from './views/components/ThirdView';
-import CampaignsView from './views/components/CampaignsView';
-import ComponentsView from './views/components/ComponentsView';
+
+const MainView = React.lazy(() => import('./views/components/MainView'));
+const ThirdView = React.lazy(() => import('./views/components/ThirdView'));
+const CampaignsView = React.lazy(() => import('./views/components/CampaignsView'));
+const ComponentsView = React.lazy(() => import('./views/components/ComponentsView'));
 
 render(
   <Provider store={store}>
     <Router>
       <AppView>
         <Switch>
-          <Route exact path='/' component={MainView}/>
-          <Route path='/third' component={ThirdView}/>
-          <Route path='/campaigns' component={CampaignsView}/>
-          <Route path='/components' component={ComponentsView}/>
+          <React.Suspense fallback={'Loading...'}>
+            <Route exact path='/' component={MainView}/>
+            <Route path='/third' component={ThirdView}/>
+            <Route path='/campaigns' component={CampaignsView}/>
+            <Route path='/components' component={ComponentsView}/>
+          </React.Suspense>
         </Switch>
       </AppView>
     </Router>
