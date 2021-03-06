@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch, useHistory} from 'react-router-dom';
+import {Route, Switch, useHistory} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faLink} from '@fortawesome/free-solid-svg-icons';
 import MainMenu from './containers/MainMenu/MainMenu';
@@ -18,7 +18,7 @@ export const TestApp: React.FC = (props) => {
   };
 
   return (
-    <Router>
+    <>
       <MainMenu/>
       <p>
         <Button
@@ -42,6 +42,6 @@ export const TestApp: React.FC = (props) => {
             <Route path='/components' component={ComponentsView}/>
           </Switch>
       </React.Suspense>
-    </Router>
+    </>
   );
 };
