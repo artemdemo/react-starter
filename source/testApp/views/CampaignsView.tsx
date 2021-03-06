@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGlobe} from '@fortawesome/free-solid-svg-icons';
 import {loadCampaigns} from '../model/campaigns/campaignsReq';
 import {Campaigns, TCampaign} from '../containers/Campaigns/Campaigns';
+import {t} from '../../services/i18n';
 
 type TState = {
   loading: boolean;
@@ -30,7 +31,7 @@ export class CampaignsView extends React.PureComponent<{}, TState> {
     if (this.state.loading) {
       return (
         <p>
-          Loading...
+          {t('loading')}
         </p>
       );
     }

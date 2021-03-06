@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faLink} from '@fortawesome/free-solid-svg-icons';
 import MainMenu from './containers/MainMenu/MainMenu';
 import Button, {EButtonAppearance} from '../components/Button/Button';
+import {t} from '../services/i18n';
 
 const MainView = React.lazy(
   () => import('./views/MainView').then(module => ({ default: module.MainView }))
@@ -42,7 +43,7 @@ export const TestApp: React.FC = (props) => {
 
       <hr/>
 
-      <React.Suspense fallback={'Loading...'}>
+      <React.Suspense fallback={t('loading')}>
           <Switch>
             <Route exact path='/' component={MainView}/>
             <Route path='/third' component={ThirdView}/>
