@@ -1,13 +1,21 @@
+## 9.0.0
+
+* Updated webpack to v5
+  * Refactored webpack config
+* Updated react to v17
+* Removed less
+* Added post-css
+
 ## 7.5.0
 
 * Updated <Select>
-    * `disabled` property for whole element and for each item
+    * `disabled` property for a whole element and for each item
     * Added `Select.less`
 * Updated examples
 
 ## 7.4.0
 
-* Added placeholder to <Select>
+* Added a placeholder property to <Select>
 
 ## 7.3.0
 
@@ -32,7 +40,7 @@
 
 * Updated React v.16.4
 * Added sagas
-* Updated webpack 
+* Updated webpack
 
 ## 6.1.0
 

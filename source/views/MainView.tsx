@@ -1,7 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGlobeAfrica} from '@fortawesome/free-solid-svg-icons';
-import JsonTest from '../../containers/JsonTest/JsonTest';
+import JsonTest from '../containers/JsonTest/JsonTest';
 
 const MainView = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGlobe} from '@fortawesome/free-solid-svg-icons';
-import {loadCampaigns} from '../../model/campaigns/campaignsReq';
-import {Campaigns, TCampaign} from '../../containers/Campaigns/Campaigns';
+import {loadCampaigns} from '../model/campaigns/campaignsReq';
+import {Campaigns, TCampaign} from '../containers/Campaigns/Campaigns';
 
 type TState = {
   loading: boolean;

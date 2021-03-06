@@ -5,12 +5,12 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './styles/general.css';
 import store from './store';
 
-import AppView from './views/components/AppView';
+import AppView from './views/AppView';
 
-const MainView = React.lazy(() => import('./views/components/MainView'));
-const ThirdView = React.lazy(() => import('./views/components/ThirdView'));
-const CampaignsView = React.lazy(() => import('./views/components/CampaignsView'));
-const ComponentsView = React.lazy(() => import('./views/components/ComponentsView'));
+const MainView = React.lazy(() => import('./views/MainView'));
+const ThirdView = React.lazy(() => import('./views/ThirdView'));
+const CampaignsView = React.lazy(() => import('./views/CampaignsView'));
+const ComponentsView = React.lazy(() => import('./views/ComponentsView'));
 
 render(
   <Provider store={store}>
