@@ -9,7 +9,7 @@ type TState = {
   campaigns: TCampaign[];
 };
 
-class CampaignsView extends React.PureComponent<{}, TState> {
+export class CampaignsView extends React.PureComponent<{}, TState> {
   constructor(props) {
     super(props);
 
@@ -53,5 +53,3 @@ class CampaignsView extends React.PureComponent<{}, TState> {
     );
   }
 }
-
-export default CampaignsView;

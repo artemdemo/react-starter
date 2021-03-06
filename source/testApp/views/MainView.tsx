@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGlobeAfrica} from '@fortawesome/free-solid-svg-icons';
 import JsonTest from '../containers/JsonTest/JsonTest';
 
-const MainView = () => {
+export const MainView = () => {
   return (
     <>
       <div className='mb-3'>
@@ -16,5 +16,3 @@ const MainView = () => {
     </>
   );
 };
-
-export default MainView;

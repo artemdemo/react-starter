@@ -5,10 +5,18 @@ import {faLink} from '@fortawesome/free-solid-svg-icons';
 import MainMenu from './containers/MainMenu/MainMenu';
 import Button, {EButtonAppearance} from '../components/Button/Button';
 
-const MainView = React.lazy(() => import('./views/MainView'));
-const ThirdView = React.lazy(() => import('./views/ThirdView'));
-const CampaignsView = React.lazy(() => import('./views/CampaignsView'));
-const ComponentsView = React.lazy(() => import('./views/ComponentsView'));
+const MainView = React.lazy(
+  () => import('./views/MainView').then(module => ({ default: module.MainView }))
+);
+const ThirdView = React.lazy(
+  () => import('./views/ThirdView').then(module => ({ default: module.ThirdView }))
+);
+const CampaignsView = React.lazy(
+  () => import('./views/CampaignsView').then(module => ({ default: module.CampaignsView }))
+);
+const ComponentsView = React.lazy(
+  () => import('./views/ComponentsView').then(module => ({ default: module.ComponentsView }))
+);
 
 export const TestApp: React.FC = (props) => {
   const history = useHistory();

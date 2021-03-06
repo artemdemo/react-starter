@@ -9,7 +9,7 @@ type TState = {
   selectItem1?: TSelectListItem;
 };
 
-class ComponentsView extends React.PureComponent<{}, TState> {
+export class ComponentsView extends React.PureComponent<{}, TState> {
   selectList: TSelectListItem[] = [];
 
   constructor(props) {
@@ -112,5 +112,3 @@ class ComponentsView extends React.PureComponent<{}, TState> {
 
   }
 }
-
-export default ComponentsView;
