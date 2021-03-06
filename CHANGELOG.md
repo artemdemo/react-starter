@@ -2,6 +2,7 @@
 
 * Updated webpack to v5
   * Refactored webpack config
+  * Removed unused plugins and loaders
 * Updated react to v17
 * Removed less
 * Added post-css
