@@ -7,8 +7,8 @@ import { MemoryRouter } from 'react-router-dom';
 import { AppProvider } from '../contexts/app/AppContext';
 import { TransProvider } from '../contexts/trans/TransContext';
 import { HttpClient, HttpProvider } from '../contexts/http/HttpContext';
-import { HttpClientMock } from '../contexts/http/HttpClientMock';
-import { RequestMock } from '../contexts/http/RequestMock';
+import { HttpClientMock } from '../contexts/http/utils/HttpClientMock';
+import { RequestMock } from '../contexts/http/utils/RequestMock';
 
 export interface RenderResults extends ReturnType<typeof render> {}
 

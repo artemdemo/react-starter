@@ -3,8 +3,8 @@ import { waitFor } from '@testing-library/react';
 import { CampaignsViewDriver } from './CampaignsView.driver';
 import { testRender } from '../../__tests__/testRender';
 import { CampaignsView } from './CampaignsView';
-import { RequestMethod, RequestMock } from '../../contexts/http/RequestMock';
-import { ResponseMock } from '../../contexts/http/ResponseMock';
+import { RequestMethod, RequestMock } from '../../contexts/http/utils/RequestMock';
+import { ResponseMock } from '../../contexts/http/utils/ResponseMock';
 import { createCampaignMock } from '../containers/Campaigns/Campaigns.driver';
 
 type RenderOptions = {
