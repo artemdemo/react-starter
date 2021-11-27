@@ -1,11 +1,8 @@
-import React from 'react';
+import React, {ButtonHTMLAttributes} from 'react';
 import classnames from 'classnames';
 import './TransparentButton.css';
 
-type Props = {
-  className?: string;
-  onClick?: () => void;
-};
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export const TransparentButton: React.FC<Props> = (props) => (
   <button className={classnames('TransparentButton', props.className)} onClick={props.onClick}>
