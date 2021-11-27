@@ -1,5 +1,5 @@
-import { testRender } from '../../../__tests__/testRender';
 import React from 'react';
+import { testRender } from '../../../__tests__/testRender';
 import { JsonTestDriver } from './JsonTest.driver';
 import { JsonTest } from './JsonTest';
 import data from './data.json';
