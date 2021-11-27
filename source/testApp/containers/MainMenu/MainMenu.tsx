@@ -21,7 +21,7 @@ export const MainMenu: React.FC<TProps> = (props) => {
       )}
     >
       {/* I need here `div` in order to support flex styling from the `Navbar` */}
-      <NavbarLink to='/' exact>{t('main')}</NavbarLink>
+      <NavbarLink to='/'>{t('main')}</NavbarLink>
       <NavbarLink to='/campaigns'>{t('campaigns')}</NavbarLink>
       <NavbarLink to='/components'>{t('components')}</NavbarLink>
     </Navbar>

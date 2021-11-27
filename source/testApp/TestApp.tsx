@@ -1,5 +1,9 @@
 import React from 'react';
-import {Route, Switch, useHistory} from 'react-router-dom';
+import {
+  Routes,
+  Route,
+  useNavigate,
+} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faLink} from '@fortawesome/free-solid-svg-icons';
 import {MainMenu} from './containers/MainMenu/MainMenu';
@@ -20,10 +24,10 @@ const ComponentsView = React.lazy(
 );
 
 export const TestApp: React.FC = (props) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const goToThirdView = () => {
-    history.push('/third');
+    navigate('/third');
   };
 
   return (
@@ -43,14 +47,40 @@ export const TestApp: React.FC = (props) => {
 
       <hr/>
 
-      <React.Suspense fallback={t('loading')}>
-        <Switch>
-          <Route exact path='/' component={MainView}/>
-          <Route path='/third' component={ThirdView}/>
-          <Route path='/campaigns' component={CampaignsView}/>
-          <Route path='/components' component={ComponentsView}/>
-        </Switch>
-      </React.Suspense>
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <React.Suspense fallback={t('loading')}>
+              <MainView />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path='/third'
+          element={
+            <React.Suspense fallback={t('loading')}>
+              <ThirdView />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path='/campaigns'
+          element={
+            <React.Suspense fallback={t('loading')}>
+              <CampaignsView/>
+            </React.Suspense>
+          }
+        />
+        <Route
+          path='/components'
+          element={
+            <React.Suspense fallback={t('loading')}>
+              <ComponentsView />
+            </React.Suspense>
+          }
+        />
+      </Routes>
     </>
   );
 };

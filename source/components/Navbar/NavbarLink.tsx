@@ -4,8 +4,6 @@ import TransparentButton from '../TransparentButton/TransparentButton';
 
 type TProps = {
   to?: string;
-  exact?: boolean;
-  children?: any;
   onClick?: (e?: any) => void;
 }
 
@@ -16,7 +14,6 @@ export const NavbarLink: React.FC<TProps> = (props) => {
         <NavLink
           className='nav-link'
           to={props.to}
-          exact={props.exact}
           onClick={props.onClick}
         >
           {props.children}
