@@ -1,5 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { useTranslation } from '../hooks/useTranslation';
 
 const MainView = React.lazy(() =>
@@ -19,41 +19,44 @@ const ComponentsView = React.lazy(() =>
   }))
 );
 
-export const Routing: React.FC = () => {
+const Suspense: React.FC = ({ children }) => {
   const { t } = useTranslation();
+  return <React.Suspense fallback={t('loading')}>{children}</React.Suspense>;
+};
 
+export const Routing: React.FC = () => {
   return (
     <Routes>
       <Route
         path="/"
         element={
-          <React.Suspense fallback={t('loading')}>
+          <Suspense>
             <MainView />
-          </React.Suspense>
+          </Suspense>
         }
       />
       <Route
         path="/third"
         element={
-          <React.Suspense fallback={t('loading')}>
+          <Suspense>
             <ThirdView />
-          </React.Suspense>
+          </Suspense>
         }
       />
       <Route
         path="/campaigns"
         element={
-          <React.Suspense fallback={t('loading')}>
+          <Suspense>
             <CampaignsView />
-          </React.Suspense>
+          </Suspense>
         }
       />
       <Route
         path="/components"
         element={
-          <React.Suspense fallback={t('loading')}>
+          <Suspense>
             <ComponentsView />
-          </React.Suspense>
+          </Suspense>
         }
       />
     </Routes>
