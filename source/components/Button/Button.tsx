@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes} from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import classnames from 'classnames';
 
 export enum EButtonAppearance {
@@ -24,7 +24,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * @link https://getbootstrap.com/docs/4.0/components/buttons/
  */
 const Button: React.FC<IProps> = (props) => {
-  const {className, sizeAppearance, block, appearance, ...rest} = props;
+  const { className, sizeAppearance, block, appearance, ...rest } = props;
   const buttonClass = classnames(className, {
     btn: true,
     'btn-lg': EButtonSize.LG === sizeAppearance,
@@ -35,10 +35,7 @@ const Button: React.FC<IProps> = (props) => {
     'btn-danger': EButtonAppearance.DANGER === appearance,
   });
   return (
-    <button
-      className={buttonClass}
-      {...rest}
-    >
+    <button className={buttonClass} {...rest}>
       {props.children}
     </button>
   );

@@ -10,11 +10,9 @@ describe('campaignsReq', () => {
     requestMock.default.get.mockResolvedValueOnce({
       data: {},
     });
-    campaignsReq.loadCampaigns()
-      .then(() => {
-        expect(requestMock.default.get)
-          .toBeCalledWith('/api/campaigns');
-        done();
-      });
+    campaignsReq.loadCampaigns().then(() => {
+      expect(requestMock.default.get).toBeCalledWith('/api/campaigns');
+      done();
+    });
   });
 });

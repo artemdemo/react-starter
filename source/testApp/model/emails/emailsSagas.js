@@ -1,4 +1,4 @@
-import {take, put, all} from 'redux-saga/effects';
+import { take, put, all } from 'redux-saga/effects';
 import axios from 'axios';
 import * as actions from './emailsActions';
 
@@ -16,7 +16,5 @@ function* loadEmailsSaga() {
 }
 
 export default function* campaignsSagas() {
-  yield all([
-    loadEmailsSaga(),
-  ]);
+  yield all([loadEmailsSaga()]);
 }

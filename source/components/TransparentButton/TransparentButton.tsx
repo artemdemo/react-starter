@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes} from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import classnames from 'classnames';
 import s from './TransparentButton.module.css';
 
@@ -6,8 +6,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export const TransparentButton: React.FC<Props> = (props) => {
   return (
-    <button className={classnames(s.TransparentButton, props.className)} onClick={props.onClick}>
+    <button
+      className={classnames(s.TransparentButton, props.className)}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
-  )
+  );
 };

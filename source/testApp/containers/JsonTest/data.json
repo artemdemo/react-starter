@@ -1,10 +1,10 @@
 {
-    "glossary": {
-        "title": "example glossary",
-        "GlossEntry": {
-            "ID": "SGML",
-            "SortAs": "SGML",
-            "GlossTerm": "Standard Generalized Markup Language"
-        }
+  "glossary": {
+    "title": "example glossary",
+    "GlossEntry": {
+      "ID": "SGML",
+      "SortAs": "SGML",
+      "GlossTerm": "Standard Generalized Markup Language"
     }
+  }
 }

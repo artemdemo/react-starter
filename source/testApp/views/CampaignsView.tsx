@@ -1,9 +1,9 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGlobe} from '@fortawesome/free-solid-svg-icons';
-import {loadCampaigns} from '../model/campaigns/campaignsReq';
-import {Campaigns, TCampaign} from '../containers/Campaigns/Campaigns';
-import {t} from '../../services/i18n';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { loadCampaigns } from '../model/campaigns/campaignsReq';
+import { Campaigns, TCampaign } from '../containers/Campaigns/Campaigns';
+import { t } from '../../services/i18n';
 
 type TState = {
   loading: boolean;
@@ -21,19 +21,15 @@ export class CampaignsView extends React.PureComponent<{}, TState> {
   }
 
   componentDidMount() {
-    this.setState({loading: true});
+    this.setState({ loading: true });
     loadCampaigns()
-      .then(campaigns => this.setState({campaigns}))
-      .finally(() => this.setState({loading: false}));
+      .then((campaigns) => this.setState({ campaigns }))
+      .finally(() => this.setState({ loading: false }));
   }
 
   renderLoading() {
     if (this.state.loading) {
-      return (
-        <p>
-          {t('loading')}
-        </p>
-      );
+      return <p>{t('loading')}</p>;
     }
     return null;
   }
@@ -42,14 +38,11 @@ export class CampaignsView extends React.PureComponent<{}, TState> {
     return (
       <>
         <p>
-          <FontAwesomeIcon icon={faGlobe}/>
-          &nbsp;
-          Campaigns View
+          <FontAwesomeIcon icon={faGlobe} />
+          &nbsp; Campaigns View
         </p>
         {this.renderLoading()}
-        <Campaigns
-          items={this.state.campaigns}
-        />
+        <Campaigns items={this.state.campaigns} />
       </>
     );
   }

@@ -1,26 +1,26 @@
 import React from 'react';
-import {
-  Routes,
-  Route,
-  useNavigate,
-} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faLink} from '@fortawesome/free-solid-svg-icons';
-import {MainMenu} from './containers/MainMenu/MainMenu';
-import Button, {EButtonAppearance} from '../components/Button/Button';
-import {t} from '../services/i18n';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { MainMenu } from './containers/MainMenu/MainMenu';
+import Button, { EButtonAppearance } from '../components/Button/Button';
+import { t } from '../services/i18n';
 
-const MainView = React.lazy(
-  () => import('./views/MainView').then(module => ({ default: module.MainView }))
+const MainView = React.lazy(() =>
+  import('./views/MainView').then((module) => ({ default: module.MainView }))
 );
-const ThirdView = React.lazy(
-  () => import('./views/ThirdView').then(module => ({ default: module.ThirdView }))
+const ThirdView = React.lazy(() =>
+  import('./views/ThirdView').then((module) => ({ default: module.ThirdView }))
 );
-const CampaignsView = React.lazy(
-  () => import('./views/CampaignsView').then(module => ({ default: module.CampaignsView }))
+const CampaignsView = React.lazy(() =>
+  import('./views/CampaignsView').then((module) => ({
+    default: module.CampaignsView,
+  }))
 );
-const ComponentsView = React.lazy(
-  () => import('./views/ComponentsView').then(module => ({ default: module.ComponentsView }))
+const ComponentsView = React.lazy(() =>
+  import('./views/ComponentsView').then((module) => ({
+    default: module.ComponentsView,
+  }))
 );
 
 export const TestApp: React.FC = (props) => {
@@ -32,24 +32,23 @@ export const TestApp: React.FC = (props) => {
 
   return (
     <>
-      <MainMenu/>
+      <MainMenu />
       <p>
         <Button
-          type='button'
+          type="button"
           onClick={goToThirdView}
           appearance={EButtonAppearance.LIGHT}
         >
-          <FontAwesomeIcon icon={faLink}/>
-          &nbsp;
-          Open third page programmatically
+          <FontAwesomeIcon icon={faLink} />
+          &nbsp; Open third page programmatically
         </Button>
       </p>
 
-      <hr/>
+      <hr />
 
       <Routes>
         <Route
-          path='/'
+          path="/"
           element={
             <React.Suspense fallback={t('loading')}>
               <MainView />
@@ -57,7 +56,7 @@ export const TestApp: React.FC = (props) => {
           }
         />
         <Route
-          path='/third'
+          path="/third"
           element={
             <React.Suspense fallback={t('loading')}>
               <ThirdView />
@@ -65,15 +64,15 @@ export const TestApp: React.FC = (props) => {
           }
         />
         <Route
-          path='/campaigns'
+          path="/campaigns"
           element={
             <React.Suspense fallback={t('loading')}>
-              <CampaignsView/>
+              <CampaignsView />
             </React.Suspense>
           }
         />
         <Route
-          path='/components'
+          path="/components"
           element={
             <React.Suspense fallback={t('loading')}>
               <ComponentsView />

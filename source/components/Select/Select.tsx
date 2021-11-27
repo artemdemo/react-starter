@@ -27,20 +27,20 @@ type TProps = {
 };
 
 export const Select = (props: TProps) => {
-  const {className, id, placeholder, disabled, list, onChange, value, size} = props;
+  const { className, id, placeholder, disabled, list, onChange, value, size } =
+    props;
   const onChangeValue = (e) => {
-    onChange && onChange(list.find(item => item.value === e.target.value));
+    onChange && onChange(list.find((item) => item.value === e.target.value));
   };
-  const selectedValue = value && list.find((item) => {
-    return item === value;
-  });
+  const selectedValue =
+    value &&
+    list.find((item) => {
+      return item === value;
+    });
   const renderPlaceholder = () => {
     if (placeholder) {
       return (
-        <option
-          value={PLACEHOLDER_VALUE}
-          disabled
-        >
+        <option value={PLACEHOLDER_VALUE} disabled>
           {placeholder}
         </option>
       );
@@ -63,7 +63,7 @@ export const Select = (props: TProps) => {
       id={id}
     >
       {renderPlaceholder()}
-      {list.map(item => (
+      {list.map((item) => (
         <option
           value={item.value}
           disabled={!item.value || item.disabled}

@@ -7,20 +7,21 @@ const emailsRegex = /\/api\/email/;
 const emails = require('./mock-data/emails.json');
 
 module.exports = {
-    '/api': {
-        bypass: (req, res) => {
-            const testUrl = (urlRegex, method = 'GET') => urlRegex.test(req.url) && req.method === method;
+  '/api': {
+    bypass: (req, res) => {
+      const testUrl = (urlRegex, method = 'GET') =>
+        urlRegex.test(req.url) && req.method === method;
 
-            switch (true) {
-                case testUrl(emailsRegex):
-                    res.json(emails);
-                    return true;
-                case testUrl(campaignsRegex):
-                    res.json(campaigns);
-                    return true;
-                default:
-                    return '/index.html';
-            }
-        },
+      switch (true) {
+        case testUrl(emailsRegex):
+          res.json(emails);
+          return true;
+        case testUrl(campaignsRegex):
+          res.json(campaigns);
+          return true;
+        default:
+          return '/index.html';
+      }
     },
+  },
 };

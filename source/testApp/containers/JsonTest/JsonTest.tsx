@@ -10,12 +10,8 @@ import data from './data.json';
 export const JsonTest = () => {
   return (
     <>
-      <p>
-        JSON import example:
-      </p>
-      <pre className={s.JsonTest}>
-        {JSON.stringify(data, null, 2)}
-      </pre>
+      <p>JSON import example:</p>
+      <pre className={s.JsonTest}>{JSON.stringify(data, null, 2)}</pre>
     </>
   );
 };

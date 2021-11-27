@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import emails from './testApp/model/emails/emailsReducer';
 
 const reducers = combineReducers({

@@ -3,29 +3,29 @@ const Boom = require('boom');
 const _ = require('lodash');
 
 const publicConfigs = (req, res, next) => {
-    try {
-        res.json({});
-    } catch (e) {
-        logger(e);
-        next(Boom.badImplementation('Error in publicConfig'));
-    }
+  try {
+    res.json({});
+  } catch (e) {
+    logger(e);
+    next(Boom.badImplementation('Error in publicConfig'));
+  }
 };
 
 const campaigns = (req, res, next) => {
-    try {
-        res.json([]);
-    } catch (e) {
-        logger(e);
-        next(Boom.badImplementation('Error in publicConfig'));
-    }
+  try {
+    res.json([]);
+  } catch (e) {
+    logger(e);
+    next(Boom.badImplementation('Error in publicConfig'));
+  }
 };
 
 const health = (req, res) => {
-    res.send('Aap is up and running.');
+  res.send('Aap is up and running.');
 };
 
 module.exports = {
-    publicConfigs,
-    campaigns,
-    health,
+  publicConfigs,
+  campaigns,
+  health,
 };

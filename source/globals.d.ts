@@ -5,4 +5,4 @@ type TENV = {
 
 declare const ENV: TENV;
 
-declare module "*.css";
+declare module '*.css';
