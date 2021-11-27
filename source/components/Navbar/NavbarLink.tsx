@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import TransparentButton from '../TransparentButton/TransparentButton';
+import { TransparentButton } from '../TransparentButton/TransparentButton';
 
 type TProps = {
   to?: string;

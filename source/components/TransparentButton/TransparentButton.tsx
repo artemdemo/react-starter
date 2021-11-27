@@ -1,35 +1,14 @@
-import styled from "styled-components";
+import React from 'react';
+import classnames from 'classnames';
+import './TransparentButton.css';
 
-const TransparentButton = styled.button`
-  cursor: pointer;
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
+type Props = {
+  className?: string;
+  onClick?: () => void;
+};
 
-  background: transparent;
-
-  /* inherit font & color from ancestor */
-  color: inherit;
-  font: inherit;
-
-  /* Normalize \`line-height\`. Cannot be changed from \`normal\` in Firefox 4+. */
-  line-height: normal;
-
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-
-  /* Corrects inability to style clickable \`input\` types in iOS */
-  -webkit-appearance: none;
-
-  /* Remove excess padding and border in Firefox 4+ */
-
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-`;
-
-export default TransparentButton;
+export const TransparentButton: React.FC<Props> = (props) => (
+  <button className={classnames('TransparentButton', props.className)} onClick={props.onClick}>
+    {props.children}
+  </button>
+);
