@@ -4,7 +4,7 @@ import {
   RenderOptions as RenderOptionsOrig,
 } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { AppProvider } from '../contexts/AppContext';
+import { AppProvider } from '../../contexts/AppContext';
 
 export interface RenderOptions extends RenderOptionsOrig {
   appVersion?: string;

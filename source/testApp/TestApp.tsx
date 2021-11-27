@@ -1,85 +1,24 @@
 import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { MainMenu } from './containers/MainMenu/MainMenu';
-import Button, { EButtonAppearance } from '../components/Button/Button';
-import { t } from '../services/i18n';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { Routing } from './Routing';
+import { Header } from './Header';
+import { AppProvider } from '../contexts/AppContext';
+import Container from '../components/Container/Container';
+import store from './store';
 
-const MainView = React.lazy(() =>
-  import('./views/MainView').then((module) => ({ default: module.MainView }))
-);
-const ThirdView = React.lazy(() =>
-  import('./views/ThirdView').then((module) => ({ default: module.ThirdView }))
-);
-const CampaignsView = React.lazy(() =>
-  import('./views/CampaignsView').then((module) => ({
-    default: module.CampaignsView,
-  }))
-);
-const ComponentsView = React.lazy(() =>
-  import('./views/ComponentsView').then((module) => ({
-    default: module.ComponentsView,
-  }))
-);
-
-export const TestApp: React.FC = (props) => {
-  const navigate = useNavigate();
-
-  const goToThirdView = () => {
-    navigate('/third');
-  };
-
+export const TestApp: React.FC = () => {
   return (
-    <>
-      <MainMenu />
-      <p>
-        <Button
-          type="button"
-          onClick={goToThirdView}
-          appearance={EButtonAppearance.LIGHT}
-        >
-          <FontAwesomeIcon icon={faLink} />
-          &nbsp; Open third page programmatically
-        </Button>
-      </p>
-
-      <hr />
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <React.Suspense fallback={t('loading')}>
-              <MainView />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/third"
-          element={
-            <React.Suspense fallback={t('loading')}>
-              <ThirdView />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/campaigns"
-          element={
-            <React.Suspense fallback={t('loading')}>
-              <CampaignsView />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/components"
-          element={
-            <React.Suspense fallback={t('loading')}>
-              <ComponentsView />
-            </React.Suspense>
-          }
-        />
-      </Routes>
-    </>
+    <Provider store={store}>
+      <Router>
+        <AppProvider appVersion={ENV.appVersion}>
+          <Container>
+            <Header />
+            <hr />
+            <Routing />
+          </Container>
+        </AppProvider>
+      </Router>
+    </Provider>
   );
 };

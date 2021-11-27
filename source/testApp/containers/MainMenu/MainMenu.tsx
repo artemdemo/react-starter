@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { NavbarLink } from '../../../components/Navbar/NavbarLink';
 import { t } from '../../../services/i18n';
-import { AppContext } from '../../contexts/AppContext';
+import { AppContext } from '../../../contexts/AppContext';
 
 type TProps = {
   className?: string;
