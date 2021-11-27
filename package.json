@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-starter",
-  "version": "9.0.0",
+  "version": "9.1.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
@@ -34,8 +34,8 @@
     "axios": "^0.24.0",
     "bootstrap": "^4.5.2",
     "classnames": "^2.2.5",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.1.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
     "cssnano": "^4.1.10",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^5.2.0",
