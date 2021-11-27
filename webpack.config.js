@@ -32,7 +32,9 @@ module.exports = () => {
     devServer: {
       host: '0.0.0.0',
       port: 8080,
-      contentBase: `${configOptions.buildFolder}/`,
+      static: {
+        directory: path.join(__dirname, configOptions.buildFolder),
+      },
       historyApiFallback: true,
       hot: true,
       proxy,
