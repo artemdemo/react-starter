@@ -1,5 +1,4 @@
 import React from 'react';
-import { waitFor } from '@testing-library/react';
 import { CampaignsViewDriver } from './CampaignsView.driver';
 import { testRender } from '../../__tests__/testRender';
 import { CampaignsView } from './CampaignsView';
@@ -33,11 +32,7 @@ describe('CampaignsView', () => {
       }),
     });
     const driver = render({ httpRequestsMock: [campaignsRequestMock] });
-    await waitFor(() =>
-      expect(driver.campaigns().campaignsListExist()).toBe(true)
-    );
-    await waitFor(() =>
-      expect(driver.campaigns().getCampaignsAmount()).toBe(2)
-    );
+    expect(await driver.campaigns().campaignsListExist()).toBe(true);
+    expect(await driver.campaigns().getCampaignsAmount()).toBe(2);
   });
 });

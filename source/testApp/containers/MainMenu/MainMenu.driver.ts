@@ -1,28 +1,28 @@
 import { RenderResults } from '../../../__tests__/testRender';
-import { testIdExists } from '../../../__tests__/utils';
+import { testIdExistsAsync } from '../../../__tests__/utils';
 
 export class MainMenuDriver {
   constructor(public readonly component: RenderResults) {}
 
-  getAppVersion() {
-    const { getByTestId } = this.component;
-    const el = getByTestId('mainMenu-app-version');
+  async getAppVersion(): Promise<string | null> {
+    const { findByTestId } = this.component;
+    const el = await findByTestId('mainMenu-app-version');
     return el.textContent;
   }
 
-  private testIdExists(key: string) {
-    return testIdExists(this.component, key);
+  private async testIdExists(key: string): Promise<boolean> {
+    return testIdExistsAsync(this.component, key);
   }
 
-  mainBtnExists() {
+  async mainBtnExists(): Promise<boolean> {
     return this.testIdExists('mainMenu-main');
   }
 
-  campaignsBtnExists() {
+  async campaignsBtnExists(): Promise<boolean> {
     return this.testIdExists('mainMenu-campaigns');
   }
 
-  componentsBtnExists() {
+  async componentsBtnExists(): Promise<boolean> {
     return this.testIdExists('mainMenu-components');
   }
 }

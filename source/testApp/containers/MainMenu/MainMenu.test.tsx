@@ -14,24 +14,24 @@ const render = (options: RenderOptions = {}): MainMenuDriver => {
 };
 
 describe('MainMenu', () => {
-  it('should render app version', () => {
+  it('should render app version', async () => {
     const appVersion = '1.0.1a';
     const driver = render({ appVersion });
-    expect(driver.getAppVersion()).toBe(appVersion);
+    expect(await driver.getAppVersion()).toBe(appVersion);
   });
 
-  it('should have "Main" button', () => {
+  it('should have "Main" button', async () => {
     const driver = render();
-    expect(driver.mainBtnExists()).toBe(true);
+    expect(await driver.mainBtnExists()).toBe(true);
   });
 
-  it('should have "Campaigns" button', () => {
+  it('should have "Campaigns" button', async () => {
     const driver = render();
-    expect(driver.campaignsBtnExists()).toBe(true);
+    expect(await driver.campaignsBtnExists()).toBe(true);
   });
 
-  it('should have "Components" button', () => {
+  fit('should have "Components" button', async () => {
     const driver = render();
-    expect(driver.componentsBtnExists()).toBe(true);
+    expect(await driver.componentsBtnExists()).toBe(true);
   });
 });

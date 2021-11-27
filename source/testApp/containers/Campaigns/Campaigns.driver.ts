@@ -1,5 +1,5 @@
 import { RenderResults } from '../../../__tests__/testRender';
-import { testIdExists } from '../../../__tests__/utils';
+import { testIdExistsAsync } from '../../../__tests__/utils';
 import { TCampaign } from './Campaigns';
 
 type CampaignOptions = {
@@ -26,13 +26,13 @@ export const createCampaignMock = (
 export class CampaignsDriver {
   constructor(public readonly component: RenderResults) {}
 
-  campaignsListExist(): boolean {
-    return testIdExists(this.component, 'campaigns-list');
+  async campaignsListExist(): Promise<boolean> {
+    return testIdExistsAsync(this.component, 'campaigns-list');
   }
 
-  getCampaignsAmount(): number {
-    const { getAllByTestId } = this.component;
-    const campaignsEl = getAllByTestId('single-campaign');
+  async getCampaignsAmount(): Promise<number> {
+    const { findAllByTestId } = this.component;
+    const campaignsEl = await findAllByTestId('single-campaign');
     return campaignsEl.length;
   }
 }
