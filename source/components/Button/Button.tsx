@@ -23,7 +23,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * Button
  * @link https://getbootstrap.com/docs/4.0/components/buttons/
  */
-const Button = (props: IProps) => {
+const Button: React.FC<IProps> = (props) => {
   const {className, sizeAppearance, block, appearance, ...rest} = props;
   const buttonClass = classnames(className, {
     btn: true,
