@@ -3,20 +3,23 @@ import classnames from 'classnames';
 
 type TProps = {
   className?: string;
-  children?: any;
+  sideContent?: React.ReactNode;
 };
 
-const Navbar = (props: TProps) => {
+export const Navbar:React.FC<TProps> = (props) => {
   return (
     <nav className={classnames(
       props.className,
-      'navbar navbar-expand navbar-light bg-light',
+      'navbar navbar-expand-lg navbar-light bg-light',
     )}>
-      <div className='navbar-nav d-flex justify-content-between' style={{width: '100%'}}>
-        {props.children}
+      <div className="container-fluid">
+        <div className='navbar-nav' style={{width: '100%'}}>
+          {props.children}
+        </div>
+        <div className='d-flex'>
+          {props.sideContent}
+        </div>
       </div>
     </nav>
   );
 };
-
-export default Navbar;

@@ -16,7 +16,7 @@ const JsonContent = styled.pre`
   display: inline-block;
 `;
 
-const JsonTest = () => {
+export const JsonTest = () => {
   return (
     <>
       <p>
@@ -28,5 +28,3 @@ const JsonTest = () => {
     </>
   );
 };
-
-export default JsonTest;

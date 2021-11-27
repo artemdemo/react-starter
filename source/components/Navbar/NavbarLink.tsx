@@ -1,36 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import styled, {css} from 'styled-components';
 import TransparentButton from '../TransparentButton/TransparentButton';
-
-const navItemCss = css`
-  display: inline-block;
-  padding: 0.5rem 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-`;
-
-const NavItem = styled.div`
-  display: inline-block;
-`;
-
-const NavLinkSty = styled(NavLink)`
-  ${navItemCss};
-  color: inherit;
-
-  &:hover {
-    text-decoration: unset;
-  }
-`;
-
-const ButtonItem = styled(TransparentButton)`
-  ${navItemCss};
-  line-height: inherit;
-`;
 
 type TProps = {
   to?: string;
@@ -43,28 +13,29 @@ export const NavbarLink: React.FC<TProps> = (props) => {
   const renderChildren = () => {
     if (props.to) {
       return (
-        // @ts-ignore
-        <NavLinkSty
+        <NavLink
+          className='nav-link'
           to={props.to}
           exact={props.exact}
+          onClick={props.onClick}
         >
           {props.children}
-        </NavLinkSty>
+        </NavLink>
       );
     }
     return (
-      <ButtonItem
+      <TransparentButton
         className='nav-link'
         onClick={props.onClick}
       >
         {props.children}
-      </ButtonItem>
+      </TransparentButton>
     );
   };
 
   return (
-    <NavItem>
+    <span className='nav-item'>
       {renderChildren()}
-    </NavItem>
+    </span>
   );
 };

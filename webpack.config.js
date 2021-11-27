@@ -78,6 +78,7 @@ module.exports = () => {
           production: configOptions.isProduction,
           clientId: JSON.stringify(configOptions.clientId),
           apiKey: JSON.stringify(configOptions.apiKey),
+          appVersion: JSON.stringify(configOptions.appVersion)
         },
       }),
 
