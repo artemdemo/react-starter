@@ -1,12 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import styled from 'styled-components';
-
-const SelectContainer = styled.select`
-  width: auto;
-  max-width: 100%;
-  display: inline-block;
-`;
+import s from './Select.module.css';
 
 const PLACEHOLDER_VALUE = 'placeholder-12#$';
 
@@ -55,8 +49,9 @@ export const Select = (props: TProps) => {
   };
 
   return (
-    <SelectContainer
+    <select
       className={classnames(className, {
+        [s.Select]: true,
         'form-control': true,
         'form-control-lg': size === ESelectSize.large,
         'form-control-sm': size === ESelectSize.small,
@@ -77,7 +72,7 @@ export const Select = (props: TProps) => {
           {item.name}
         </option>
       ))}
-    </SelectContainer>
+    </select>
   );
 };
 

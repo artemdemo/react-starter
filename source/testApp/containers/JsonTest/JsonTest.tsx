@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import s from './JsonTest.module.css';
 import data from './data.json';
 
 /*
@@ -7,24 +7,15 @@ import data from './data.json';
  * Therefore I'm testing it to be sure that I can update to the latest version.
  */
 
-const JsonContent = styled.pre`
-  font-size: 0.8em;
-  background: #f4f6f7;
-  border: 1px solid #ECEFF1;
-  padding: 5px 8px;
-  border-radius: 3px;
-  display: inline-block;
-`;
-
 export const JsonTest = () => {
   return (
     <>
       <p>
         JSON import example:
       </p>
-      <JsonContent>
+      <pre className={s.JsonTest}>
         {JSON.stringify(data, null, 2)}
-      </JsonContent>
+      </pre>
     </>
   );
 };
