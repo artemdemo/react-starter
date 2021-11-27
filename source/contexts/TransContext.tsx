@@ -1,10 +1,18 @@
 import React, { createContext } from 'react';
 
-type TransContextTypes = {};
+type TransContextTypes = {
+  en: {
+    [key: string]: string;
+  };
+};
 
-export const TransContext = createContext<TransContextTypes>({});
+export const TransContext = createContext<TransContextTypes>({
+  en: {},
+});
 
 export const TransProvider: React.FC<TransContextTypes> = (props) => {
-  const { children } = props;
-  return <TransContext.Provider value={{}}>{children}</TransContext.Provider>;
+  const { children, en } = props;
+  return (
+    <TransContext.Provider value={{ en }}>{children}</TransContext.Provider>
+  );
 };

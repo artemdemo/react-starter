@@ -5,6 +5,7 @@ import {
 } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { AppProvider } from '../../contexts/AppContext';
+import { TransProvider } from '../../contexts/TransContext';
 
 export interface RenderOptions extends RenderOptionsOrig {
   appVersion?: string;
@@ -22,7 +23,9 @@ const createProviders: (options?: CreateProvidersOptions) => React.FC =
     const { appVersion } = options;
     return (
       <MemoryRouter>
-        <AppProvider appVersion={appVersion}>{props.children}</AppProvider>
+        <AppProvider appVersion={appVersion}>
+          <TransProvider en={{}}>{props.children}</TransProvider>
+        </AppProvider>
       </MemoryRouter>
     );
   };

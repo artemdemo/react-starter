@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import classnames from 'classnames';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { NavbarLink } from '../../../components/Navbar/NavbarLink';
-import { t } from '../../../services/i18n';
+import { useTranslation } from '../../../hooks/useTranslation';
 import { AppContext } from '../../../contexts/AppContext';
 
 type TProps = {
@@ -11,6 +11,7 @@ type TProps = {
 
 export const MainMenu: React.FC<TProps> = (props) => {
   const appContext = useContext(AppContext);
+  const { t } = useTranslation();
 
   const handleVersionClick = () => {
     console.log(ENV);

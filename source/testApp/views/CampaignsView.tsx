@@ -1,49 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { loadCampaigns } from '../model/campaigns/campaignsReq';
 import { Campaigns, TCampaign } from '../containers/Campaigns/Campaigns';
-import { t } from '../../services/i18n';
+import { useTranslation } from '../../hooks/useTranslation';
 
-type TState = {
-  loading: boolean;
-  campaigns: TCampaign[];
-};
+export const CampaignsView: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [campaigns, setCampaigns] = useState<TCampaign[]>([]);
+  const { t } = useTranslation();
 
-export class CampaignsView extends React.PureComponent<{}, TState> {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: false,
-      campaigns: [],
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ loading: true });
+  useEffect(() => {
+    setIsLoading(true);
     loadCampaigns()
-      .then((campaigns) => this.setState({ campaigns }))
-      .finally(() => this.setState({ loading: false }));
-  }
+      .then((campaigns) => setCampaigns(campaigns))
+      .finally(() => setIsLoading(false));
+  }, []);
 
-  renderLoading() {
-    if (this.state.loading) {
+  const renderLoading = () => {
+    if (isLoading) {
       return <p>{t('loading')}</p>;
     }
     return null;
-  }
+  };
 
-  render() {
-    return (
-      <>
-        <p>
-          <FontAwesomeIcon icon={faGlobe} />
-          &nbsp; Campaigns View
-        </p>
-        {this.renderLoading()}
-        <Campaigns items={this.state.campaigns} />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <p>
+        <FontAwesomeIcon icon={faGlobe} />
+        &nbsp; Campaigns View
+      </p>
+      {renderLoading()}
+      <Campaigns items={campaigns} />
+    </>
+  );
+};

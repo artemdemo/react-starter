@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
-import { t } from '../services/i18n';
+import { useTranslation } from '../hooks/useTranslation';
 
 const MainView = React.lazy(() =>
   import('./views/MainView').then((module) => ({ default: module.MainView }))
@@ -20,6 +20,8 @@ const ComponentsView = React.lazy(() =>
 );
 
 export const Routing: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Routes>
       <Route
