@@ -9,14 +9,12 @@ import { HttpClient, HttpProvider } from '../contexts/http/HttpContext';
 import { HttpClientMock } from '../contexts/http/utils/HttpClientMock';
 import { RequestMock } from '../contexts/http/utils/RequestMock';
 
-export interface RenderResults extends ReturnType<typeof render> {}
-
 type CreateProvidersOptions = {
   appVersion?: string;
   httpRequestsMock?: RequestMock[];
 };
 
-const createProviders: (options?: CreateProvidersOptions) => React.FC =
+const createWrapper: (options?: CreateProvidersOptions) => React.FC =
   (options = {}) =>
   (props) => {
     const { appVersion, httpRequestsMock = [] } = options;
@@ -33,6 +31,8 @@ const createProviders: (options?: CreateProvidersOptions) => React.FC =
     );
   };
 
+export interface RenderResults extends ReturnType<typeof render> {}
+
 export interface RenderOptions extends RenderOptionsOrig {
   appVersion?: string;
   httpRequestsMock?: RequestMock[];
@@ -44,7 +44,7 @@ export const testRender = (
 ): RenderResults => {
   const { appVersion, httpRequestsMock } = options;
   return render(component, {
-    wrapper: createProviders({ appVersion, httpRequestsMock }),
+    wrapper: createWrapper({ appVersion, httpRequestsMock }),
     ...options,
   });
 };

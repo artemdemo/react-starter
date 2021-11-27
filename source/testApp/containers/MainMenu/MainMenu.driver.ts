@@ -10,19 +10,19 @@ export class MainMenuDriver {
     return el.textContent;
   }
 
-  private async testIdExists(key: string): Promise<boolean> {
+  private async testIdExistsAsync(key: string): Promise<boolean> {
     return testIdExistsAsync(this.component, key);
   }
 
   async mainBtnExists(): Promise<boolean> {
-    return this.testIdExists('mainMenu-main');
+    return this.testIdExistsAsync('mainMenu-main');
   }
 
   async campaignsBtnExists(): Promise<boolean> {
-    return this.testIdExists('mainMenu-campaigns');
+    return this.testIdExistsAsync('mainMenu-campaigns');
   }
 
   async componentsBtnExists(): Promise<boolean> {
-    return this.testIdExists('mainMenu-components');
+    return this.testIdExistsAsync('mainMenu-components');
   }
 }

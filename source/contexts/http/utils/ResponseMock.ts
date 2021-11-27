@@ -5,7 +5,7 @@ export type ResponseMockOptions = {
 export class ResponseMock {
   data: any;
 
-  constructor(private readonly options: ResponseMockOptions) {
+  constructor(options: ResponseMockOptions) {
     this.data = options.data;
   }
 }
