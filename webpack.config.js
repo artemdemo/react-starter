@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const packageFile = require('./package.json');
 const proxy = require('./webpack/proxy');
+const fontLoaders = require('./webpack/fontLoaders');
 const path = require('path');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -78,6 +79,8 @@ module.exports = () => {
             'postcss-loader',
           ],
         },
+
+        ...fontLoaders,
       ],
     },
     plugins: [
