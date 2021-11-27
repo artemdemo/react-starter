@@ -5,7 +5,6 @@ import {
 } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { AppProvider } from '../contexts/app/AppContext';
-import { TransProvider } from '../contexts/trans/TransContext';
 import { HttpClient, HttpProvider } from '../contexts/http/HttpContext';
 import { HttpClientMock } from '../contexts/http/utils/HttpClientMock';
 import { RequestMock } from '../contexts/http/utils/RequestMock';
@@ -27,7 +26,7 @@ const createProviders: (options?: CreateProvidersOptions) => React.FC =
       <MemoryRouter>
         <AppProvider appVersion={appVersion}>
           <HttpProvider httpClient={httpClientMock as unknown as HttpClient}>
-            <TransProvider en={{}}>{props.children}</TransProvider>
+            {props.children}
           </HttpProvider>
         </AppProvider>
       </MemoryRouter>

@@ -1,12 +1,10 @@
-import { useContext } from 'react';
-import { TransContext } from '../contexts/trans/TransContext';
+import en from '../translations/en.json';
 
 export const useTranslation = () => {
-  const trans = useContext(TransContext);
   return {
     t: (key: string) => {
-      if (trans.en.hasOwnProperty(key)) {
-        return trans.en[key];
+      if (en.hasOwnProperty(key)) {
+        return en[key];
       }
       return key;
     },
