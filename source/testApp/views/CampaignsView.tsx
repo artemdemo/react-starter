@@ -7,24 +7,16 @@ import { useTranslation } from '../../hooks/useTranslation';
 import { HttpContext } from '../../contexts/http/HttpContext';
 
 export const CampaignsView: React.FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [campaigns, setCampaigns] = useState<TCampaign[]>([]);
   const { t } = useTranslation();
   const { httpClient } = useContext(HttpContext);
 
   useEffect(() => {
-    setIsLoading(true);
     loadCampaigns(httpClient)
       .then((campaigns) => setCampaigns(campaigns))
       .finally(() => setIsLoading(false));
   }, []);
-
-  const renderLoading = () => {
-    if (isLoading) {
-      return <p>{t('loading')}</p>;
-    }
-    return null;
-  };
 
   return (
     <>
@@ -32,8 +24,7 @@ export const CampaignsView: React.FC = () => {
         <FontAwesomeIcon icon={faGlobe} />
         &nbsp; Campaigns View
       </p>
-      {renderLoading()}
-      <Campaigns items={campaigns} />
+      {isLoading ? <p>{t('loading')}</p> : <Campaigns items={campaigns} />}
     </>
   );
 };

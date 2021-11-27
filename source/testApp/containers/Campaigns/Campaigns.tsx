@@ -13,7 +13,7 @@ type TProps = {
 export const Campaigns: React.FC<TProps> = (props) => {
   const items = props.items || [];
   return (
-    <div className="row">
+    <div className="row" data-testid="campaigns">
       {items.map((item) => (
         <div className="col-6 col-md-4" key={`campaigns-item ${item.name}`}>
           <h3>{item.name}</h3>
