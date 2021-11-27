@@ -6,8 +6,8 @@ export class MainMenuDriver {
 
   getAppVersion() {
     const { getByTestId } = this.component;
-    const btn = getByTestId('mainMenu-app-version');
-    return btn.textContent;
+    const el = getByTestId('mainMenu-app-version');
+    return el.textContent;
   }
 
   private testIdExists(key: string) {
