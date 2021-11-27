@@ -36,7 +36,7 @@
     "classnames": "^2.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
-    "cssnano": "^4.1.10",
+    "cssnano": "^5.0.11",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^5.2.0",
     "postcss-loader": "^5.1.0",

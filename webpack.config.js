@@ -8,6 +8,7 @@ const path = require('path');
 const isProduction = process.env.NODE_ENV === 'production';
 const configOptions = {
   buildFolder: './build',
+  mainSourceFolder: './source',
   appVersion: packageFile.version,
   extractCssFile: true,
   clientId: process.env.CLIENT_ID,
@@ -17,7 +18,7 @@ const configOptions = {
 
 module.exports = () => {
   return {
-    entry: path.join(__dirname, 'source', 'index.tsx'),
+    entry: path.join(__dirname, configOptions.mainSourceFolder, 'index.tsx'),
     output: {
       path: `${process.cwd()}/${configOptions.buildFolder}`,
       filename: configOptions.isProduction ?
@@ -43,7 +44,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.([tj])sx?$/,
-          include: path.resolve(__dirname, 'source'),
+          include: path.resolve(__dirname, configOptions.mainSourceFolder),
           exclude: /node_modules/,
           use: [{
             loader: 'ts-loader',
@@ -52,7 +53,7 @@ module.exports = () => {
         },
         {
           test: /\.css$/i,
-          include: path.resolve(__dirname, 'source'),
+          include: path.resolve(__dirname, configOptions.mainSourceFolder),
           exclude: /node_modules/,
           use: [
             'style-loader',

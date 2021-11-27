@@ -44,12 +44,12 @@ export const TestApp: React.FC = (props) => {
       <hr/>
 
       <React.Suspense fallback={t('loading')}>
-          <Switch>
-            <Route exact path='/' component={MainView}/>
-            <Route path='/third' component={ThirdView}/>
-            <Route path='/campaigns' component={CampaignsView}/>
-            <Route path='/components' component={ComponentsView}/>
-          </Switch>
+        <Switch>
+          <Route exact path='/' component={MainView}/>
+          <Route path='/third' component={ThirdView}/>
+          <Route path='/campaigns' component={CampaignsView}/>
+          <Route path='/components' component={ComponentsView}/>
+        </Switch>
       </React.Suspense>
     </>
   );
