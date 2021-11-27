@@ -7,8 +7,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 export const TransparentButton: React.FC<Props> = (props) => {
   return (
     <button
+      {...props}
       className={classnames(s.TransparentButton, props.className)}
-      onClick={props.onClick}
     >
       {props.children}
     </button>

@@ -6,14 +6,17 @@ import store from './store';
 import { AppView } from './views/AppView';
 import { TestApp } from './testApp/TestApp';
 import './styles/general.css';
+import { AppProvider } from './testApp/contexts/AppContext';
 
 render(
   <Provider store={store}>
-    <Router>
-      <AppView>
-        <TestApp />
-      </AppView>
-    </Router>
+    <AppProvider appVersion={ENV.appVersion}>
+      <Router>
+        <AppView>
+          <TestApp />
+        </AppView>
+      </Router>
+    </AppProvider>
   </Provider>,
   document.getElementById('app')
 );
