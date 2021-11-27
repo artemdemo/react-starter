@@ -11,7 +11,9 @@ export const JsonTest = () => {
   return (
     <>
       <p>JSON import example:</p>
-      <pre className={s.JsonTest} data-testid="json-test">{JSON.stringify(data, null, 2)}</pre>
+      <pre className={s.JsonTest} data-testid="json-test">
+        {JSON.stringify(data, null, 2)}
+      </pre>
     </>
   );
 };

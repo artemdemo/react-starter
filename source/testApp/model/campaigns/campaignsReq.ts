@@ -1,5 +1,5 @@
-import axios from 'axios';
+import { HttpClient } from '../../../contexts/http/HttpContext';
 
-export const loadCampaigns = () => {
-  return axios.get('/api/campaigns').then((result) => result.data);
+export const loadCampaigns = (httpClient: HttpClient) => {
+  return httpClient.get('/api/campaigns').then((result) => result.data);
 };

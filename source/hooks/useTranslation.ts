@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { TransContext } from '../contexts/TransContext';
+import { TransContext } from '../contexts/trans/TransContext';
 
 export const useTranslation = () => {
   const trans = useContext(TransContext);

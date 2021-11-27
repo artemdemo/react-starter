@@ -1,4 +1,4 @@
-import {RenderResults} from './testRender';
+import { RenderResults } from './testRender';
 
 export const testIdExists = (component: RenderResults, key: string) => {
   const { getByTestId } = component;
