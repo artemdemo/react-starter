@@ -60,7 +60,13 @@ module.exports = () => {
             {
               loader: 'css-loader',
               options: {
-                importLoaders: 1
+                importLoaders: 1,
+                // https://webpack.js.org/loaders/css-loader/#modules
+                modules: {
+                  // enable CSS modules for all files matching /\.module\.\w+$/i.test(filename)
+                  auto: true,
+                  localIdentName: configOptions.isProduction ? '[hash:base64:5]' : '[path]',
+                },
               }
             },
             'postcss-loader',
