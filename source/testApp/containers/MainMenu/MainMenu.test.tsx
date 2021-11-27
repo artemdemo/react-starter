@@ -1,5 +1,5 @@
 import React from 'react';
-import { testRender } from '../../__tests__/testRender';
+import { testRender } from '../../../__tests__/testRender';
 import { MainMenu } from './MainMenu';
 import { MainMenuDriver } from './MainMenu.driver';
 

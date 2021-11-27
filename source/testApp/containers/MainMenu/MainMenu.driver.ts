@@ -1,5 +1,5 @@
-import { RenderResults } from '../../__tests__/testRender';
-import { testIdExists } from '../../__tests__/utils';
+import { RenderResults } from '../../../__tests__/testRender';
+import { testIdExists } from '../../../__tests__/utils';
 
 export class MainMenuDriver {
   constructor(public readonly component: RenderResults) {}

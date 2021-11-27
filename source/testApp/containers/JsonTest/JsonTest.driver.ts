@@ -1,4 +1,4 @@
-import {RenderResults} from '../../__tests__/testRender';
+import {RenderResults} from '../../../__tests__/testRender';
 import _ from 'lodash';
 
 export class JsonTestDriver {
