@@ -19,6 +19,7 @@ const configOptions = {
 module.exports = () => {
   return {
     entry: path.join(__dirname, configOptions.mainSourceFolder, 'index.tsx'),
+    mode: configOptions.isProduction ? 'production' : 'development',
     output: {
       path: `${process.cwd()}/${configOptions.buildFolder}`,
       filename: configOptions.isProduction

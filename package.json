@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "./start.sh",
-    "server:dev": "webpack serve --mode development",
+    "server:dev": "webpack serve",
     "build": "NODE_ENV=production webpack --progress",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js",
     "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js --coverage",
