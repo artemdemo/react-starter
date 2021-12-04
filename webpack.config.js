@@ -11,7 +11,6 @@ const configOptions = {
   buildFolder: './build',
   mainSourceFolder: './source',
   appVersion: packageFile.version,
-  extractCssFile: true,
   clientId: process.env.CLIENT_ID,
   apiKey: process.env.API_KEY,
   isProduction,
