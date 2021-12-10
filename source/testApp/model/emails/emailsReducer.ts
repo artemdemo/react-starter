@@ -7,19 +7,21 @@ const initState = {
   loadingError: null,
 };
 
-export default handleActions(
+type State = typeof initState;
+
+export default handleActions<State, any>(
   {
-    [actions.loadEmails]: (state) => ({
+    [`${actions.loadEmails}`]: (state) => ({
       ...state,
       loading: true,
     }),
-    [actions.emailsLoaded]: (state, action) => ({
+    [`${actions.emailsLoaded}`]: (state, action) => ({
       ...state,
       data: action.payload,
       loading: false,
       loadingError: null,
     }),
-    [actions.emailsLoadingError]: (state, action) => ({
+    [`${actions.emailsLoadingError}`]: (state, action) => ({
       ...state,
       loading: false,
       loadingError: action.payload,

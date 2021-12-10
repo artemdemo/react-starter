@@ -2,7 +2,7 @@ import { take, put, all } from 'redux-saga/effects';
 import axios from 'axios';
 import * as actions from './emailsActions';
 
-function* loadEmailsSaga() {
+function* loadEmailsSaga(): any {
   while (true) {
     yield take(actions.loadEmails);
     try {

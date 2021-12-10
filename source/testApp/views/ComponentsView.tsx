@@ -12,10 +12,10 @@ type TState = {
   selectItem1?: TSelectListItem;
 };
 
-export class ComponentsView extends React.PureComponent<{}, TState> {
+export class ComponentsView extends React.PureComponent<any, TState> {
   selectList: TSelectListItem[] = [];
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
 
     this.state = {
