@@ -30,6 +30,14 @@ module.exports = () => {
         : './js/[id].chunk.js',
       publicPath: '/',
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        // Since the chunk name includes all origin chunk names
+        // it's recommended for production builds with long term caching to NOT include [name] in the filenames
+        name: false,
+      },
+    },
     devServer: {
       host: '0.0.0.0',
       port: 8080,
