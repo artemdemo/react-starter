@@ -11,7 +11,7 @@ describe('emailReducer', () => {
           `${actions.loadEmails}`,
           `${actions.emailsLoaded}`,
           `${actions.emailsLoadingError}`,
-        ].sort()
+        ].sort(),
       );
       expect(initState).toEqual({
         data: [],

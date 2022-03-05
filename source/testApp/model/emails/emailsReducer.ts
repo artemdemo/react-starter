@@ -27,5 +27,5 @@ export default handleActions<State, any>(
       loadingError: action.payload,
     }),
   },
-  initState
+  initState,
 );

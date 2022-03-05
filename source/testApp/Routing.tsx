@@ -5,30 +5,30 @@ import { useTranslation } from '../hooks/useTranslation';
 const MainView = React.lazy(() =>
   import(
     /* webpackChunkName: "MainView" */
-    './views/MainView',
-  ).then((module) => ({ default: module.MainView }))
+    './views/MainView'
+  ).then((module) => ({ default: module.MainView })),
 );
 const ThirdView = React.lazy(() =>
   import(
     /* webpackChunkName: "ThirdView" */
-    './views/ThirdView',
-  ).then((module) => ({ default: module.ThirdView }))
+    './views/ThirdView'
+  ).then((module) => ({ default: module.ThirdView })),
 );
 const CampaignsView = React.lazy(() =>
   import(
     /* webpackChunkName: "CampaignsView" */
-    './views/CampaignsView',
+    './views/CampaignsView'
   ).then((module) => ({
     default: module.CampaignsView,
-  }))
+  })),
 );
 const ComponentsView = React.lazy(() =>
   import(
     /* webpackChunkName: "ComponentsView" */
-    './views/ComponentsView',
+    './views/ComponentsView'
   ).then((module) => ({
     default: module.ComponentsView,
-  }))
+  })),
 );
 
 const Suspense: React.FC = ({ children }) => {

@@ -11,7 +11,7 @@ export const Navbar: React.FC<TProps> = (props) => {
     <nav
       className={classnames(
         props.className,
-        'navbar navbar-expand-lg navbar-light bg-light'
+        'navbar navbar-expand-lg navbar-light bg-light',
       )}
     >
       <div className="container-fluid">

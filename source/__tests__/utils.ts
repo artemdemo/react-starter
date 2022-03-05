@@ -2,7 +2,7 @@ import { RenderResults } from './testRender';
 
 export const testIdExists = (
   component: RenderResults,
-  key: string
+  key: string,
 ): boolean => {
   const { getByTestId } = component;
   try {
@@ -14,7 +14,7 @@ export const testIdExists = (
 
 export const testIdExistsAsync = async (
   component: RenderResults,
-  key: string
+  key: string,
 ): Promise<boolean> => {
   const { findByTestId } = component;
   try {

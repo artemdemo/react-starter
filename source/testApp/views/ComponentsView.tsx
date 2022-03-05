@@ -87,7 +87,7 @@ export class ComponentsView extends React.PureComponent<any, TState> {
                   () => {
                     // eslint-disable-next-line no-console
                     console.log(this.state.selectItem1);
-                  }
+                  },
                 );
               }}
               placeholder="Select..."

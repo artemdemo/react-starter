@@ -40,7 +40,7 @@ export interface RenderOptions extends RenderOptionsOrig {
 
 export const testRender = (
   component: ReactElement,
-  options: RenderOptions = {}
+  options: RenderOptions = {},
 ): RenderResults => {
   const { appVersion, httpRequestsMock } = options;
   return render(component, {

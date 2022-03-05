@@ -29,7 +29,7 @@ app.use(
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       }
     },
-  })
+  }),
 );
 
 app.get(`${publicPath}api/publicConfig`, apiController.publicConfigs);

@@ -9,7 +9,7 @@ type CampaignOptions = {
 };
 
 export const createCampaignMock = (
-  options: CampaignOptions = {}
+  options: CampaignOptions = {},
 ): TCampaign => {
   const {
     name = 'test campaign',
