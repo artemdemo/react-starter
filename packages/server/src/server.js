@@ -9,7 +9,7 @@ const app = express();
 
 const isDevelopment = app.get('env') === 'development';
 const publicPath = '/';
-const buildFolderPath = '../../build';
+const buildFolderPath = '../../app/build';
 
 app.disable('x-powered-by');
 

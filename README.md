@@ -40,12 +40,11 @@ $ rm -rf .git/ && git init
 
 - `$ yarn start` - build bundle, but without minification and serve it in the browser
 - `$ yarn build` - build version of bundle
+- `$ yarn serve` - serve build files
 - `$ yarn outdated` - check if some of yarn packages are outdated
 - `$ yarn stats` - analyze code distribution in bundle files
-- `$ yarn eslint` - run eslint for code-styling checks
-- `$ yarn t` - run tests
-- `$ yarn server:prod` - build for production and run simple server to show in the browser
-- `$ yarn server:dev:minified` - run dev server with minified JS
+- `$ yarn lint` - run linting
+- `$ yarn test` - run tests
 
 **Notice**
 

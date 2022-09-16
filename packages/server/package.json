@@ -4,7 +4,7 @@
   "description": "Basic server",
   "main": "server.js",
   "scripts": {
-    "start": "node ./source/server.js",
+    "start": "node ./src/server.js",
     "lint": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
