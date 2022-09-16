@@ -7216,6 +7216,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"server@workspace:packages/server":
+  version: 0.0.0-use.local
+  resolution: "server@workspace:packages/server"
+  dependencies:
+    boom: ^7.3.0
+    colors: ^1.4.0
+    express: ^4.17.1
+    lodash: ^4.17.21
+    prettier: ^2.5.1
+  languageName: unknown
+  linkType: soft
+
 "set-blocking@npm:^2.0.0":
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
@@ -7275,17 +7287,6 @@ __metadata:
   checksum: a2f098f247adc367dffc27845853e9959b9e88b01cb301658cfe4194352d8d2bb32e18467c786a7fe15f1d44b233ea35633d076d5e737870b7139949d1ab6318
   languageName: node
   linkType: hard
-
-"simple-server@workspace:packages/server":
-  version: 0.0.0-use.local
-  resolution: "simple-server@workspace:packages/server"
-  dependencies:
-    boom: ^7.3.0
-    colors: ^1.4.0
-    express: ^4.17.1
-    lodash: ^4.17.21
-  languageName: unknown
-  linkType: soft
 
 "sirv@npm:^1.0.7":
   version: 1.0.19
