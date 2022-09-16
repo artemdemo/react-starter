@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve",
     "build": "NODE_ENV=production webpack --progress",
-    "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js",
+    "test": "run -T jest",
     "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js --coverage",
     "lint": "prettier --write .",
     "stats": "BABEL_ENV=production webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html"
