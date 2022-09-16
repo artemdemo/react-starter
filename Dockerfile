@@ -8,14 +8,14 @@ ENV NODE_ENV=production
 COPY ./package*.json ./app/
 
 WORKDIR '/app'
-RUN npm install
+RUN yarn install
 COPY . .
-RUN npm run build
+RUN yarn run build
 
 WORKDIR '/app/server'
-RUN npm install
+RUN yarn install
 
 ENV PORT=8080
 EXPOSE $PORT
 
-CMD ["npm", "run", "start"]
+CMD ["yarn", "run", "start"]

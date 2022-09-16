@@ -1,10 +1,11 @@
 {
-  "name": "simple-server",
+  "name": "server",
   "version": "1.0.0",
   "description": "Basic server",
   "main": "server.js",
   "scripts": {
     "start": "node ./source/server.js",
+    "lint": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Artem Demo",
@@ -14,5 +15,8 @@
     "colors": "^1.4.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }

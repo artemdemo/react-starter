@@ -25,10 +25,10 @@ $ cd YOUR_APP_NAME
 ```
 
 ```
-$ npm install
+$ yarn install
 ```
 
-You also can use `npm i` instead, but yarn is better.
+You also can use `yarn i` instead, but yarn is better.
 
 And finally you'll probably want replace `.git` folder with yours:
 
@@ -36,16 +36,16 @@ And finally you'll probably want replace `.git` folder with yours:
 $ rm -rf .git/ && git init
 ```
 
-## npm commands
+## yarn commands
 
-- `$ npm start` (alias `$ npm run server:dev`) - build bundle, but without minification and serve it in the browser
-- `$ npm run build` - build version of bundle
-- `$ npm run npm-check` - check if some of npm packages are outdated
-- `$ npm run stats` - analyze code distribution in bundle files
-- `$ npm run eslint` - run eslint for code-styling checks
-- `$ npm t` - run tests
-- `$ npm run server:prod` - build for production and run simple server to show in the browser
-- `$ npm run server:dev:minified` - run dev server with minified JS
+- `$ yarn start` - build bundle, but without minification and serve it in the browser
+- `$ yarn build` - build version of bundle
+- `$ yarn outdated` - check if some of yarn packages are outdated
+- `$ yarn stats` - analyze code distribution in bundle files
+- `$ yarn eslint` - run eslint for code-styling checks
+- `$ yarn t` - run tests
+- `$ yarn server:prod` - build for production and run simple server to show in the browser
+- `$ yarn server:dev:minified` - run dev server with minified JS
 
 **Notice**
 
@@ -54,17 +54,17 @@ In order to run command in production mode you'll need use env variable `NODE_EN
 ### Check for outdated packages
 
 ```
-$ npm outdated
+$ yarn outdated
 ```
 
 After that you can upgrade them:
 
 ```
-$ npm update [-g] [<pkg>...]
+$ yarn update [-g] [<pkg>...]
 ```
 
 If you want to upgrade to the latest version use:
 
 ```
-$ npm update <pkg>@latest
+$ yarn update <pkg>@latest
 ```

@@ -1,5 +1,4 @@
 module.exports = {
-  rootDir: '../',
   preset: 'ts-jest',
   testMatch: ['**/?(*.)(spec|test).(t|j)s?(x)'],
   testEnvironment: 'jest-environment-jsdom',
@@ -20,12 +19,5 @@ module.exports = {
       production: true,
     },
   },
-  collectCoverageFrom: [
-    'source/**/*.{js,jsx,ts,tsx}',
-    '!source/libraries/**',
-    '!source/styles/**',
-    '!source/images/**',
-    '!node_modules/**',
-  ],
   coverageReporters: ['text', 'text-summary'],
 };
