@@ -8,8 +8,6 @@
     "lint": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Artem Demo",
-  "license": "MIT",
   "dependencies": {
     "boom": "^7.3.0",
     "colors": "^1.4.0",
