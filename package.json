@@ -5,13 +5,13 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "yarn workspace app start",
-    "server": "yarn workspace server start",
-    "build": "NODE_ENV=production webpack --progress",
-    "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest.config.js",
+    "serve": "yarn workspace server start",
+    "build": "yarn workspace app build",
+    "test": "yarn workspace app test; yarn workspace server test",
     "lint": "yarn lint:prettier; yarn lint:versions",
     "lint:prettier": "yarn workspace app lint; yarn workspace server lint",
     "lint:versions": "syncpack list-mismatches",
-    "stats": "BABEL_ENV=production webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html"
+    "stats": "yarn workspace app stats"
   },
   "repository": {
     "type": "git",

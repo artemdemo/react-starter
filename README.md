@@ -38,7 +38,7 @@ $ rm -rf .git/ && git init
 
 ## yarn commands
 
-- `$ yarn start` (alias `$ yarn run server:dev`) - build bundle, but without minification and serve it in the browser
+- `$ yarn start` - build bundle, but without minification and serve it in the browser
 - `$ yarn build` - build version of bundle
 - `$ yarn outdated` - check if some of yarn packages are outdated
 - `$ yarn stats` - analyze code distribution in bundle files
