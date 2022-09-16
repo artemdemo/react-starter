@@ -22,6 +22,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["packages/app/source", "packages/app/source/**/*.json", "./types/"],
+  "include": ["src", "src/**/*.json", "./types/"],
   "exclude": ["node_modules"]
 }

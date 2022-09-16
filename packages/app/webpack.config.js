@@ -9,7 +9,7 @@ const path = require('path');
 const isProduction = process.env.NODE_ENV === 'production';
 const configOptions = {
   buildFolder: './build',
-  mainSourceFolder: './source',
+  sourceFolder: './src',
   appVersion: packageFile.version,
   clientId: process.env.CLIENT_ID,
   apiKey: process.env.API_KEY,
@@ -18,7 +18,7 @@ const configOptions = {
 
 module.exports = () => {
   return {
-    entry: path.join(__dirname, configOptions.mainSourceFolder, 'index.tsx'),
+    entry: path.join(__dirname, configOptions.sourceFolder, 'index.tsx'),
     mode: configOptions.isProduction ? 'production' : 'development',
     output: {
       path: `${process.cwd()}/${configOptions.buildFolder}`,
@@ -55,7 +55,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.([tj])sx?$/,
-          include: path.resolve(__dirname, configOptions.mainSourceFolder),
+          include: path.resolve(__dirname, configOptions.sourceFolder),
           exclude: /node_modules/,
           use: [
             {
@@ -66,7 +66,7 @@ module.exports = () => {
         },
         {
           test: /\.css$/i,
-          include: path.resolve(__dirname, configOptions.mainSourceFolder),
+          include: path.resolve(__dirname, configOptions.sourceFolder),
           exclude: /node_modules/,
           use: [
             'style-loader',
@@ -112,7 +112,7 @@ module.exports = () => {
       // new ModuleConcatenationPlugin(),
 
       new HtmlWebpackPlugin({
-        template: './source/index.ejs',
+        template: `${configOptions.sourceFolder}/index.ejs`,
         filename: './index.html',
         appVersion: configOptions.appVersion,
       }),
