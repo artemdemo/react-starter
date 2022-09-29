@@ -5,6 +5,7 @@ export type HttpClient = typeof axios;
 
 type TransContextTypes = {
   httpClient: HttpClient;
+  children?: React.ReactNode;
 };
 
 export const HttpContext = createContext<TransContextTypes>({

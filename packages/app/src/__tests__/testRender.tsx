@@ -14,7 +14,7 @@ type CreateProvidersOptions = {
   httpRequestsMock?: RequestMock[];
 };
 
-const createWrapper: (options?: CreateProvidersOptions) => React.FC =
+const createWrapper: (options?: CreateProvidersOptions) => React.FC<{ children?: React.ReactNode }> =
   (options = {}) =>
   (props) => {
     const { appVersion, httpRequestsMock = [] } = options;

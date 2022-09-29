@@ -31,7 +31,7 @@ const ComponentsView = React.lazy(() =>
   })),
 );
 
-const Suspense: React.FC = ({ children }) => {
+const Suspense: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const { t } = useTranslation();
   return <React.Suspense fallback={t('loading')}>{children}</React.Suspense>;
 };

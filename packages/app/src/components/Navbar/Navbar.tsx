@@ -4,6 +4,7 @@ import classnames from 'classnames';
 type TProps = {
   className?: string;
   sideContent?: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const Navbar: React.FC<TProps> = (props) => {

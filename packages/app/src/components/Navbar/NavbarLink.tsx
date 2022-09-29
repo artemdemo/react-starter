@@ -8,6 +8,7 @@ type TProps = {
   to?: string;
   onClick?: (e?: any) => void;
   dataTestid?: string;
+  children?: React.ReactNode;
 };
 
 export const NavbarLink: React.FC<TProps> = (props) => {
