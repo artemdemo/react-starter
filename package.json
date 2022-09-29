@@ -8,6 +8,7 @@
     "serve": "yarn workspace server start",
     "build": "yarn workspace app build",
     "test": "yarn workspace app test; yarn workspace server test",
+    "test:watch": "yarn workspace app test:watch; yarn workspace server test:watch",
     "lint": "yarn lint:prettier; yarn lint:versions",
     "lint:prettier": "yarn workspace app lint; yarn workspace server lint",
     "lint:versions": "syncpack list-mismatches",

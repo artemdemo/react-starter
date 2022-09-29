@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/server.js",
     "lint": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "boom": "^7.3.0",

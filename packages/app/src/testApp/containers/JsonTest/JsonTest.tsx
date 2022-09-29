@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './JsonTest.module.css';
-import * as data from './data.json';
+import data from './data.json';
 
 /*
  * There have been problems with importing json for certain versions of webpack.

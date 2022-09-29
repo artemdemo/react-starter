@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { testRender } from '../../../__tests__/testRender';
 import { JsonTestDriver } from './JsonTest.driver';
 import { JsonTest } from './JsonTest';
-import * as data from './data.json';
+import data from './data.json';
 
 const render = (): JsonTestDriver => {
   const component = testRender(<JsonTest />);
