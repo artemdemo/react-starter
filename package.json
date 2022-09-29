@@ -8,6 +8,7 @@
     "serve": "yarn workspace server start",
     "build": "yarn workspace app build",
     "test": "yarn workspace app test; yarn workspace server test",
+    "test:watch": "yarn workspace app test:watch; yarn workspace server test:watch",
     "lint": "yarn lint:prettier; yarn lint:versions",
     "lint:prettier": "yarn workspace app lint; yarn workspace server lint",
     "lint:versions": "syncpack list-mismatches",
@@ -29,11 +30,9 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
     "concurrently": "^7.3.0",
-    "jest": "^27.5.1",
     "syncpack": "^8.2.4",
-    "ts-jest": "^27.1.4"
+    "vitest": "^0.23.4"
   },
   "packageManager": "yarn@3.2.3"
 }
