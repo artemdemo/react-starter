@@ -1,4 +1,5 @@
 import React from 'react';
+import { describe, expect, it } from 'vitest';
 import { testRender } from '../../../__tests__/testRender';
 import { MainMenu } from './MainMenu';
 import { MainMenuDriver } from './MainMenu.driver';
@@ -30,7 +31,7 @@ describe('MainMenu', () => {
     expect(await driver.campaignsBtnExists()).toBe(true);
   });
 
-  fit('should have "Components" button', async () => {
+  it.skip('should have "Components" button', async () => {
     const driver = render();
     expect(await driver.componentsBtnExists()).toBe(true);
   });

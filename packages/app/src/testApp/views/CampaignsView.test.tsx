@@ -1,4 +1,5 @@
 import React from 'react';
+import { describe, expect, it } from 'vitest';
 import { CampaignsViewDriver } from './CampaignsView.driver';
 import { testRender } from '../../__tests__/testRender';
 import { CampaignsView } from './CampaignsView';
