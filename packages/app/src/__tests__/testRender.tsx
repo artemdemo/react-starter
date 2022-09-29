@@ -1,8 +1,11 @@
 import React, { ReactElement } from 'react';
 import {
   render,
+  cleanup,
   RenderOptions as RenderOptionsOrig,
 } from '@testing-library/react';
+import _ from 'lodash';
+import { afterEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import { AppProvider } from '../contexts/app/AppContext';
 import { HttpClient, HttpProvider } from '../contexts/http/HttpContext';
@@ -31,6 +34,12 @@ const createWrapper: (options?: CreateProvidersOptions) => React.FC<{ children?:
     );
   };
 
+let unmountApp: () => Promise<void>;
+afterEach(async () => {
+  _.isFunction(unmountApp) && (await unmountApp());
+  cleanup();
+});
+
 export interface RenderResults extends ReturnType<typeof render> {}
 
 export interface RenderOptions extends RenderOptionsOrig {
@@ -43,8 +52,14 @@ export const testRender = (
   options: RenderOptions = {},
 ): RenderResults => {
   const { appVersion, httpRequestsMock } = options;
-  return render(component, {
+  const renderedComponent = render(component, {
     wrapper: createWrapper({ appVersion, httpRequestsMock }),
     ...options,
   });
+
+  unmountApp = async () => {
+    renderedComponent.unmount();
+  };
+
+  return renderedComponent;
 };

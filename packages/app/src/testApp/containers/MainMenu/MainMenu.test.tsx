@@ -31,7 +31,7 @@ describe('MainMenu', () => {
     expect(await driver.campaignsBtnExists()).toBe(true);
   });
 
-  it.skip('should have "Components" button', async () => {
+  it('should have "Components" button', async () => {
     const driver = render();
     expect(await driver.componentsBtnExists()).toBe(true);
   });
