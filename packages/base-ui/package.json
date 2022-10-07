@@ -1,8 +1,15 @@
 {
   "name": "base-ui",
   "version": "1.0.0",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "tsup",
+    "build:prod": "tsup --minify",
     "lint": "prettier --write .",
     "test": "run -T vitest run",
     "test:watch": "run -T vitest watch"

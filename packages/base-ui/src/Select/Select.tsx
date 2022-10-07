@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import s from './Select.module.css';
+import './Select.module.css';
 
 const PLACEHOLDER_VALUE = 'placeholder-12#$';
 
@@ -51,7 +51,7 @@ export const Select = (props: TProps) => {
   return (
     <select
       className={classnames(className, {
-        [s.Select]: true,
+        'Select': true,
         'form-control': true,
         'form-control-lg': size === ESelectSize.large,
         'form-control-sm': size === ESelectSize.small,

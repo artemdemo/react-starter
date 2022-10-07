@@ -1038,6 +1038,7 @@ __metadata:
     "@types/react-dom": ^18.0.0
     "@types/react-router-dom": ^5.1.7
     axios: ^0.27.2
+    base-ui: "workspace:*"
     bootstrap: ^5.2.1
     classnames: ^2.3.2
     clean-webpack-plugin: ^4.0.0
@@ -1162,7 +1163,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base-ui@workspace:packages/base-ui":
+"base-ui@workspace:*, base-ui@workspace:packages/base-ui":
   version: 0.0.0-use.local
   resolution: "base-ui@workspace:packages/base-ui"
   dependencies:
