@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { Container } from 'base-ui';
-// @ts-ignore
 import { BaseUiProvider } from 'base-ui/BaseUiProvider';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routing } from './Routing';

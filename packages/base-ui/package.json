@@ -2,7 +2,6 @@
   "name": "base-ui",
   "version": "1.0.0",
   "type": "module",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -11,11 +10,16 @@
     },
     "./BaseUiProvider": {
       "import": {
-        "types": "./dist/BaseUiProvider/BaseUiProvider.d.ts",
         "default": "./dist/BaseUiProvider/BaseUiProvider.js"
       }
     },
     "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "BaseUiProvider": ["./dist/BaseUiProvider/BaseUiProvider.d.ts"],
+      "*": ["./dist/*.d.ts"]
+    }
   },
   "scripts": {
     "build": "tsup",
