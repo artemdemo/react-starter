@@ -9,6 +9,12 @@
         "default": "./dist/index.js"
       }
     },
+    "./BaseUiProvider": {
+      "import": {
+        "types": "./dist/BaseUiProvider/BaseUiProvider.d.ts",
+        "default": "./dist/BaseUiProvider/BaseUiProvider.js"
+      }
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
