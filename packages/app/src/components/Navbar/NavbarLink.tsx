@@ -21,6 +21,7 @@ export const NavbarLink: React.FC<TProps> = (props) => {
           className={className}
           to={props.to}
           onClick={props.onClick}
+          end
           data-testid={props.dataTestid}
         >
           {props.children}

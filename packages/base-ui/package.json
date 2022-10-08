@@ -17,8 +17,12 @@
   },
   "typesVersions": {
     "*": {
-      "BaseUiProvider": ["./dist/BaseUiProvider/BaseUiProvider.d.ts"],
-      "*": ["./dist/*.d.ts"]
+      "BaseUiProvider": [
+        "./dist/BaseUiProvider/BaseUiProvider.d.ts"
+      ],
+      "*": [
+        "./dist/*.d.ts"
+      ]
     }
   },
   "scripts": {
@@ -29,6 +33,7 @@
     "test:watch": "run -T vitest watch"
   },
   "devDependencies": {
+    "bootstrap": "^5.2.1",
     "jsdom": "^20.0.0",
     "prettier": "^2.7.1",
     "react": "^18.0.0",
