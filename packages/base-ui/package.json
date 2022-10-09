@@ -1,0 +1,42 @@
+{
+  "name": "base-ui",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.js"
+      }
+    },
+    "./BaseUiProvider": {
+      "import": {
+        "default": "./dist/BaseUiProvider/BaseUiProvider.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "BaseUiProvider": [
+        "./dist/BaseUiProvider/BaseUiProvider.d.ts"
+      ],
+      "*": [
+        "./dist/*.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:prod": "tsup --minify",
+    "lint": "prettier --write .",
+    "test": "run -T vitest run",
+    "test:watch": "run -T vitest watch"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.2.1",
+    "jsdom": "^20.0.0",
+    "prettier": "^2.7.1",
+    "react": "^18.0.0",
+    "tsup": "^6.2.3"
+  }
+}

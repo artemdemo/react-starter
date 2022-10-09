@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
-import { Navbar } from '../../../components/Navbar/Navbar';
-import { NavbarLink } from '../../../components/Navbar/NavbarLink';
 import { useTranslation } from '../../../hooks/useTranslation';
 import { AppContext } from '../../../contexts/app/AppContext';
+import { Navbar } from '../../../components/Navbar/Navbar';
+import { NavbarLink } from '../../../components/Navbar/NavbarLink';
 
 type TProps = {
   className?: string;

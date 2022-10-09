@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { MainMenu } from './containers/MainMenu/MainMenu';
-import Button, { EButtonAppearance } from '../components/Button/Button';
+import { Button, EButtonAppearance } from 'base-ui';
 
 export const Header: React.FC = () => {
   const navigate = useNavigate();

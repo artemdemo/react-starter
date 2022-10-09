@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
-import { TransparentButton } from '../TransparentButton/TransparentButton';
+import { TransparentButton } from 'base-ui';
 
 type TProps = {
   className?: string;
@@ -21,6 +21,7 @@ export const NavbarLink: React.FC<TProps> = (props) => {
           className={className}
           to={props.to}
           onClick={props.onClick}
+          end
           data-testid={props.dataTestid}
         >
           {props.children}

@@ -2,11 +2,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlug } from '@fortawesome/free-solid-svg-icons';
-import Button, {
+import {
+  Button,
   EButtonAppearance,
   EButtonSize,
-} from '../../components/Button/Button';
-import { Select, TSelectListItem } from '../../components/Select/Select';
+} from 'base-ui';
+import { Select, TSelectListItem } from 'base-ui';
 
 type TState = {
   selectItem1?: TSelectListItem;

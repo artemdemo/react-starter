@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "NODE_ENV=production webpack --progress",
+    "build": "webpack --progress",
+    "build:prod": "NODE_ENV=production webpack --progress",
     "test": "run -T vitest run",
     "test:watch": "run -T vitest watch",
     "lint": "prettier --write .",
@@ -16,7 +17,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^0.27.2",
-    "bootstrap": "^5.2.1",
     "classnames": "^2.3.2",
     "cssnano": "^5.0.13",
     "lodash": "^4.17.21",
@@ -30,6 +30,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-router-dom": "^5.1.7",
+    "base-ui": "workspace:*",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.0.0",
     "html-webpack-plugin": "^5.2.0",
@@ -45,6 +46,5 @@
     "webpack-bundle-analyzer": "^4.0.0",
     "webpack-cli": "^4.0.0",
     "webpack-dev-server": "^4.0.0"
-  },
-  "packageManager": "yarn@3.2.3"
+  }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn workspace app start",
     "serve": "yarn workspace server start",
-    "build": "yarn workspace app build",
+    "build": "yarn workspace base-ui build && yarn workspace app build",
     "test": "yarn workspace app test; yarn workspace server test",
     "test:watch": "yarn workspace app test:watch; yarn workspace server test:watch",
     "lint": "yarn lint:prettier; yarn lint:versions",
