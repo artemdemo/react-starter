@@ -1039,6 +1039,7 @@ __metadata:
     "@types/react-router-dom": ^5.1.7
     axios: ^0.27.2
     base-ui: "workspace:*"
+    builder-webpack: "workspace:*"
     classnames: ^2.3.2
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.0.0
@@ -1056,10 +1057,6 @@ __metadata:
     style-loader: ^3.3.1
     ts-loader: ^9.0.0
     typescript: ^4.8.0
-    webpack: ^5.0.0
-    webpack-bundle-analyzer: ^4.0.0
-    webpack-cli: ^4.0.0
-    webpack-dev-server: ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -1315,6 +1312,40 @@ __metadata:
   checksum: 0448524a562b37d4d7ed9efd91685a5b77a50672c556ea254ac9a6d30e3403a517d8981f10e565db24e8339413b43c97ca2951f10e399c6125a0d8911f5679bb
   languageName: node
   linkType: hard
+
+"builder-webpack@workspace:*, builder-webpack@workspace:packages/builder-webpack":
+  version: 0.0.0-use.local
+  resolution: "builder-webpack@workspace:packages/builder-webpack"
+  dependencies:
+    "@testing-library/react": ^13.4.0
+    "@types/lodash": ^4.14.186
+    "@types/react": ^18.0.0
+    "@types/react-dom": ^18.0.0
+    "@types/react-router-dom": ^5.1.7
+    base-ui: "workspace:*"
+    classnames: ^2.3.2
+    clean-webpack-plugin: ^4.0.0
+    css-loader: ^6.0.0
+    cssnano: ^5.0.13
+    html-webpack-plugin: ^5.2.0
+    jsdom: ^20.0.0
+    lodash: ^4.17.21
+    postcss-loader: ^7.0.0
+    prettier: ^2.7.1
+    react: ^18.0.0
+    react-addons-test-utils: ^15.6.2
+    react-dom: ^18.0.0
+    react-router-dom: ^6.4.1
+    react-test-renderer: ^18.0.0
+    style-loader: ^3.3.1
+    ts-loader: ^9.0.0
+    typescript: ^4.8.0
+    webpack: ^5.0.0
+    webpack-bundle-analyzer: ^4.0.0
+    webpack-cli: ^4.0.0
+    webpack-dev-server: ^4.0.0
+  languageName: unknown
+  linkType: soft
 
 "bundle-require@npm:^3.1.0":
   version: 3.1.0
