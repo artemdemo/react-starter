@@ -1,40 +1,6 @@
 # React with webpack - starter pack
 
-[![Build Status](https://travis-ci.org/artemdemo/react-webpack-starter.svg?branch=master)](https://travis-ci.org/artemdemo/react-webpack-starter)
-
 Basic packages and scripts to start app developing in react, redux and webpack
-
-## Packages
-
-- react
-  - react-router
-- redux
-- webpack
-  - webpack-dev-server
-- less
-- bootstrap css
-
-## Getting started
-
-```
-$ git clone git@github.com:artemdemo/react-webpack-starter.git YOUR_APP_NAME
-```
-
-```
-$ cd YOUR_APP_NAME
-```
-
-```
-$ yarn install
-```
-
-You also can use `yarn i` instead, but yarn is better.
-
-And finally you'll probably want replace `.git` folder with yours:
-
-```
-$ rm -rf .git/ && git init
-```
 
 ## yarn commands
 
