@@ -4,11 +4,13 @@ import { DefinePlugin, Configuration } from 'webpack';
 import path from 'path';
 // import { proxy } from './proxy';
 import { fontLoaders } from './fontLoaders';
+import { BUILD_DIR, SOURCE_DIR, TARGET_DIR } from '../constants';
 
 type ConfigOptions = {
   projectCwd?: string;
   buildFolder?: string;
   sourceFolder?: string;
+  targetFolder?: string;
   clientId?: string;
   apiKey?: string;
   isProduction?: boolean;
@@ -17,8 +19,9 @@ type ConfigOptions = {
 export const createWebpackConfig = (options: ConfigOptions = {}): Configuration => {
   const {
     projectCwd = process.cwd(),
-    buildFolder = './build',
-    sourceFolder = './src',
+    buildFolder = BUILD_DIR,
+    sourceFolder = SOURCE_DIR,
+    targetFolder = TARGET_DIR,
     clientId = process.env.CLIENT_ID,
     apiKey = process.env.API_KEY,
     isProduction = process.env.NODE_ENV === 'production',
@@ -26,7 +29,7 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
   const appVersion = require(path.join(projectCwd, './package.json')).version;
 
   return {
-    entry: path.join(projectCwd, sourceFolder, 'index.ts'),
+    entry: path.join(projectCwd, targetFolder, 'index.tsx'),
     mode: isProduction ? 'production' : 'development',
     output: {
       path: path.join(projectCwd, buildFolder),
@@ -61,7 +64,10 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
       rules: [
         {
           test: /\.([tj])sx?$/,
-          include: path.resolve(projectCwd, sourceFolder),
+          include: [
+            path.resolve(projectCwd, sourceFolder),
+            path.resolve(projectCwd, targetFolder),
+          ],
           exclude: /node_modules/,
           use: [
             {

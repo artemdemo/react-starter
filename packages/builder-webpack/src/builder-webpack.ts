@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import { cliArgsParser } from './cliArgsParser';
+import { generateTarget } from './generateTarget';
 import { createWebpackConfig } from './webpack/createWebpackConfig';
 
 console.log('--><--');
@@ -18,8 +19,10 @@ cliArgsParser([
   {
     name: 'build',
     description: 'Builds the project',
-    action: (str, options) => {
+    action: async (str, options) => {
       console.log('build action');
+
+      await generateTarget();
 
       webpack(createWebpackConfig(), (err, stats) => {
         if (err) {
