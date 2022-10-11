@@ -1,9 +1,11 @@
 import { Command } from 'commander';
 
+export type ActionCb = (str: string, options: any) => void;
+
 type CliCommand = {
   name: string;
   description: string;
-  action?: (str: string, options: any) => void;
+  action?: ActionCb;
 };
 
 export const cliArgsParser = (commands: CliCommand[] = []) => {

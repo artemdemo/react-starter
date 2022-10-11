@@ -17,9 +17,16 @@ export const generateTarget = async (
     sourceFolder = SOURCE_DIR,
   } = options;
 
+  const targetPath = path.join(projectCwd, targetFolder);
+
   try {
-    await fs.mkdir(path.join(projectCwd, targetFolder));
-  } catch (error) {}
+    await fs.mkdir(targetPath);
+  } catch (error) {
+    // I will end up here if the directory already exists.
+    // Removing it and recreating from scratch.
+    await fs.rmdir(targetPath, { recursive: true });
+    await fs.mkdir(targetPath);
+  }
 
   try {
     await fs.writeFile(
