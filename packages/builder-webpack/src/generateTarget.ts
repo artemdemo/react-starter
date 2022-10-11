@@ -24,7 +24,7 @@ export const generateTarget = async (
   } catch (error) {
     // I will end up here if the directory already exists.
     // Removing it and recreating from scratch.
-    await fs.rmdir(targetPath, { recursive: true });
+    await fs.rm(targetPath, { recursive: true });
     await fs.mkdir(targetPath);
   }
 

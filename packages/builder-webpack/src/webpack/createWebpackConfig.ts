@@ -2,37 +2,29 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { DefinePlugin, Configuration } from 'webpack';
 import path from 'path';
-// import { proxy } from './proxy';
 import { fontLoaders } from './fontLoaders';
 import { BUILD_DIR, SOURCE_DIR, TARGET_DIR } from '../constants';
 
 type ConfigOptions = {
-  projectCwd?: string;
-  buildFolder?: string;
-  sourceFolder?: string;
-  targetFolder?: string;
   clientId?: string;
   apiKey?: string;
-  isProduction?: boolean;
 };
 
 export const createWebpackConfig = (options: ConfigOptions = {}): Configuration => {
   const {
-    projectCwd = process.cwd(),
-    buildFolder = BUILD_DIR,
-    sourceFolder = SOURCE_DIR,
-    targetFolder = TARGET_DIR,
     clientId = process.env.CLIENT_ID,
     apiKey = process.env.API_KEY,
-    isProduction = process.env.NODE_ENV === 'production',
   } = options;
+
+  const projectCwd = process.cwd();
+  const isProduction = process.env.NODE_ENV === 'production';
   const appVersion = require(path.join(projectCwd, './package.json')).version;
 
   return {
-    entry: path.join(projectCwd, targetFolder, 'index.tsx'),
+    entry: path.join(projectCwd, TARGET_DIR, 'index.tsx'),
     mode: isProduction ? 'production' : 'development',
     output: {
-      path: path.join(projectCwd, buildFolder),
+      path: path.join(projectCwd, BUILD_DIR),
       filename: isProduction ? './js/[name]-[chunkhash].js' : './js/[name].js',
       chunkFilename: isProduction
         ? './js/[id].chunk-[chunkhash].js'
@@ -47,16 +39,6 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
         name: false,
       },
     },
-    // devServer: {
-    //   host: '0.0.0.0',
-    //   port: 8080,
-    //   static: {
-    //     directory: path.join(projectCwd, buildFolder),
-    //   },
-    //   historyApiFallback: true,
-    //   hot: true,
-    //   proxy,
-    // },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
@@ -65,8 +47,8 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
         {
           test: /\.([tj])sx?$/,
           include: [
-            path.resolve(projectCwd, sourceFolder),
-            path.resolve(projectCwd, targetFolder),
+            path.resolve(projectCwd, SOURCE_DIR),
+            path.resolve(projectCwd, TARGET_DIR),
           ],
           exclude: /node_modules/,
           use: [
@@ -78,7 +60,7 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
         },
         {
           test: /\.css$/i,
-          include: path.resolve(projectCwd, sourceFolder),
+          include: path.resolve(projectCwd, SOURCE_DIR),
           exclude: /node_modules/,
           use: [
             'style-loader',
