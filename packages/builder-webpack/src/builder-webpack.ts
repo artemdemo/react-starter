@@ -13,7 +13,7 @@ cliArgsParser([
     description: 'Starts the project',
     action: (str, options) => {
       console.log('start action');
-    }
+    },
   },
   {
     name: 'build',
@@ -27,9 +27,7 @@ cliArgsParser([
           return;
         }
 
-        console.log(
-          stats?.toString() + '\n'
-        );
+        console.log(stats?.toString() + '\n');
 
         const info = stats?.toJson();
 
@@ -43,6 +41,6 @@ cliArgsParser([
           console.warn(info?.warnings);
         }
       });
-    }
+    },
   },
 ]);
