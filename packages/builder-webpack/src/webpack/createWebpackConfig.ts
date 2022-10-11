@@ -5,16 +5,7 @@ import path from 'path';
 import { fontLoaders } from './fontLoaders';
 import { BUILD_DIR, SOURCE_DIR, TARGET_DIR } from '../constants';
 
-type ConfigOptions = {
-  clientId?: string;
-  apiKey?: string;
-};
-
-export const createWebpackConfig = (options: ConfigOptions = {}): Configuration => {
-  const {
-    clientId = process.env.CLIENT_ID,
-    apiKey = process.env.API_KEY,
-  } = options;
+export const createWebpackConfig = (): Configuration => {
 
   const projectCwd = process.cwd();
   const isProduction = process.env.NODE_ENV === 'production';
@@ -91,8 +82,6 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
       new DefinePlugin({
         ENV: {
           production: isProduction,
-          clientId: JSON.stringify(clientId),
-          apiKey: JSON.stringify(apiKey),
           appVersion: JSON.stringify(appVersion),
         },
       }),
