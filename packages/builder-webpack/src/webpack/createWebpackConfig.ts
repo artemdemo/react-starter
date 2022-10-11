@@ -1,12 +1,12 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import { DefinePlugin } from 'webpack';
+import { DefinePlugin, Configuration } from 'webpack';
 import path from 'path';
-import packageFile from '../package.json';
-import { proxy } from './proxy';
+// import { proxy } from './proxy';
 import { fontLoaders } from './fontLoaders';
 
 type ConfigOptions = {
+  projectCwd?: string;
   buildFolder?: string;
   sourceFolder?: string;
   clientId?: string;
@@ -14,21 +14,22 @@ type ConfigOptions = {
   isProduction?: boolean;
 };
 
-export const createWebpackConfig = (options: ConfigOptions = {}) => {
+export const createWebpackConfig = (options: ConfigOptions = {}): Configuration => {
   const {
+    projectCwd = process.cwd(),
     buildFolder = './build',
     sourceFolder = './src',
     clientId = process.env.CLIENT_ID,
     apiKey = process.env.API_KEY,
     isProduction = process.env.NODE_ENV === 'production',
   } = options;
-  const appVersion = packageFile.version;
+  const appVersion = require(path.join(projectCwd, './package.json')).version;
 
   return {
-    entry: path.join(__dirname, sourceFolder, 'index.tsx'),
+    entry: path.join(projectCwd, sourceFolder, 'index.ts'),
     mode: isProduction ? 'production' : 'development',
     output: {
-      path: `${process.cwd()}/${buildFolder}`,
+      path: path.join(projectCwd, buildFolder),
       filename: isProduction ? './js/[name]-[chunkhash].js' : './js/[name].js',
       chunkFilename: isProduction
         ? './js/[id].chunk-[chunkhash].js'
@@ -43,16 +44,16 @@ export const createWebpackConfig = (options: ConfigOptions = {}) => {
         name: false,
       },
     },
-    devServer: {
-      host: '0.0.0.0',
-      port: 8080,
-      static: {
-        directory: path.join(__dirname, buildFolder),
-      },
-      historyApiFallback: true,
-      hot: true,
-      proxy,
-    },
+    // devServer: {
+    //   host: '0.0.0.0',
+    //   port: 8080,
+    //   static: {
+    //     directory: path.join(projectCwd, buildFolder),
+    //   },
+    //   historyApiFallback: true,
+    //   hot: true,
+    //   proxy,
+    // },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
@@ -60,7 +61,7 @@ export const createWebpackConfig = (options: ConfigOptions = {}) => {
       rules: [
         {
           test: /\.([tj])sx?$/,
-          include: path.resolve(__dirname, sourceFolder),
+          include: path.resolve(projectCwd, sourceFolder),
           exclude: /node_modules/,
           use: [
             {
@@ -71,7 +72,7 @@ export const createWebpackConfig = (options: ConfigOptions = {}) => {
         },
         {
           test: /\.css$/i,
-          include: path.resolve(__dirname, sourceFolder),
+          include: path.resolve(projectCwd, sourceFolder),
           exclude: /node_modules/,
           use: [
             'style-loader',
@@ -115,9 +116,22 @@ export const createWebpackConfig = (options: ConfigOptions = {}) => {
       // new ModuleConcatenationPlugin(),
 
       new HtmlWebpackPlugin({
-        template: `${sourceFolder}/index.ejs`,
+        templateContent: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>App</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="app-version" content="${appVersion}">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
+        `,
         filename: './index.html',
-        appVersion,
       }),
 
       new CleanWebpackPlugin({
