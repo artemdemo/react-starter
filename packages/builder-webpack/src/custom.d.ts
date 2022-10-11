@@ -6,6 +6,7 @@ type TENV = {
 declare const ENV: TENV;
 
 declare module '*.css';
+declare module '*.json';
 
 declare module '*.svg' {
   const content: string;

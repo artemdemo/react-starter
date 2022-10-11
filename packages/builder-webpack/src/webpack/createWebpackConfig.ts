@@ -1,31 +1,36 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { DefinePlugin } = require('webpack');
-const packageFile = require('./package.json');
-const proxy = require('./webpack/proxy');
-const fontLoaders = require('./webpack/fontLoaders');
-const path = require('path');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { DefinePlugin } from 'webpack';
+import path from 'path';
+import packageFile from '../package.json';
+import { proxy } from './proxy';
+import { fontLoaders } from './fontLoaders';
 
-const isProduction = process.env.NODE_ENV === 'production';
-const configOptions = {
-  buildFolder: './build',
-  sourceFolder: './src',
-  appVersion: packageFile.version,
-  clientId: process.env.CLIENT_ID,
-  apiKey: process.env.API_KEY,
-  isProduction,
+type ConfigOptions = {
+  buildFolder?: string;
+  sourceFolder?: string;
+  clientId?: string;
+  apiKey?: string;
+  isProduction?: boolean;
 };
 
-module.exports = () => {
+export const createWebpackConfig = (options: ConfigOptions = {}) => {
+  const {
+    buildFolder = './build',
+    sourceFolder = './src',
+    clientId = process.env.CLIENT_ID,
+    apiKey = process.env.API_KEY,
+    isProduction = process.env.NODE_ENV === 'production',
+  } = options;
+  const appVersion = packageFile.version;
+
   return {
-    entry: path.join(__dirname, configOptions.sourceFolder, 'index.tsx'),
-    mode: configOptions.isProduction ? 'production' : 'development',
+    entry: path.join(__dirname, sourceFolder, 'index.tsx'),
+    mode: isProduction ? 'production' : 'development',
     output: {
-      path: `${process.cwd()}/${configOptions.buildFolder}`,
-      filename: configOptions.isProduction
-        ? './js/[name]-[chunkhash].js'
-        : './js/[name].js',
-      chunkFilename: configOptions.isProduction
+      path: `${process.cwd()}/${buildFolder}`,
+      filename: isProduction ? './js/[name]-[chunkhash].js' : './js/[name].js',
+      chunkFilename: isProduction
         ? './js/[id].chunk-[chunkhash].js'
         : './js/[id].chunk.js',
       publicPath: '/',
@@ -42,7 +47,7 @@ module.exports = () => {
       host: '0.0.0.0',
       port: 8080,
       static: {
-        directory: path.join(__dirname, configOptions.buildFolder),
+        directory: path.join(__dirname, buildFolder),
       },
       historyApiFallback: true,
       hot: true,
@@ -55,7 +60,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.([tj])sx?$/,
-          include: path.resolve(__dirname, configOptions.sourceFolder),
+          include: path.resolve(__dirname, sourceFolder),
           exclude: /node_modules/,
           use: [
             {
@@ -66,7 +71,7 @@ module.exports = () => {
         },
         {
           test: /\.css$/i,
-          include: path.resolve(__dirname, configOptions.sourceFolder),
+          include: path.resolve(__dirname, sourceFolder),
           exclude: /node_modules/,
           use: [
             'style-loader',
@@ -78,9 +83,7 @@ module.exports = () => {
                 modules: {
                   // enable CSS modules for all files matching /\.module\.\w+$/i.test(filename)
                   auto: true,
-                  localIdentName: configOptions.isProduction
-                    ? '[hash:base64:5]'
-                    : '[path]',
+                  localIdentName: isProduction ? '[hash:base64:5]' : '[path]',
                 },
               },
             },
@@ -98,10 +101,10 @@ module.exports = () => {
       // and don't want to delete this code in production, just want to deactivate it then.
       new DefinePlugin({
         ENV: {
-          production: configOptions.isProduction,
-          clientId: JSON.stringify(configOptions.clientId),
-          apiKey: JSON.stringify(configOptions.apiKey),
-          appVersion: JSON.stringify(configOptions.appVersion),
+          production: isProduction,
+          clientId: JSON.stringify(clientId),
+          apiKey: JSON.stringify(apiKey),
+          appVersion: JSON.stringify(appVersion),
         },
       }),
 
@@ -112,9 +115,9 @@ module.exports = () => {
       // new ModuleConcatenationPlugin(),
 
       new HtmlWebpackPlugin({
-        template: `${configOptions.sourceFolder}/index.ejs`,
+        template: `${sourceFolder}/index.ejs`,
         filename: './index.html',
-        appVersion: configOptions.appVersion,
+        appVersion,
       }),
 
       new CleanWebpackPlugin({
