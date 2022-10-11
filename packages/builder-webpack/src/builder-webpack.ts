@@ -21,11 +21,27 @@ cliArgsParser([
     action: (str, options) => {
       console.log('build action');
 
-      const compiler = webpack(createWebpackConfig());
+      webpack(createWebpackConfig(), (err, stats) => {
+        if (err) {
+          console.error(err.stack || err);
+          return;
+        }
 
-      compiler.run((err, stats) => {
-        console.log('err', err);
-        // console.log('stats', stats);
+        console.log(
+          stats?.toString() + '\n'
+        );
+
+        const info = stats?.toJson();
+
+        if (stats?.hasErrors()) {
+          console.log('>>> ERRORS <<<');
+          console.error(info?.errors);
+        }
+
+        if (stats?.hasWarnings()) {
+          console.log('>>> WARNINGS <<<');
+          console.warn(info?.warnings);
+        }
       });
     }
   },

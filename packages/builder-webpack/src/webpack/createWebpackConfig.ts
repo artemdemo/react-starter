@@ -135,7 +135,7 @@ export const createWebpackConfig = (options: ConfigOptions = {}): Configuration 
       }),
 
       new CleanWebpackPlugin({
-        verbose: true,
+        // verbose: true,
         dry: false,
         cleanOnceBeforeBuildPatterns: ['**/*', '!.gitignore'],
       }),
