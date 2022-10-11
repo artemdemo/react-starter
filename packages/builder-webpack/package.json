@@ -14,16 +14,7 @@
     "test:watch": "run -T vitest watch",
     "lint": "prettier ./src --write"
   },
-  "dependencies": {
-    "cssnano": "^5.0.13",
-    "lodash": "^4.17.21",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
   "devDependencies": {
-    "@types/lodash": "^4.14.186",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "commander": "^9.4.1",
     "css-loader": "^6.0.0",
