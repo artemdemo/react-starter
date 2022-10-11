@@ -32,16 +32,11 @@
     "@types/react-router-dom": "^5.1.7",
     "base-ui": "workspace:*",
     "builder-webpack": "workspace:*",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.0.0",
-    "html-webpack-plugin": "^5.2.0",
     "jsdom": "^20.0.0",
-    "postcss-loader": "^7.0.0",
     "prettier": "^2.7.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^18.0.0",
     "style-loader": "^3.3.1",
-    "ts-loader": "^9.0.0",
     "typescript": "^4.8.0"
   }
 }
