@@ -4,7 +4,7 @@
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "builder-webpack",
+    "start": "builder-webpack start",
     "build": "builder-webpack build",
     "build:prod": "NODE_ENV=production webpack --progress",
     "test": "run -T vitest run",
