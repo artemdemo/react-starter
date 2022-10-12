@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
-import { TransparentButton } from 'base-ui';
+import { TransparentButton } from '../TransparentButton/TransparentButton';
 
 type TProps = {
   className?: string;

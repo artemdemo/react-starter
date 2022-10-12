@@ -1,15 +1,13 @@
-/* eslint-disable consistent-return, max-len,import/newline-after-import */
+import campaigns from './mock-data/campaigns.json';
+import emails from './mock-data/emails.json';
 
 const campaignsRegex = /\/api\/campaigns/;
-const campaigns = require('./mock-data/campaigns.json');
-
 const emailsRegex = /\/api\/email/;
-const emails = require('./mock-data/emails.json');
 
-module.exports = {
+export const proxy = {
   '/api': {
-    bypass: (req, res) => {
-      const testUrl = (urlRegex, method = 'GET') =>
+    bypass: (req: any, res: any) => {
+      const testUrl = (urlRegex: RegExp, method: string = 'GET') =>
         urlRegex.test(req.url) && req.method === method;
 
       switch (true) {

@@ -1,4 +1,4 @@
-const getLoaders = (mimetype) => [
+const getLoaders = (mimetype: string) => [
   {
     loader: 'url-loader',
     options: {
@@ -9,7 +9,7 @@ const getLoaders = (mimetype) => [
   },
 ];
 
-const fontLoaders = [
+export const fontLoaders = [
   {
     test: /\.(svg)(\?.*$|$)/,
     use: getLoaders('image/svg+xml'),
@@ -31,5 +31,3 @@ const fontLoaders = [
     use: getLoaders('application/vnd.ms-fontobject'),
   },
 ];
-
-module.exports = fontLoaders;
