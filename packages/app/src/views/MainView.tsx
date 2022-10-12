@@ -6,7 +6,7 @@ import { JsonTest } from '../containers/JsonTest/JsonTest';
 export const MainView = () => {
   return (
     <>
-      <div className="mb-3">
+      <div className="mb-3" data-testid="MainView">
         <FontAwesomeIcon icon={faGlobeAfrica} />
         &nbsp; Main View
       </div>

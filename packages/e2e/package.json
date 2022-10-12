@@ -1,0 +1,11 @@
+{
+  "name": "e2e",
+  "private": true,
+  "scripts": {
+    "test:e2e": "run -T vitest run"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "puppeteer": "^13.6.0"
+  }
+}

@@ -1,5 +1,6 @@
 {
   "name": "app",
+  "private": true,
   "version": "1.0.0",
   "description": "Basic packages and scripts to start app developing in react, redux and webpack",
   "main": "webpack.config.js",
