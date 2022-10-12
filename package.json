@@ -6,11 +6,11 @@
   "scripts": {
     "start": "yarn workspace app start",
     "serve": "yarn workspace server start",
-    "build": "yarn workspace base-ui build && yarn workspace app build",
-    "test": "yarn workspace app test; yarn workspace server test",
+    "build": "turbo run build",
+    "test": "turbo run test",
     "test:watch": "yarn workspace app test:watch; yarn workspace server test:watch",
     "lint": "yarn lint:prettier; yarn lint:versions",
-    "lint:prettier": "yarn workspace app lint; yarn workspace server lint",
+    "lint:prettier": "turbo run lint",
     "lint:versions": "syncpack list-mismatches",
     "stats": "yarn workspace app stats"
   },
@@ -32,6 +32,7 @@
   "devDependencies": {
     "concurrently": "^7.3.0",
     "syncpack": "^8.2.4",
+    "turbo": "^1.5.4",
     "vitest": "^0.24.1"
   },
   "packageManager": "yarn@3.2.3"

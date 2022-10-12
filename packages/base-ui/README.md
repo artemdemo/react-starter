@@ -16,11 +16,11 @@ According to typescript documentation, types should be supported in `exports` ob
       // Entry-point for `import "my-package"` in ESM
       "import": "./esm/index.js",
       // Entry-point for `require("my-package") in CJS
-      "require": "./commonjs/index.cjs",
-    },
+      "require": "./commonjs/index.cjs"
+    }
   },
   // CJS fall-back for older versions of Node.js
-  "main": "./commonjs/index.cjs",
+  "main": "./commonjs/index.cjs"
 }
 ```
 
@@ -52,7 +52,7 @@ Meanwhile after a lot of digging I found out that there is additional configurat
       "BaseUiProvider": ["./dist/BaseUiProvider/BaseUiProvider.d.ts"],
       "*": ["./dist/*.d.ts"]
     }
-  },
+  }
 }
 ```
 

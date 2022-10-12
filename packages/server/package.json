@@ -6,8 +6,8 @@
   "scripts": {
     "start": "ts-node ./src/server.ts",
     "lint": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:watch": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\"",
+    "test:watch": "echo \"Error: no test specified\""
   },
   "dependencies": {
     "boom": "^7.3.0",

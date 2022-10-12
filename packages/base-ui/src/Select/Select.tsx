@@ -51,7 +51,7 @@ export const Select = (props: TProps) => {
   return (
     <select
       className={classnames(className, {
-        'Select': true,
+        Select: true,
         'form-control': true,
         'form-control-lg': size === ESelectSize.large,
         'form-control-sm': size === ESelectSize.small,

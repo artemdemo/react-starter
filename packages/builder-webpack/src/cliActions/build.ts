@@ -30,4 +30,4 @@ export const build: ActionCb = async (str, options) => {
       console.warn(info?.warnings);
     }
   });
-}
+};

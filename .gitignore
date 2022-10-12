@@ -6,6 +6,7 @@ bundle-stats.json
 *.log
 selenium-*
 node_modules
+.turbo
 .pnp
 .pnp.js
 

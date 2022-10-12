@@ -6,7 +6,6 @@ import { fontLoaders } from './fontLoaders';
 import { BUILD_DIR, SOURCE_DIR, TARGET_DIR } from '../constants';
 
 export const createWebpackConfig = (): Configuration => {
-
   const projectCwd = process.cwd();
   const isProduction = process.env.NODE_ENV === 'production';
   const appVersion = require(path.join(projectCwd, './package.json')).version;

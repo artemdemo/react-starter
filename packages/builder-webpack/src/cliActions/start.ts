@@ -15,4 +15,4 @@ export const start: ActionCb = async (str, options) => {
 
   console.log('Starting server...');
   await server.start();
-}
+};

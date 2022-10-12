@@ -16,6 +16,6 @@ export const createDevServerConfig = (): WebpackDevServer.Configuration => {
     historyApiFallback: true,
     hot: true,
     // proxy,
-    open: true
+    open: true,
   };
 };
