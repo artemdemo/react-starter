@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { useTranslation } from '../hooks/useTranslation';
+import { useTranslation } from './hooks/useTranslation';
 
 const MainView = React.lazy(() =>
   import(

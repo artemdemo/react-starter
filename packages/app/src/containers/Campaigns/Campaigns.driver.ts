@@ -1,5 +1,5 @@
-import { RenderResults } from '../../../__tests__/testRender';
-import { testIdExistsAsync } from '../../../__tests__/utils';
+import { RenderResults } from '../../__tests__/testRender';
+import { testIdExistsAsync } from '../../__tests__/utils';
 import { TCampaign } from './Campaigns';
 
 type CampaignOptions = {

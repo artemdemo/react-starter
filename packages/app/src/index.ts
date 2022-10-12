@@ -1,3 +1,3 @@
-import { TestApp } from './testApp/TestApp';
+import { TestApp } from './TestApp';
 
 export default TestApp;

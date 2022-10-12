@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { RenderResults } from '../../../__tests__/testRender';
+import { RenderResults } from '../../__tests__/testRender';
 
 export class JsonTestDriver {
   constructor(public readonly component: RenderResults) {}

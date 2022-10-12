@@ -1,4 +1,4 @@
-import { RenderResults } from '../../__tests__/testRender';
+import { RenderResults } from '../__tests__/testRender';
 import { CampaignsDriver } from '../containers/Campaigns/Campaigns.driver';
 
 export class CampaignsViewDriver {

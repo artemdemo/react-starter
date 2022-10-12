@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { testRender } from '../../../__tests__/testRender';
+import { testRender } from '../../__tests__/testRender';
 import { MainMenu } from './MainMenu';
 import { MainMenuDriver } from './MainMenu.driver';
 

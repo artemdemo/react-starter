@@ -5,8 +5,8 @@ import { BaseUiProvider } from 'base-ui/BaseUiProvider';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routing } from './Routing';
 import { Header } from './Header';
-import { AppProvider } from '../contexts/app/AppContext';
-import { HttpProvider } from '../contexts/http/HttpContext';
+import { AppProvider } from './contexts/app/AppContext';
+import { HttpProvider } from './contexts/http/HttpContext';
 
 export const TestApp: React.FC = () => {
   return (

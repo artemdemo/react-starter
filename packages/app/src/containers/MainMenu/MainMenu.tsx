@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
-import { useTranslation } from '../../../hooks/useTranslation';
-import { AppContext } from '../../../contexts/app/AppContext';
+import { useTranslation } from '../../hooks/useTranslation';
+import { AppContext } from '../../contexts/app/AppContext';
 import { Navbar } from 'base-ui';
 import { NavbarLink } from 'base-ui';
 
