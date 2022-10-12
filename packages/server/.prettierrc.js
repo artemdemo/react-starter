@@ -1,4 +1,5 @@
+const defaultConfig = require('../../.prettierrc.js');
+
 module.exports = {
-  trailingComma: 'all',
-  singleQuote: true,
+  ...defaultConfig,
 };
