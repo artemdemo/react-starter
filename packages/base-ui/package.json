@@ -34,10 +34,10 @@
   },
   "devDependencies": {
     "bootstrap": "^5.2.1",
-    "jsdom": "^20.0.0",
+    "jsdom": "^20.0.1",
     "prettier": "^2.7.1",
     "react": "^18.0.0",
-    "react-router-dom": "^6.4.1",
+    "react-router-dom": "^6.4.2",
     "tsup": "^6.2.3"
   }
 }

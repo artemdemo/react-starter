@@ -22,7 +22,7 @@
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.4.1"
+    "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
@@ -32,7 +32,7 @@
     "@types/react-router-dom": "^5.1.7",
     "base-ui": "workspace:*",
     "builder-webpack": "workspace:*",
-    "jsdom": "^20.0.0",
+    "jsdom": "^20.0.1",
     "prettier": "^2.7.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^18.0.0",
