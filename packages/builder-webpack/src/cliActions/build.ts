@@ -20,7 +20,9 @@ export const build: ActionCb = async (str, options) => {
 
     if (stats?.hasErrors()) {
       console.log('>>> ERRORS <<<');
-      console.error(info?.errors);
+      info?.errors?.forEach((error) => {
+        console.error(error.stack);
+      });
     }
 
     if (stats?.hasWarnings()) {
