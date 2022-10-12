@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "private": true,
   "version": "1.0.0",
   "description": "Basic server",
   "main": "server.js",

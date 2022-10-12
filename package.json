@@ -9,6 +9,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "test:watch": "yarn workspace app test:watch; yarn workspace server test:watch",
+    "test:e2e": "yarn build; concurrently --kill-others-on-fail \"yarn serve\"  \"yarn workspace e2e test:e2e\"",
     "lint": "yarn lint:prettier; yarn lint:versions",
     "lint:prettier": "turbo run lint",
     "lint:versions": "syncpack list-mismatches",
