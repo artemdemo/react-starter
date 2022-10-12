@@ -1,9 +1,11 @@
-const path = require('path');
-const express = require('express');
-const Boom = require('boom');
-const _ = require('lodash');
-const logger = require('./services/logger')('server.js');
-const apiController = require('./controllers/apiController');
+import path from 'path';
+import express, { Request, Response, NextFunction } from 'express';
+import Boom from 'boom';
+import _ from 'lodash';
+import loggerCreator from './services/logger';
+import apiController from './controllers/apiController';
+
+const logger = loggerCreator('server.js');
 
 const app = express();
 
@@ -13,7 +15,7 @@ const buildFolderPath = '../../app/build';
 
 app.disable('x-powered-by');
 
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   if (process.env.NODE_ENV === 'development') {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -24,7 +26,7 @@ app.use((req, res, next) => {
 app.use(
   publicPath,
   express.static(path.resolve(__dirname, `${buildFolderPath}/`), {
-    setHeaders: (res, path) => {
+    setHeaders: (res: Response, path) => {
       if (path.includes('index.html')) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       }
@@ -35,7 +37,7 @@ app.use(
 app.get(`${publicPath}api/publicConfig`, apiController.publicConfigs);
 app.get(`${publicPath}api/campaigns`, apiController.campaigns);
 app.get(`${publicPath}health`, apiController.health);
-app.get(`${publicPath}*`, (req, res, next) => {
+app.get(`${publicPath}*`, (req: Request, res: Response, next: NextFunction) => {
   if (req.url === '/' || req.url.startsWith(publicPath)) {
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     res.sendFile(path.resolve(__dirname, `${buildFolderPath}/index.html`));
@@ -44,8 +46,7 @@ app.get(`${publicPath}*`, (req, res, next) => {
   }
 });
 
-// eslint-disable-next-line no-unused-vars
-app.use((err, req, res, next) => {
+app.use((err: Boom, req: Request, res: Response, next: NextFunction) => {
   logger.error('An unhandled error has occurred');
   logger(err);
 
