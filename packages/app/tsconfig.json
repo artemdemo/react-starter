@@ -25,6 +25,6 @@
     "isolatedModules": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "src/**/*.json", "./types/", "../base-ui/src/Navbar"],
+  "include": ["src", "src/**/*.json", "./types/"],
   "exclude": ["node_modules"]
 }
