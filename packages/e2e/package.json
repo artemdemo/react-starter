@@ -6,6 +6,6 @@
   },
   "devDependencies": {
     "prettier": "^2.7.1",
-    "puppeteer": "^13.6.0"
+    "puppeteer": "^19.0.0"
   }
 }
