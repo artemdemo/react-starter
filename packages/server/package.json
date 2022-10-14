@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "boom": "^7.3.0",
-    "colors": "^1.4.0",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "ts-node": "^10.9.1"

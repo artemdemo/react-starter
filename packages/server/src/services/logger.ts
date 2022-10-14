@@ -1,16 +1,11 @@
-import colors from 'colors/safe';
-
 const getFileKey = (fileName: string) => `[${fileName}]`;
 
 const logError = (fileName: string, ...args: any[]) => {
-  // @ts-ignore
-  const fileKeyColored = colors.red.bold(getFileKey(fileName));
-  console.log(fileKeyColored, ...args);
+  console.log(getFileKey(fileName), ...args);
 };
 
 const logInfo = (fileName: string, ...args: any[]) => {
-  const fileKeyColored = colors.green(getFileKey(fileName));
-  console.log(fileKeyColored, ...args);
+  console.log(getFileKey(fileName), ...args);
 };
 
 const logger = (fileName: string, ...args: any[]) => {
@@ -18,7 +13,7 @@ const logger = (fileName: string, ...args: any[]) => {
   const argsColored = args.map((item) => {
     if (item instanceof Error) {
       hasErr = true;
-      return colors.red(String(item));
+      return String(item);
     }
     return item;
   });
