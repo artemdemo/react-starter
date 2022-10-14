@@ -5,14 +5,10 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": {
-        "default": "./dist/index.js"
-      }
+      "import": "./dist/index.js"
     },
     "./BaseUiProvider": {
-      "import": {
-        "default": "./dist/BaseUiProvider/BaseUiProvider.js"
-      }
+      "import": "./dist/BaseUiProvider/BaseUiProvider.js"
     },
     "./package.json": "./package.json"
   },
