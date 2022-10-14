@@ -7,7 +7,7 @@ type TProps = {
   className?: string;
   to?: string;
   onClick?: (e?: any) => void;
-  dataTestid?: string;
+  'data-testid'?: string;
   children?: React.ReactNode;
 };
 
@@ -22,7 +22,7 @@ export const NavbarLink: React.FC<TProps> = (props) => {
           to={props.to}
           onClick={props.onClick}
           end
-          data-testid={props.dataTestid}
+          data-testid={props['data-testid']}
         >
           {props.children}
         </NavLink>
@@ -33,7 +33,7 @@ export const NavbarLink: React.FC<TProps> = (props) => {
       <TransparentButton
         className={className}
         onClick={props.onClick}
-        data-testid={props.dataTestid}
+        data-testid={props['data-testid']}
       >
         {props.children}
       </TransparentButton>

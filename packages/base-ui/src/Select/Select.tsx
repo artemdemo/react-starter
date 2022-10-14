@@ -24,6 +24,7 @@ type TProps = {
   onChange?: (item: TSelectListItem) => void;
   value: TSelectListItem;
   size?: ESelectSize;
+  'data-testid'?: string;
 };
 
 export const Select = (props: TProps) => {
@@ -61,6 +62,7 @@ export const Select = (props: TProps) => {
       onChange={onChange && onChangeValue}
       disabled={disabled}
       id={id}
+      data-testid={props['data-testid']}
     >
       {renderPlaceholder()}
       {list.map((item) => (

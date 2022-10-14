@@ -24,20 +24,21 @@ export const MainMenu: React.FC<TProps> = (props) => {
         <NavbarLink
           className="text-muted"
           onClick={handleVersionClick}
-          dataTestid="mainMenu-app-version"
+          data-testid="mainMenu-app-version"
         >
           {appContext.appVersion}
         </NavbarLink>
       }
+      data-testid="mainMenu"
     >
       {/* I need here `div` in order to support flex styling from the `Navbar` */}
-      <NavbarLink to="/" dataTestid="mainMenu-main">
+      <NavbarLink to="/" data-testid="mainMenu-main">
         {t('main')}
       </NavbarLink>
-      <NavbarLink to="/campaigns" dataTestid="mainMenu-campaigns">
+      <NavbarLink to="/campaigns" data-testid="mainMenu-campaigns">
         {t('campaigns')}
       </NavbarLink>
-      <NavbarLink to="/components" dataTestid="mainMenu-components">
+      <NavbarLink to="/components" data-testid="mainMenu-components">
         {t('components')}
       </NavbarLink>
     </Navbar>

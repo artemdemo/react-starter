@@ -17,6 +17,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   sizeAppearance?: EButtonSize;
   appearance?: EButtonAppearance;
   block?: boolean;
+  'data-testid'?: string;
 }
 
 /**

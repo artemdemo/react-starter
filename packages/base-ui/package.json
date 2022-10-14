@@ -26,8 +26,7 @@
     "build": "tsup",
     "build:prod": "tsup --minify",
     "lint": "prettier --write .",
-    "test": "run -T vitest run",
-    "test:watch": "run -T vitest watch"
+    "test": ":"
   },
   "devDependencies": {
     "bootstrap": "^5.2.1",
