@@ -3,10 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { CampaignsViewDriver } from './CampaignsView.driver';
 import { testRender } from '../__tests__/testRender';
 import { CampaignsView } from './CampaignsView';
-import {
-  RequestMethod,
-  RequestMock,
-} from '../contexts/http/utils/RequestMock';
+import { RequestMethod, RequestMock } from '../contexts/http/utils/RequestMock';
 import { ResponseMock } from '../contexts/http/utils/ResponseMock';
 import { createCampaignMock } from '../containers/Campaigns/Campaigns.driver';
 

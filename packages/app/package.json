@@ -7,7 +7,7 @@
   "scripts": {
     "start": "builder-webpack start",
     "build": "builder-webpack build",
-    "build:prod": "NODE_ENV=production webpack --progress",
+    "build:prod": "NODE_ENV=production builder-webpack build",
     "test": "run -T vitest run",
     "test:watch": "run -T vitest watch",
     "lint": "prettier --write .",
