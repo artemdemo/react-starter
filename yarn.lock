@@ -1331,7 +1331,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "base-ui@workspace:packages/base-ui"
   dependencies:
-    bootstrap: ^5.2.1
+    bootstrap: ^5.2.2
     jsdom: ^20.0.1
     prettier: ^2.7.1
     react: ^18.0.0
@@ -1440,12 +1440,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.2.1":
-  version: 5.2.1
-  resolution: "bootstrap@npm:5.2.1"
+"bootstrap@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "bootstrap@npm:5.2.2"
   peerDependencies:
     "@popperjs/core": ^2.11.6
-  checksum: f7d733ae5d27177d813adb2ac2158f08069a558d8f664b3db8857aba0ab07423d83b4276dba6123dde52309e707bb06ec13e040fb905eaa293c53453110bb802
+  checksum: 14e6df28feb975dc10702cac0a6c2a21132a6e4e5562e31cdae1db3970e287ed29001020066b61d96b2cea2a45ecf44c08c8c26bc84a31cdeabec0a9be6b9389
   languageName: node
   linkType: hard
 
