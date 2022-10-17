@@ -7,12 +7,17 @@ export const runE2e = (): Promise<number> =>
       // * subprocess.stdin
       // * subprocess.stdout
       // * subprocess.stderr
+      //
+      // I'm using `inherit` to preserve the colors.
+      // If you want, you can comment out `stdio`,
+      // in this case you will need to handle `e2e.stdout.on('data', (data) => { console.log(data.toString()) })` yourself.
+      // Also there will be no colors in the output.
       stdio: ['pipe', 'inherit', 'pipe'],
     });
 
     try {
-      e2e.stderr.on('data', function (data) {
-        console.log('stderr: ' + data);
+      e2e.stderr.on('data', (data) => {
+        console.log('stderr: ' + data.toString());
         reject();
       });
 
