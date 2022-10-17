@@ -3,21 +3,14 @@ import { spawn } from 'child_process';
 export const runE2e = (): Promise<number> =>
   new Promise((resolve, reject) => {
     const e2e = spawn('yarn', ['test:e2e'], {
-      // stdio: 'pipe',
-      // stdio: "inherit",
-      // shell: true,
-
-      // @ts-ignore
-      // env: { FORCE_COLOR: true }
+      // @link https://nodejs.org/api/child_process.html#optionsstdio
+      // * subprocess.stdin
+      // * subprocess.stdout
+      // * subprocess.stderr
+      stdio: ['pipe', 'inherit', 'pipe'],
     });
 
     try {
-      e2e.stdout.on('data', (data) => {
-        const resultStr = data.toString();
-        const normStr = resultStr.length > 3 ? resultStr.replace('\n', '') : resultStr;
-        console.log(normStr);
-      });
-
       e2e.stderr.on('data', function (data) {
         console.log('stderr: ' + data);
         reject();
@@ -26,7 +19,7 @@ export const runE2e = (): Promise<number> =>
       e2e.on('close', (code) => {
         console.log('child process exited with code ' + code);
         if (code === 0) {
-          resolve(0);
+          resolve(code);
         } else {
           reject(code);
         }
