@@ -24,7 +24,7 @@ const campaigns = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const health = (req: Request, res: Response) => {
-  res.send('Aap is up and running.');
+  res.send('App is running.');
 };
 
 export default {
