@@ -6,6 +6,7 @@
     "test:e2e": "run -T vitest run"
   },
   "devDependencies": {
+    "pptr-testing-library": "^0.7.0",
     "prettier": "^2.7.1",
     "puppeteer": "^19.0.0",
     "ts-node": "^10.9.1",

@@ -1,7 +1,9 @@
 import { afterAll, beforeAll, describe, expect, test } from 'vitest';
+import { getDocument, queries, waitFor } from 'pptr-testing-library';
 import puppeteer from 'puppeteer';
 import type { Browser, Page } from 'puppeteer';
-import { waitForTestId } from './services/utils';
+
+const { getByTestId } = queries;
 
 describe('basic', async () => {
   let browser: Browser;
@@ -18,6 +20,7 @@ describe('basic', async () => {
 
   test('MainView should be loaded', async () => {
     await page.goto('http://localhost:3000');
-    await waitForTestId(page, 'MainView');
+    const $document = await getDocument(page);
+    await waitFor(() => getByTestId($document, 'MainView'));
   });
 });
