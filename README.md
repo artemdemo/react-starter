@@ -1,6 +1,6 @@
 # React with webpack - starter pack
 
-Basic packages and scripts to start app developing in react, redux and webpack
+Basic packages and scripts to start app developing in react and webpack
 
 ## yarn commands
 
