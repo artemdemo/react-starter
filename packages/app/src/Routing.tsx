@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useTranslation } from './hooks/useTranslation';
+import { JQueryView } from './views/jQueryView';
 
 const MainView = React.lazy(() =>
   import(
@@ -68,6 +69,14 @@ export const Routing: React.FC = () => {
         element={
           <Suspense>
             <ComponentsView />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/jquery"
+        element={
+          <Suspense>
+            <JQueryView />
           </Suspense>
         }
       />
