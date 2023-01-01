@@ -5,7 +5,7 @@ import type { Browser, Page } from 'puppeteer';
 
 const { getByTestId } = queries;
 
-describe.only('jQueryVersion', async () => {
+describe('jQueryVersion', async () => {
   let browser: Browser;
   let page: Page;
 

@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, test } from 'vitest';
+import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 import { getDocument, queries, waitFor } from 'pptr-testing-library';
 import puppeteer from 'puppeteer';
 import type { Browser, Page } from 'puppeteer';
@@ -9,12 +9,12 @@ describe('basic', async () => {
   let browser: Browser;
   let page: Page;
 
-  beforeAll(async () => {
+  beforeEach(async () => {
     browser = await puppeteer.launch();
     page = await browser.newPage();
   });
 
-  afterAll(async () => {
+  afterEach(async () => {
     await browser.close();
   });
 
