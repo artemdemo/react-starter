@@ -108,7 +108,6 @@ export const createWebpackConfig = (): Configuration => {
 <!-- I added jQuery for test purposes, remove it -->
 <script
   src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
   crossorigin="anonymous"></script>
 </html>
         `,
