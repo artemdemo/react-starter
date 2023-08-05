@@ -1,4 +1,4 @@
-# React with webpack - starter pack
+# React - starter pack
 
 Basic packages and scripts to start app developing in react and webpack
 
