@@ -32,7 +32,7 @@
   "devDependencies": {
     "concurrently": "^7.3.0",
     "syncpack": "^8.2.4",
-    "turbo": "^1.5.4",
+    "turbo": "^1.0.0",
     "vitest": "^0.24.3"
   },
   "packageManager": "yarn@3.6.1"
