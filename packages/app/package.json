@@ -34,7 +34,7 @@
     "base-ui": "workspace:*",
     "builder-webpack": "workspace:*",
     "jsdom": "^20.0.1",
-    "prettier": "^2.7.1",
+    "prettier": "^3.0.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^18.0.0",
     "style-loader": "^3.3.1",

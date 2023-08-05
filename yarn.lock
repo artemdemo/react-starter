@@ -1199,7 +1199,7 @@ __metadata:
     cssnano: ^5.0.13
     jsdom: ^20.0.1
     lodash: ^4.17.21
-    prettier: ^2.7.1
+    prettier: ^3.0.1
     react: ^18.0.0
     react-addons-test-utils: ^15.6.2
     react-dom: ^18.0.0
@@ -1333,7 +1333,7 @@ __metadata:
   dependencies:
     bootstrap: ^5.2.2
     jsdom: ^20.0.1
-    prettier: ^2.7.1
+    prettier: ^3.0.1
     react: ^18.0.0
     react-router-dom: ^6.4.2
     tsup: ^6.2.3
@@ -1539,7 +1539,7 @@ __metadata:
     css-loader: ^6.0.0
     html-webpack-plugin: ^5.2.0
     postcss-loader: ^7.0.0
-    prettier: ^2.7.1
+    prettier: ^3.0.1
     style-loader: ^3.3.1
     ts-loader: ^9.0.0
     typescript: ^4.8.0
@@ -2494,7 +2494,7 @@ __metadata:
   resolution: "e2e@workspace:packages/e2e"
   dependencies:
     pptr-testing-library: ^0.7.0
-    prettier: ^2.7.1
+    prettier: ^3.0.1
     puppeteer: ^19.0.0
     ts-node: ^10.9.1
     typescript: ^4.8.0
@@ -5501,12 +5501,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "prettier@npm:2.7.1"
+"prettier@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "prettier@npm:3.0.1"
   bin:
-    prettier: bin-prettier.js
-  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
+    prettier: bin/prettier.cjs
+  checksum: e1f3f16c7fe0495de3faa182597871f74927d787cce3c52095a66ff5d7eacc05173371d5f58bf12141a0a1b6bfe739a338531d6cf18b92c7256c1319f2c84e73
   languageName: node
   linkType: hard
 
@@ -6260,7 +6260,7 @@ __metadata:
     boom: ^7.3.0
     express: ^4.18.2
     lodash: ^4.17.21
-    prettier: ^2.7.1
+    prettier: ^3.0.1
     ts-node: ^10.9.1
     typescript: ^4.8.0
   languageName: unknown
