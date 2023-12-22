@@ -33,7 +33,7 @@
     "@types/react-router-dom": "^5.1.7",
     "base-ui": "workspace:*",
     "builder-webpack": "workspace:*",
-    "jsdom": "^20.0.1",
+    "jsdom": "^23.0.0",
     "prettier": "^3.0.0",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^18.0.0",
