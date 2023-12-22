@@ -35,5 +35,5 @@
     "turbo": "^1.0.0",
     "vitest": "^0.24.3"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@4.0.2"
 }
