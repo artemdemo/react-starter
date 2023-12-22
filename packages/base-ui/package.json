@@ -31,7 +31,7 @@
   "devDependencies": {
     "bootstrap": "^5.2.2",
     "jsdom": "^20.0.1",
-    "prettier": "^3.0.1",
+    "prettier": "^3.0.0",
     "react": "^18.0.0",
     "react-router-dom": "^6.4.2",
     "tsup": "^6.2.3"
