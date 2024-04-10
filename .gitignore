@@ -20,7 +20,11 @@ yarn-debug.log*
 yarn-error.log*
 
 /.yarn/*
+# `.yarn/plugins` and `.yarn/releases` contain the Yarn releases used in the current repository (as defined by yarn set version).
+# You will want to keep them versioned
+# (this prevents potential issues if, say, two engineers use different Yarn versions with different features).
 !/.yarn/releases
+!/.yarn/plugins
 
 # local env files
 .env.local
